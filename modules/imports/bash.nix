@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }: {
-  programs.bash.bashrcExtra = {
-    ''eval "$(starship init bash)"''
-  };
+  programs.bash.enable = true;
+  programs.bash.bashrcExtra = ''
+   eval "$(starship init bash)"
+  '';
 }
