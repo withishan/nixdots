@@ -2,12 +2,12 @@
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     main = {
-      font = "Hack Nerd Font:size=12";
+      font = "JetBrainsMono Nerd Font Mono:size=12";
       prompt = ''""'';
       icons-enabled = "no";
-      width = "30";
+      width = "25";
       vertical-pad = "25";
-      horizontal-pad = "25";
+      horizontal-pad = "35";
       inner-pad = "10";
     };
 
@@ -23,6 +23,7 @@
 
     border = {
      width = "0";
+     radius = "6";
     };
   };
 }

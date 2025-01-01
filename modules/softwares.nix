@@ -1,10 +1,12 @@
 { config, lib, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
     inputs.ghostty.packages.${pkgs.system}.default
-    firefox
     wl-clipboard
     gh 
+    unzip
+    lsd
     brightnessctl
+    font-manager
     stow
     fzf
     btop

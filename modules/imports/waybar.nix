@@ -14,24 +14,29 @@
     }
 
     #clock, 
-    #pulseaudio, 
-    #backlight, 
+    #audiolight, 
     #battery, 
     #network, 
+    #pulseaudio,
+    #backlight,
     #workspaces,
     #keyboard-state,
     #language
     {
-      padding: 4px 16px;
-      border-radius: 10px;
+      padding: 5px 20px;
+      border-radius: 16px;
       transition: none;
       color: #ffffff;
-      background: #383c4a;
+      background-color: #383c4a;
+    }
+    
+    #network {
+      padding-right: 16px;
     }
 
     #battery.charging {
       color: #ffffff;
-      background-color: #26A65B;
+      background-color: #0E9464;
     }
     
     #battery.warning:not(.charging) {
@@ -69,8 +74,9 @@
 	margin = "10 10 0 10";
 	spacing = 5;
 
-	modules-left = ["niri/workspaces" "keyboard-state" "niri/language"];
-	modules-right = ["clock" "battery" "backlight" "pulseaudio" "network"];
+	modules-left = ["keyboard-state" "clock"];
+	modules-center = ["niri/workspaces"];
+	modules-right = ["battery" "backlight" "pulseaudio" "network"];
 
 	"niri/workspaces" = {
 	  "disable-scroll" = false;
@@ -85,26 +91,25 @@
 	  };
 	  "format-icons" = {
 	    locked = " ";
-	    unlocked = " ";
+	    unlocked = " ";
 	  };
 	};		
 
-	"niri/language" = {
-	  format = "{short}";
-	};
-
-	clock = {
-          format = " {:%H:%M}";
+	"clock" = {
+          format = "{:%a, %d %b, %I:%M %p}";
 	  tooltip = false;
 	};
 
 	backlight = {
-          format = "{percent}";
+          format = "{icon} {percent}";
+	  "format-icons" = [ "󰃚" ];
 	  tooltip = false;
 	};
 
 	battery = {
          format = "{icon} {capacity}"; 
+	 "format-charging" = "󰂄 {capacity}";
+	 "format-plugged" = "󰂄 {capacity}";
 	 "format-icons" = [ "󰂎" "󰁻" "󰁽" "󰁿" "󰂁" "󰁹" ];
 	 tooltip = false;
 	};
@@ -120,7 +125,6 @@
 
 	network = {
 	  format = "{icon}";
-	  "format-ethernet" = " ";
 	  "format-disconnected" = "󰤯 ";
 	  "format-icons" = [ "󰤨 " ];
 	  tooltip = false;
