@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     inputs.ghostty.packages.${pkgs.system}.default
     wl-clipboard
+    firefox
     gh 
     unzip
     lsd

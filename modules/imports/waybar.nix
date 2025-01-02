@@ -3,9 +3,9 @@
     enable = true;
     style = ''
     * {
-      font-family: "JetBrainsMono Nerd Font";
+      font-family: "Host Grotesk";
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 800;
     }
     
     window {
@@ -23,17 +23,13 @@
     #keyboard-state,
     #language
     {
-      padding: 5px 20px;
+      padding: 6px 26px;
       border-radius: 16px;
       transition: none;
       color: #ffffff;
       background-color: #383c4a;
     }
     
-    #network {
-      padding-right: 16px;
-    }
-
     #battery.charging {
       color: #ffffff;
       background-color: #0E9464;
@@ -74,7 +70,7 @@
 	margin = "10 10 0 10";
 	spacing = 5;
 
-	modules-left = ["keyboard-state" "clock"];
+	modules-left = ["clock" "keyboard-state"];
 	modules-center = ["niri/workspaces"];
 	modules-right = ["battery" "backlight" "pulseaudio" "network"];
 
@@ -87,35 +83,35 @@
 	  numlock = false;
 	  capslock = true;
 	  format = {
-	    capslock = "caps {icon}";
+	    capslock = "caps  {icon}";
 	  };
 	  "format-icons" = {
 	    locked = " ";
 	    unlocked = " ";
 	  };
 	};		
-
+	
 	"clock" = {
           format = "{:%a, %d %b, %I:%M %p}";
 	  tooltip = false;
 	};
 
 	backlight = {
-          format = "{icon} {percent}";
-	  "format-icons" = [ "󰃚" ];
+          format = "{icon} {percent}%";
+	  "format-icons" = [ "󰃞 " ];
 	  tooltip = false;
 	};
 
 	battery = {
-         format = "{icon} {capacity}"; 
-	 "format-charging" = "󰂄 {capacity}";
-	 "format-plugged" = "󰂄 {capacity}";
+         format = "{icon} {capacity}%"; 
+	 "format-charging" = "󰂄 {capacity}%";
+	 "format-plugged" = "󰂄 {capacity}%";
 	 "format-icons" = [ "󰂎" "󰁻" "󰁽" "󰁿" "󰂁" "󰁹" ];
 	 tooltip = false;
 	};
 
 	pulseaudio = {
-          format = "{icon} {volume}";
+          format = "{icon}  {volume}%";
 	  "format-muted" = " ";
 	  "format-icons" = {
 	    default = [ " " ];

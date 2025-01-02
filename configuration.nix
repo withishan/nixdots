@@ -24,8 +24,6 @@
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
 
-  services.flatpak.enable = true;
-
   environment.variables = {
     NIXOS_OZONE_WL = "1";
     DISPLAY = ":0";
@@ -35,7 +33,16 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 
-  fonts.fontconfig.enable = true;
+  # Fonts
+  fonts = {
+    fontconfig = {
+      defaultFonts = {
+        serif = [ "JetBrainsMono Nerd Font" ];
+        sansSerif = [ "JetBrainsMono Nerd Font" ];
+        monospace = [ "JetBrainsMono Nerd Font" ];
+      };
+    };
+  };
 
   # Enable networking
   networking.networkmanager.enable = true;
