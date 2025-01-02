@@ -72,7 +72,7 @@
 
 	modules-left = ["clock" "keyboard-state"];
 	modules-center = ["niri/workspaces"];
-	modules-right = ["battery" "backlight" "pulseaudio" "network"];
+	modules-right = ["network" "battery" "backlight" "pulseaudio"];
 
 	"niri/workspaces" = {
 	  "disable-scroll" = false;
