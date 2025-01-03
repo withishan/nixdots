@@ -1,11 +1,11 @@
 { config, pkgs, inputs, ... }: {
   imports = [
-    ./configs/niri.nix
-    ./configs/waybar.nix
-    ./configs/fuzzel.nix
-    ./configs/btop.nix
-    ./configs/bash.nix
-    ./configs/neovim.nix
+    ./imports/niri.nix
+    ./imports/waybar.nix
+    ./imports/fuzzel.nix
+    ./imports/btop.nix
+    ./imports/bash.nix
+    ./imports/nvim.nix
   ]; 
 
   home = {

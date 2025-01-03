@@ -5,7 +5,7 @@
       lualine-nvim
     ];
     extraLuaConfig = ''
-      ${builtins.readFile ./nvim/lualine.lua}
+      ${builtins.readFile ./nvim/plugins/lualine.lua}
     '';
   };
 }
