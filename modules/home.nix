@@ -5,7 +5,7 @@
     ./configs/fuzzel.nix
     ./configs/btop.nix
     ./configs/bash.nix
-    ./configs/neovim/nvim.nix
+    ./configs/neovim.nix
   ]; 
 
   home = {
