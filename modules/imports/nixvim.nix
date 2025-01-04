@@ -1,3 +1,6 @@
-{ config, pkgs, lib, ... }: {
-  programs.nixvim.enable = true;
+{ self, ... }: {
+  programs.nixvim = {
+    enable = true;
+    colorschemes.kanagawa.enable = true;
+  };
 }

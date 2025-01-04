@@ -43,7 +43,6 @@
       specialArgs = { inherit inputs; };
       modules = [ 
         ./configuration.nix 
-	nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager 
 	{
           home-manager.useGlobalPkgs = true;
@@ -52,6 +51,7 @@
 	    imports = [ 
 	      ./modules/home.nix 
 	      niri.homeModules.niri
+	      nixvim.homeManagerModules.nixvim
 	    ]; 
 	  }; 
         }
