@@ -51,7 +51,7 @@
     }
 
     #workspaces button {
-      color: #3C3D37;
+      color: #5a5c52;
       padding: 4px;
       border: none;
       box-shadow: none;
