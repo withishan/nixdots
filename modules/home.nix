@@ -5,7 +5,7 @@
     ./imports/fuzzel.nix
     ./imports/btop.nix
     ./imports/bash.nix
-    ./imports/nvim.nix
+    ./imports/nixvim.nix
   ]; 
 
   home = {
