@@ -13,11 +13,11 @@
 
     colors = {
       prompt = "ffffffff";
-      background = "383c4aff";
-      text = "99a0c6ff";
+      background = "343a40ff";
+      text = "6c757dff";
       input = "ffffffff";
       match = "ffffffff";
-      selection = "383c4aff";
+      selection = "343a40ff";
       selection-text = "ffffffff";
       selection-match = "ffffffff";
     };

@@ -3,8 +3,8 @@
     enable = true;
     style = ''
     * {
-      font-family: "Host Grotesk";
-      font-size: 18px;
+      font-family: "Archivo";
+      font-size: 17px;
       font-weight: 800;
     }
     
@@ -83,7 +83,7 @@
 	  numlock = false;
 	  capslock = true;
 	  format = {
-	    capslock = "caps  {icon}";
+	    capslock = "caps   {icon}";
 	  };
 	  "format-icons" = {
 	    locked = " ";
@@ -97,21 +97,21 @@
 	};
 
 	backlight = {
-          format = "{icon} {percent}%";
+          format = "{icon}    {percent}%";
 	  "format-icons" = [ "󰃞 " ];
 	  tooltip = false;
 	};
 
 	battery = {
-         format = "{icon}   {capacity}%"; 
-	 "format-charging" = "   {capacity}%";
-	 "format-plugged" = "   {capacity}%";
+         format = "{icon}     {capacity}%"; 
+	 "format-charging" = "     {capacity}%";
+	 "format-plugged" = "     {capacity}%";
 	 "format-icons" = [ "" "" "" "" ];
 	 tooltip = false;
 	};
 
 	pulseaudio = {
-          format = "{icon}  {volume}%";
+          format = "{icon}    {volume}%";
 	  "format-muted" = " ";
 	  "format-icons" = {
 	    default = [ " " ];
