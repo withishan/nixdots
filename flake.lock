@@ -42,11 +42,11 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1735875799,
-        "narHash": "sha256-EI6C+CRmfHqkjnp0aJxYb/pTImwb5FZOu1HWHnnZsOc=",
+        "lastModified": 1735943291,
+        "narHash": "sha256-igXLrO0AtN7+k7VaR5zaHaPhDcS3go5NZr4liVqW9g4=",
         "ref": "refs/heads/main",
-        "rev": "e2f9eb6a6f4dc2108f91293938374c0ed314dcb8",
-        "revCount": 8834,
+        "rev": "1baf8928a0bd6ccc2f49e1e9478baab71d49a018",
+        "revCount": 8852,
         "type": "git",
         "url": "ssh://git@github.com/ghostty-org/ghostty"
       },
@@ -88,11 +88,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1735901295,
-        "narHash": "sha256-oJZr5AtTdnnHjhlPHOPLDwWYIno6WE29XPSpOSEtvqY=",
+        "lastModified": 1735926524,
+        "narHash": "sha256-BRcp1VNIeGL709AfiVTKx06ZnjhuixZtB7Wjryo8c+s=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "bede9daa211de9240dd1eb087e2cf57a8932c1d0",
+        "rev": "470ebbc098914eded248cc257bcd67f0036e96a4",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1735896617,
-        "narHash": "sha256-wQXOtPYhChN9y25j0ke9ej2Ae9RBI7eg1naH21snYT4=",
+        "lastModified": 1735914396,
+        "narHash": "sha256-QMvvPKqqaTCfGQf4v77lyz8n8gabuQbocc5tzA8x8cw=",
         "owner": "YaLTeR",
         "repo": "niri",
-        "rev": "d1370622d87f53f7c47f53fe1aaa4a018757d8d7",
+        "rev": "b3c6f0e661878c7ab4f3c84c480ae61a5de5d3b3",
         "type": "github"
       },
       "original": {
