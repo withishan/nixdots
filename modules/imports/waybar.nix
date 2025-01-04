@@ -26,12 +26,12 @@
       padding: 6px 26px;
       border-radius: 16px;
       transition: none;
-      color: #ffffff;
-      background-color: #383c4a;
+      color: #ECDFCC;
+      background-color: #181C14;
     }
     
     #battery.charging {
-      color: #ffffff;
+      color: #ECDFCC;
       background-color: #0E9464;
     }
     
@@ -42,7 +42,7 @@
     
     #battery.critical:not(.charging) {
       background-color: #f53c3c;
-      color: #ffffff;
+      color: #ECDFCC;
       animation-name: blink;
       animation-duration: 0.5s;
       animation-timing-function: linear;
@@ -51,16 +51,16 @@
     }
 
     #workspaces button {
-      color: #99a0c6;
+      color: #3C3D37;
       padding: 4px;
       border: none;
       box-shadow: none;
       text-shadow: none;
-      background: #383c4a;
+      background: #181C14;
     }
     
     #workspaces button.active {
-      color: #ffffff;
+      color: #ECDFCC;
     }
     '';
     settings = {
@@ -103,10 +103,10 @@
 	};
 
 	battery = {
-         format = "{icon} {capacity}%"; 
-	 "format-charging" = "󰂄 {capacity}%";
-	 "format-plugged" = "󰂄 {capacity}%";
-	 "format-icons" = [ "󰂎" "󰁻" "󰁽" "󰁿" "󰂁" "󰁹" ];
+         format = "{icon}  {capacity}%"; 
+	 "format-charging" = "󰂅  {capacity}%";
+	 "format-plugged" = "󰂅  {capacity}%";
+	 "format-icons" = [ "" "" "" "" ];
 	 tooltip = false;
 	};
 
