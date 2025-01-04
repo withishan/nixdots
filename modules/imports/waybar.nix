@@ -3,8 +3,8 @@
     enable = true;
     style = ''
     * {
-      font-family: "Archivo";
-      font-size: 17px;
+      font-family: "Host Grotesk";
+      font-size: 18px;
       font-weight: 800;
     }
     
@@ -97,16 +97,16 @@
 	};
 
 	backlight = {
-          format = "{icon}    {percent}%";
+          format = "{icon}  {percent}%";
 	  "format-icons" = [ "󰃞 " ];
 	  tooltip = false;
 	};
 
 	battery = {
-         format = "{icon}     {capacity}%"; 
-	 "format-charging" = "     {capacity}%";
-	 "format-plugged" = "     {capacity}%";
-	 "format-icons" = [ "" "" "" "" ];
+         format = "{icon}  {capacity}%"; 
+	 "format-charging" = "󰂅  {capacity}%";
+	 "format-plugged" = "󰂅  {capacity}%";
+	 "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰁹" ];
 	 tooltip = false;
 	};
 

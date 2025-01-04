@@ -44,16 +44,16 @@
       modules = [ 
         ./configuration.nix 
         home-manager.nixosModules.home-manager 
-	{
+	      {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ishan = { 
-	    imports = [ 
-	      ./modules/home.nix 
-	      niri.homeModules.niri
-	      nixvim.homeManagerModules.nixvim
-	    ]; 
-	  }; 
+	          imports = [ 
+	            ./modules/home.nix 
+	            niri.homeModules.niri
+	            nixvim.homeManagerModules.nixvim
+	          ]; 
+	        }; 
         }
       ];
     };
