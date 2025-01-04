@@ -103,9 +103,9 @@
 	};
 
 	battery = {
-         format = "{icon}  {capacity}%"; 
-	 "format-charging" = "󰂅  {capacity}%";
-	 "format-plugged" = "󰂅  {capacity}%";
+         format = "{icon}   {capacity}%"; 
+	 "format-charging" = "   {capacity}%";
+	 "format-plugged" = "   {capacity}%";
 	 "format-icons" = [ "" "" "" "" ];
 	 tooltip = false;
 	};
