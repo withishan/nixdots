@@ -66,65 +66,65 @@
     settings = {
       mainbar = {
         layer = "top";
-	position = "top";
-	margin = "10 10 0 10";
-	spacing = 5;
+	      position = "top";
+	      margin = "10 10 0 10";
+	      spacing = 5;
 
-	modules-left = ["clock" "keyboard-state"];
-	modules-center = ["niri/workspaces"];
-	modules-right = ["network" "battery" "backlight" "pulseaudio"];
+	      modules-left = ["clock" "keyboard-state"];
+	      modules-center = ["niri/workspaces"];
+	      modules-right = ["network" "battery" "backlight" "pulseaudio"];
 
-	"niri/workspaces" = {
-	  "disable-scroll" = false;
-	  "format" = "{icon}";
-	};
+	      "niri/workspaces" = {
+	        "disable-scroll" = false;
+	        "format" = "{icon}";
+	      };
 
-	"keyboard-state" = {
-	  numlock = false;
-	  capslock = true;
-	  format = {
-	    capslock = "caps   {icon}";
-	  };
-	  "format-icons" = {
-	    locked = " ";
-	    unlocked = " ";
-	  };
-	};		
-	
-	"clock" = {
+	      "keyboard-state" = {
+	        numlock = false;
+	        capslock = true;
+	        format = {
+	          capslock = "caps   {icon}";
+	        };
+	        "format-icons" = {
+	          locked = " ";
+	          unlocked = " ";
+	        };
+	      };		
+	      
+	      "clock" = {
           format = "{:%a, %d %b, %I:%M %p}";
-	  tooltip = false;
-	};
+	        tooltip = false;
+	      };
 
-	backlight = {
+	      backlight = {
           format = "{icon}  {percent}%";
-	  "format-icons" = [ "󰃞 " ];
-	  tooltip = false;
-	};
+	        "format-icons" = [ "󰃞 " ];
+	        tooltip = false;
+	      };
 
-	battery = {
-         format = "{icon}  {capacity}%"; 
-	 "format-charging" = "󰂅  {capacity}%";
-	 "format-plugged" = "󰂅  {capacity}%";
-	 "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰁹" ];
-	 tooltip = false;
-	};
+	      battery = {
+          format = "{icon}  {capacity}%"; 
+	        "format-charging" = "󰂅  {capacity}%";
+          "format-plugged" = "󰂅  {capacity}%";
+	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰁹" ];
+	        tooltip = false;
+	      };
 
-	pulseaudio = {
-          format = "{icon}    {volume}%";
-	  "format-muted" = " ";
-	  "format-icons" = {
-	    default = [ " " ];
-	  }; 
-	  tooltip = false;
-	};
+	      pulseaudio = {
+          format = "{icon}   {volume}%";
+	        "format-muted" = " ";
+	        "format-icons" = {
+	        default = [ " " ];
+	        }; 
+	        tooltip = false;
+	      };
 
-	network = {
-	  format = "{icon}";
-	  "format-disconnected" = "󰤯 ";
-	  "format-icons" = [ "󰤨 " ];
-	  tooltip = false;
-	};
+	      network = {
+	        format = "{icon}";
+	        "format-disconnected" = "󰤯 ";
+	        "format-icons" = [ "󰤨 " ];
+	        tooltip = false;
+	      };
       };
     };
   };

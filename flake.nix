@@ -9,25 +9,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-   ghostty = {
-      url = "git+ssh://git@github.com/ghostty-org/ghostty";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
-   niri = {
-     url = "github:sodiboo/niri-flake";
-     inputs.nixpkgs.follows = "nixpkgs";
-   };
-
-   nixvim = {
-     url = "github:nix-community/nixvim/nixos-24.11";
-     inputs.nixpkgs.follows = "nixpkgs";
-   };
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = 
   { 
   nixpkgs, 
-  ghostty, 
   niri, 
   home-manager, 
   nixvim, 

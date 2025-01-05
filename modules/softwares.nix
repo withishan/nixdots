@@ -1,6 +1,6 @@
 { config, lib, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
-    inputs.ghostty.packages.${pkgs.system}.default
+    ghostty
     wl-clipboard
     firefox
     gh 
