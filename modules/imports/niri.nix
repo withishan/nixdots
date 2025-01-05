@@ -19,7 +19,7 @@
      animations.window-open = {
        easing = {
          duration-ms = 300;
-	 curve = "ease-out-quad";
+	       curve = "ease-out-quad";
        };
      };
 
@@ -36,7 +36,7 @@
             { app-id = "^.*$"; }
           ];
           draw-border-with-background = false;
-	   geometry-corner-radius = {
+          geometry-corner-radius = {
               bottom-left = 12.0;
               bottom-right = 12.0;
               top-left = 12.0;

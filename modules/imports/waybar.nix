@@ -21,7 +21,9 @@
     #backlight,
     #workspaces,
     #keyboard-state,
-    #language
+    #language,
+    #tray,
+    #window
     {
       padding: 6px 26px;
       border-radius: 16px;
@@ -29,10 +31,14 @@
       color: #ECDFCC;
       background-color: #181C14;
     }
+
+    window#waybar.empty #window {
+      background-color: transparent;
+    }
     
     #battery.charging {
-      color: #ECDFCC;
-      background-color: #0E9464;
+      color: #181C14;
+      background-color: #ECDFCC;
     }
     
     #battery.warning:not(.charging) {
@@ -70,14 +76,21 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["clock" "keyboard-state"];
-	      modules-center = ["niri/workspaces"];
-	      modules-right = ["network" "battery" "backlight" "pulseaudio"];
+	      modules-left = ["network" "pulseaudio" "battery"];
+	      modules-center = ["niri/workspaces" "clock" "keyboard-state"];
+	      modules-right = ["niri/window" "backlight"];
 
 	      "niri/workspaces" = {
 	        "disable-scroll" = false;
 	        "format" = "{icon}";
 	      };
+
+        "niri/window" = {
+          format = "{title}";
+          rewrite = {
+            "com.mitchellh.ghostty" = "ghostty";
+          };
+        };
 
 	      "keyboard-state" = {
 	        numlock = false;
@@ -101,6 +114,10 @@
 	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
+
+        tray = {
+          "icon-size" = 20;
+        };
 
 	      battery = {
           format = "{icon}  {capacity}%"; 

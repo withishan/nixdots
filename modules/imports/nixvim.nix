@@ -18,6 +18,10 @@
     };
 
     colorschemes.kanagawa.enable = true;
+    colorschemes.kanagawa.settings = {
+      terminalColors = true;
+      transparent = true;
+    };
 
     plugins = {
       treesitter.enable = true;
