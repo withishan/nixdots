@@ -86,7 +86,7 @@
 	      };
 
         "niri/window" = {
-          format = "{}";
+          format = "{app_id}";
           rewrite = {
             "com.mitchellh.ghostty" = "ghostty";
           };
