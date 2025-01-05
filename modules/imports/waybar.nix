@@ -86,7 +86,7 @@
 	      };
 
         "niri/window" = {
-          format = "{title}";
+          format = "{}";
           rewrite = {
             "com.mitchellh.ghostty" = "ghostty";
           };
