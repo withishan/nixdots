@@ -76,9 +76,9 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["network" "pulseaudio" "battery"];
+	      modules-left = ["niri/window" "pulseaudio" "battery"];
 	      modules-center = ["niri/workspaces" "clock" "keyboard-state"];
-	      modules-right = ["niri/window" "backlight"];
+	      modules-right = ["network" "backlight"];
 
 	      "niri/workspaces" = {
 	        "disable-scroll" = false;
