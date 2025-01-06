@@ -23,7 +23,7 @@
     #keyboard-state,
     #language,
     #tray,
-    #window
+    #window,
     {
       padding: 6px 26px;
       border-radius: 16px;
@@ -89,7 +89,7 @@
         "niri/window" = {
           format = "{app_id}";
           rewrite = {
-            "com.mitchellh.ghostty" = "ghostty";
+            "com.mitchellh.ghostty" = "󰊠  ghostty";
           };
         };
 
