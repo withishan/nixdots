@@ -23,7 +23,7 @@
     #keyboard-state,
     #language,
     #tray,
-    #window,
+    #window
     {
       padding: 6px 26px;
       border-radius: 16px;
