@@ -34,6 +34,7 @@
 
     window#waybar.empty #window {
       background-color: transparent;
+      padding: 0px;
     }
     
     #battery.charging {
@@ -76,7 +77,7 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["niri/window" "pulseaudio" "battery"];
+	      modules-left = ["pulseaudio" "battery" "niri/window"];
 	      modules-center = ["niri/workspaces" "clock" "keyboard-state"];
 	      modules-right = ["network" "backlight"];
 
