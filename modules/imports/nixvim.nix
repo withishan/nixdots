@@ -25,6 +25,7 @@
 
     plugins = {
       treesitter.enable = true;
+      presence-nvim.enable = true;
     };
   };
 }
