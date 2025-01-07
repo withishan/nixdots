@@ -12,7 +12,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware/hardware-configuration.nix
-      ./modules/softwares.nix
+      ./modules/programs.nix
       ./modules/fonts.nix
     ];
 
