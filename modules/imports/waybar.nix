@@ -1,9 +1,11 @@
 { config, pkgs, lib, ... }: {
   programs.waybar = {
     enable = true;
-    style = ''
+    style = "
+    @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
+
     * {
-      font-family: "Host Grotesk";
+      font-family: 'Host Grotesk';
       font-size: 18px;
       font-weight: 800;
     }
@@ -28,8 +30,8 @@
       padding: 6px 26px;
       border-radius: 16px;
       transition: none;
-      color: #ECDFCC;
-      background-color: #181C14;
+      color: @foreground;
+      background-color: @background;
     }
 
     window#waybar.empty #window {
@@ -38,8 +40,8 @@
     }
     
     #battery.charging {
-      color: #181C14;
-      background-color: #ECDFCC;
+      color: @background;
+      background-color: @foreground;
     }
     
     #battery.warning:not(.charging) {
@@ -58,18 +60,18 @@
     }
 
     #workspaces button {
-      color: #5a5c52;
+      color: @foreground;
       padding: 4px;
       border: none;
       box-shadow: none;
       text-shadow: none;
-      background: #181C14;
+      background: @background;
     }
     
     #workspaces button.active {
       color: #ECDFCC;
     }
-    '';
+    ";
     settings = {
       mainbar = {
         layer = "top";

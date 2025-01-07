@@ -4,6 +4,7 @@
     wl-clipboard
     firefox
     gh 
+    pywal
     unzip
     cava
     brightnessctl
