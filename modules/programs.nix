@@ -5,7 +5,6 @@
     firefox
     gh 
     unzip
-    lsd
     cava
     brightnessctl
     font-manager

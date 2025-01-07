@@ -4,7 +4,6 @@
    eval "$(starship init bash)"
   '';
   programs.bash.shellAliases = {
-    ls = "lsd";
     rebuild = "sudo nixos-rebuild switch --flake ./";
   };
 }
