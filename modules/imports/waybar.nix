@@ -51,7 +51,7 @@
     
     #battery.critical:not(.charging) {
       background-color: #f53c3c;
-      color: #ECDFCC;
+      color: #f7f7f7;
       animation-name: blink;
       animation-duration: 0.5s;
       animation-timing-function: linear;
@@ -60,7 +60,7 @@
     }
 
     #workspaces button {
-      color: @foreground;
+      color: @color10;
       padding: 4px;
       border: none;
       box-shadow: none;
@@ -69,7 +69,7 @@
     }
     
     #workspaces button.active {
-      color: #ECDFCC;
+      color: @color15;
     }
     ";
     settings = {
