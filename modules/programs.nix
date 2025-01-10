@@ -5,6 +5,7 @@
     firefox
     gh 
     pywal
+    mpv
     unzip
     cava
     brightnessctl
