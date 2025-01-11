@@ -28,7 +28,7 @@
     #window
     {
       padding: 6px 26px;
-      border-radius: 16px;
+      border-radius: 20px;
       transition: none;
       color: @foreground;
       background-color: @background;
@@ -69,7 +69,10 @@
     }
     
     #workspaces button.active {
-      color: @color15;
+      padding: 5px 10px;
+      border-radius: 20px;
+      color: @background;
+      background-color: @color15;
     }
     ";
     settings = {
@@ -91,7 +94,7 @@
         "niri/window" = {
           format = "{app_id}";
           rewrite = {
-            "com.mitchellh.ghostty" = "󰊠  ghostty";
+            "com.mitchellh.ghostty" = "󰊠  ghost";
           };
         };
 

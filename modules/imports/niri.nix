@@ -37,10 +37,10 @@
           ];
           draw-border-with-background = false;
           geometry-corner-radius = {
-              bottom-left = 12.0;
-              bottom-right = 12.0;
-              top-left = 12.0;
-              top-right = 12.0;
+              bottom-left = 5.0;
+              bottom-right = 5.0;
+              top-left = 5.0;
+              top-right = 5.0;
            };
           clip-to-geometry = true;
         }
