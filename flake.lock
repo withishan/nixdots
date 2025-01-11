@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "astal": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1736497508,
-        "narHash": "sha256-murrCQMYKtZ8rkZ5O726ZCsCDee1l3ZdmV8yC9gRaIc=",
-        "owner": "aylur",
-        "repo": "astal",
-        "rev": "ef4f95608481414053ecdbe4de29bd86fb452813",
-        "type": "github"
-      },
-      "original": {
-        "owner": "aylur",
-        "repo": "astal",
-        "type": "github"
-      }
-    },
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -378,7 +358,6 @@
     },
     "root": {
       "inputs": {
-        "astal": "astal",
         "home-manager": "home-manager",
         "niri": "niri",
         "nixpkgs": "nixpkgs",
