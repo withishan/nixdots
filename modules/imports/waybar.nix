@@ -94,7 +94,7 @@
         "niri/window" = {
           format = "{app_id}";
           rewrite = {
-            "com.mitchellh.ghostty" = "󰊠 ";
+            "com.mitchellh.ghostty" = "󰊠  ghostty";
           };
         };
 
