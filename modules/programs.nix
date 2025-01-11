@@ -5,23 +5,21 @@
     firefox
     gh 
     pywal
-    mpv
+    nitch
+    lua
     unzip
-    cava
     brightnessctl
     font-manager
     stow
     fzf
-    btop
     git
+    cava
     grim
     slurp
     waybar
-    nerdfetch
     starship
     swww
     neovim
-    obsidian
     vesktop 
     fuzzel 
   ];

@@ -70,7 +70,7 @@
     
     #workspaces button.active {
       padding: 5px 10px;
-      border-radius: 20px;
+      border-radius: 15px;
       color: @background;
       background-color: @color15;
     }
@@ -82,9 +82,9 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["pulseaudio" "battery" "niri/window"];
-	      modules-center = ["niri/workspaces" "clock" "keyboard-state"];
-	      modules-right = ["network" "backlight"];
+	      modules-left = ["pulseaudio" "battery" "keyboard-state"];
+	      modules-center = ["niri/workspaces" "clock"];
+	      modules-right = ["niri/window" "network" "backlight"];
 
 	      "niri/workspaces" = {
 	        "disable-scroll" = false;
@@ -94,7 +94,7 @@
         "niri/window" = {
           format = "{app_id}";
           rewrite = {
-            "com.mitchellh.ghostty" = "󰊠  ghost";
+            "com.mitchellh.ghostty" = "󰊠 ";
           };
         };
 
