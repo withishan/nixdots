@@ -25,6 +25,9 @@
 
     plugins = {
       treesitter.enable = true;
+      nvim-tree.enable = true;
+      bufferline.enable = true;
+      nvim-colorizer.enable = true;
       presence-nvim.enable = true;
     };
   };
