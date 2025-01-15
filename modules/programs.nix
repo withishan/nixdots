@@ -19,6 +19,8 @@
     slurp
     waybar
     starship
+    jdk
+    nautilus
     swww
     neovim
     vesktop 
