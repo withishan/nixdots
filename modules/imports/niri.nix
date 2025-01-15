@@ -25,7 +25,11 @@
 
      layout = {
        gaps = 16;
-       border.enable = false;
+       border = {
+        enable = true;
+        width = 2;
+        active.color = "rgb(128, 128, 128)";
+       };
        focus-ring.enable = false;
        always-center-single-column = false;
      };
@@ -37,10 +41,10 @@
           ];
           draw-border-with-background = false;
           geometry-corner-radius = {
-              bottom-left = 5.0;
-              bottom-right = 5.0;
-              top-left = 5.0;
-              top-right = 5.0;
+              bottom-left = 8.0;
+              bottom-right = 8.0;
+              top-left = 8.0;
+              top-right = 8.0;
            };
           clip-to-geometry = true;
         }
@@ -51,31 +55,32 @@
             shoot = spawn "sh" "-c";
       in
       {
-	"XF86AudioRaiseVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" ];
+	      "XF86AudioRaiseVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" ];
         "XF86AudioLowerVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-" ];
-	"XF86AudioMute".action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
-	"XF86MonBrightnessUp".action.spawn = [ "brightnessctl" "set" "+5%" ];
+	      "XF86AudioMute".action.spawn = [ "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle" ];
+	      "XF86MonBrightnessUp".action.spawn = [ "brightnessctl" "set" "+5%" ];
         "XF86MonBrightnessDown".action.spawn = [ "brightnessctl" "set" "5%-" ];
 
-	"Super+Q".action = close-window;
-	"Super+F".action = maximize-column;
-	"Super+Equal".action = set-column-width "+5%";
-	"Super+Minus".action = set-column-width "-5%";
+        "Super+F".action = toggle-window-floating;
+	      "Super+Q".action = close-window;
+	      "Super+M".action = maximize-column;
+	      "Super+Equal".action = set-column-width "+5%";
+	      "Super+Minus".action = set-column-width "-5%";
 
-	"Super+1".action = focus-workspace 1;
-	"Super+2".action = focus-workspace 2;
-	"Super+3".action = focus-workspace 3;
-	"Super+4".action = focus-workspace 4;
+	      "Super+1".action = focus-workspace 1;
+	      "Super+2".action = focus-workspace 2;
+	      "Super+3".action = focus-workspace 3;
+	      "Super+4".action = focus-workspace 4;
 
-	"Super+D".action.spawn = "fuzzel";
+	      "Super+D".action.spawn = "fuzzel";
         "Super+T".action.spawn = "ghostty";
 
-	"Super+H".action = focus-column-left;
+	      "Super+H".action = focus-column-left;
         "Super+L".action = focus-column-right;
         "Super+J".action = focus-window-down-or-column-left;
         "Super+K".action = focus-window-up-or-column-right;
 
-	"Print".action = shoot ''grim -g "$(slurp)" - | wl-copy'';
+	      "Print".action = shoot ''grim -g "$(slurp)" - | wl-copy'';
       };
     };
   };
