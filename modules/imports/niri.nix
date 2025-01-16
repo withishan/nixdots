@@ -26,8 +26,8 @@
      layout = {
        gaps = 16;
        border = {
-        enable = false;
-        width = 2;
+        enable = true;
+        width = 1;
         active.color = "rgb(128, 128, 128)";
        };
        focus-ring.enable = false;
@@ -41,10 +41,10 @@
           ];
           draw-border-with-background = false;
           geometry-corner-radius = {
-              bottom-left = 8.0;
-              bottom-right = 8.0;
-              top-left = 8.0;
-              top-right = 8.0;
+              bottom-left = 12.0;
+              bottom-right = 12.0;
+              top-left = 12.0;
+              top-right = 12.0;
            };
           clip-to-geometry = true;
         }
