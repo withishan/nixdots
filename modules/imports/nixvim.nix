@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, pkgs, ... }: {
   programs.nixvim = {
     enable = true;
 
@@ -17,10 +17,9 @@
       softtabstop = 2;
     };
 
-    colorschemes.kanagawa.enable = true;
-    colorschemes.kanagawa.settings = {
-      terminalColors = true;
-      transparent = true;
+    colorschemes.everforest.enable = true;
+    colorschemes.everforest.settings = {
+      transparent_background = 1;
     };
 
     plugins = {

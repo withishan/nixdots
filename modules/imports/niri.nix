@@ -26,7 +26,7 @@
      layout = {
        gaps = 16;
        border = {
-        enable = true;
+        enable = false;
         width = 2;
         active.color = "rgb(128, 128, 128)";
        };
