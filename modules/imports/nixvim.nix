@@ -46,10 +46,10 @@
       lualine.settings = {
         sections = {
           lualine_a = ["mode"];
-          lualine_b = ["filename"];
+          lualine_b = [""];
           lualine_c = [""];
-          lualine_x = ["diff"];
-          lualine_y = ["diagnostics"];
+          lualine_x = ["filename"];
+          lualine_y = ["diff"];
         };
 
         options = {
