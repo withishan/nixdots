@@ -11,6 +11,10 @@
         action = "<cmd>Yazi<cr>";
         key = "<C-y>";
       }
+      {
+        action = "<cmd>LazyGit<cr>";
+        key = "<C-l>";
+      }
     ];
 
     opts = {
@@ -22,9 +26,9 @@
       softtabstop = 2;
     };
 
-    colorschemes.poimandres.enable = true;
-    colorschemes.poimandres.settings = {
-      disable_background = true;
+    colorschemes.tokyonight.enable = true;
+    colorschemes.tokyonight.settings = {
+      transparent = true;
     };
 
     plugins = {
@@ -33,6 +37,7 @@
       };
       treesitter.enable = true;
       yazi.enable = true;
+      lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
       presence-nvim.enable = true;
@@ -41,7 +46,7 @@
       lualine.settings = {
         sections = {
           lualine_a = ["mode"];
-          lualine_b = [""];
+          lualine_b = ["filename"];
           lualine_c = [""];
           lualine_x = [""];
           lualine_y = ["diff"];
