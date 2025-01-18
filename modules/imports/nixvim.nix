@@ -22,11 +22,25 @@
       softtabstop = 2;
     };
 
-    colorschemes.nord.enable = true;
-    colorschemes.nord.settings = {
-      disable_background = true;
-      italic = false;
-    };
+    # colorschemes.nord.enable = true;
+    # colorschemes.nord.settings = {
+    #   disable_background = true;
+    #   italic = false;
+    # };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "pywal16.nvim";
+        src = pkgs.fetchFromGitHub {
+          owner = "uZer";
+          repo = "pywal16.nvim";
+          rev = "446ae689c8e4569b9537cddadb28d6e939658ea5";
+          sha256 = "1y3r04n8ks1qq5rfv2lkxdsd39hajfiqg7z997m5j8xxq7cjzrlh";
+        };
+      })
+    ];
+
+    colorscheme = "pywal16";
 
     plugins = {
       cursorline = {
@@ -44,8 +58,8 @@
         sections = {
           lualine_a = ["mode"];
           lualine_b = [""];
-          lualine_c = [""];
-          lualine_x = ["filename"];
+          lualine_c = ["filename"];
+          lualine_x = [""];
           lualine_y = ["diff"];
         };
 
