@@ -3,7 +3,6 @@
     ./imports/niri.nix
     ./imports/waybar.nix
     ./imports/fuzzel.nix
-    ./imports/btop.nix
     ./imports/bash.nix
     ./imports/nixvim.nix
   ]; 

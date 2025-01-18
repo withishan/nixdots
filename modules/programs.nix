@@ -3,15 +3,14 @@
     libreoffice
     ghostty
     wl-clipboard
+    wf-recorder
     firefox
     gh 
     pywal
     nitch
-    lua
     unzip
     brightnessctl
     font-manager
-    stow
     fzf
     git
     cava
@@ -19,7 +18,6 @@
     slurp
     waybar
     starship
-    jdk
     nautilus
     swww
     neovim
