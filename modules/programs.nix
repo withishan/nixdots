@@ -3,7 +3,6 @@
     libreoffice
     ghostty
     wl-clipboard
-    wf-recorder
     firefox
     gh 
     pywal
