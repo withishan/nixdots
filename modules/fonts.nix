@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   fonts.packages = with pkgs; [
-    # nerdfonts 
+    nerdfonts 
     font-awesome
   ]; 
 }

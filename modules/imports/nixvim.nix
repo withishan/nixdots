@@ -8,10 +8,6 @@
 
     keymaps = [
       {
-        action = "<cmd>Yazi<cr>";
-        key = "<C-y>";
-      }
-      {
         action = "<cmd>LazyGit<cr>";
         key = "<C-l>";
       }
@@ -26,17 +22,18 @@
       softtabstop = 2;
     };
 
-    colorschemes.tokyonight.enable = true;
-    colorschemes.tokyonight.settings = {
-      transparent = true;
+    colorschemes.nord.enable = true;
+    colorschemes.nord.settings = {
+      disable_background = true;
+      italic = false;
     };
 
     plugins = {
       cursorline = {
         enable = true;
+        cursorline.timeout = 600;
       };
       treesitter.enable = true;
-      yazi.enable = true;
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
