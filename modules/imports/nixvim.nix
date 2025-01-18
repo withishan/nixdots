@@ -48,8 +48,8 @@
           lualine_a = ["mode"];
           lualine_b = ["filename"];
           lualine_c = [""];
-          lualine_x = [""];
-          lualine_y = ["diff"];
+          lualine_x = ["diff"];
+          lualine_y = ["diagnostics"];
         };
 
         options = {
