@@ -53,30 +53,30 @@
       nvim-colorizer.enable = true;
       presence-nvim.enable = true;
       web-devicons.enable = true;
-      lualine.enable = true;    
-      lualine.settings = {
-        sections = {
-          lualine_a = ["mode"];
-          lualine_b = [""];
-          lualine_c = ["filename"];
-          lualine_x = [""];
-          lualine_y = ["diff"];
-        };
+      # lualine.enable = true;    
+      # lualine.settings = {
+      #   sections = {
+      #     lualine_a = ["mode"];
+      #     lualine_b = [""];
+      #     lualine_c = ["filename"];
+      #     lualine_x = [""];
+      #     lualine_y = ["diff"];
+      #   };
 
-        options = {
-          globalstatus = true;
+      #   options = {
+      #     globalstatus = true;
 
-          section_separators = {
-            left = "";
-            right = "";
-          };
+      #     section_separators = {
+      #       left = "";
+      #       right = "";
+      #     };
 
-          component_separators = {
-            left = "";
-            right = "";
-          };
-        };
-      };
+      #     component_separators = {
+      #       left = "";
+      #       right = "";
+      #     };
+      #   };
+      # };
     };
   };
 }

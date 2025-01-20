@@ -1,10 +1,10 @@
 { config, lib, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
-    libreoffice
     ghostty
     wl-clipboard
     firefox
     gh 
+    kooha
     pywal
     nitch
     unzip
