@@ -2,9 +2,9 @@
   environment.systemPackages = with pkgs; [
     ghostty
     wl-clipboard
+    wf-recorder
     firefox
     gh 
-    kooha
     pywal
     nitch
     unzip
