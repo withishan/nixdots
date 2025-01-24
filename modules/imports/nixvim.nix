@@ -40,7 +40,7 @@
       })
     ];
 
-    colorscheme = "pywal16";
+    # colorscheme = "pywal16";
 
     plugins = {
       cursorline = {
