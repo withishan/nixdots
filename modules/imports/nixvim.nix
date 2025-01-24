@@ -22,11 +22,11 @@
       softtabstop = 2;
     };
 
-    # colorschemes.nord.enable = true;
-    # colorschemes.nord.settings = {
-    #   disable_background = true;
+    colorschemes.poimandres.enable = true;
+    colorschemes.poimandres.settings = {
+      disable_background = true;
     #   italic = false;
-    # };
+    };
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
