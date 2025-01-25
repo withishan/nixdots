@@ -52,6 +52,9 @@
       bufferline.enable = true;
       nvim-colorizer.enable = true;
       neocord.enable = true;
+      neocord.settings = {
+        global_timer = true;
+      };
       web-devicons.enable = true;
     };
   };
