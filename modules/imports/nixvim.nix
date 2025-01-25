@@ -22,11 +22,11 @@
       softtabstop = 2;
     };
 
-    colorschemes.poimandres.enable = true;
-    colorschemes.poimandres.settings = {
-      disable_background = true;
+    # colorschemes.poimandres.enable = true;
+    # colorschemes.poimandres.settings = {
+    #   disable_background = true;
     #   italic = false;
-    };
+    # };
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
@@ -40,7 +40,7 @@
       })
     ];
 
-    # colorscheme = "pywal16";
+    colorscheme = "pywal16";
 
     plugins = {
       cursorline = {
