@@ -51,7 +51,7 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
-      presence-nvim.enable = true;
+      neocord.enable = true;
       web-devicons.enable = true;
     };
   };
