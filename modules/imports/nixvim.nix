@@ -22,7 +22,10 @@
       softtabstop = 2;
     };
 
-    # colorschemes.poimandres.enable = true;
+    # colorschemes.everforest.enable = true;
+    # colorschemes.everforest.settings = {
+    #   transparent_background = 1;
+    # };
     # colorschemes.poimandres.settings = {
     #   disable_background = true;
     #   italic = false;
@@ -38,9 +41,25 @@
           sha256 = "1y3r04n8ks1qq5rfv2lkxdsd39hajfiqg7z997m5j8xxq7cjzrlh";
         };
       })
+
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "vague.nvim";
+        src = pkgs.fetchFromGitHub {
+          owner = "vague2k";
+          repo = "vague.nvim";
+          rev = "aa744dbf7bfc768da3dd232ccde3b337182903dc";
+          sha256 = "0vpyyak3fn3clnlnbmpj7a2bwdrbd14cz76xicvmrvfz1p1yfh7q";
+        };
+      })
     ];
 
-    colorscheme = "pywal16";
+    # colorscheme = "vague";
+    extraConfigLua = ''
+      require("vague").setup({
+        transparent = true
+      })
+      vim.cmd "colorscheme vague"
+    '';
 
     plugins = {
       cursorline = {

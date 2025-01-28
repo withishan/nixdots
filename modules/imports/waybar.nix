@@ -6,7 +6,7 @@
 
     * {
       font-family: 'Host Grotesk';
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 800;
     }
     
@@ -27,8 +27,8 @@
     #tray,
     #window
     {
-      padding: 6px 26px;
-      border-radius: 20px;
+      padding: 4px 27px;
+      border-radius: 18px;
       transition: none;
       color: @foreground;
       background-color: @background;
@@ -60,7 +60,7 @@
     }
 
     #workspaces button {
-      color: @color10;
+      color: @foreground;
       padding: 4px;
       border: none;
       box-shadow: none;
@@ -69,8 +69,8 @@
     }
     
     #workspaces button.active {
-      padding: 4px 10px;
-      border-radius: 100%;
+      padding: 4px 16px;
+      border-radius: 40px;
       color: @background;
       background-color: @color15;
     }
@@ -111,7 +111,7 @@
 	      };		
 	      
 	      "clock" = {
-          format = "{:%a, %d %b, %I:%M %p}";
+          format = "   {:%a, %d %b, %I:%M %p}";
 	        tooltip = false;
 	      };
 
