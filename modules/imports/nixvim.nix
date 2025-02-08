@@ -53,7 +53,7 @@
       })
     ];
 
-    # colorscheme = "vague";
+    # colorscheme = "pywal16";
     extraConfigLua = ''
       require("vague").setup({
         transparent = true
