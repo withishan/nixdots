@@ -4,7 +4,6 @@
     ./imports/waybar.nix
     ./imports/fuzzel.nix
     ./imports/bash.nix
-    ./imports/nixvim.nix
   ]; 
 
   home = {
