@@ -22,15 +22,6 @@
       softtabstop = 2;
     };
 
-    # colorschemes.everforest.enable = true;
-    # colorschemes.everforest.settings = {
-    #   transparent_background = 1;
-    # };
-    # colorschemes.poimandres.settings = {
-    #   disable_background = true;
-    #   italic = false;
-    # };
-
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
         name = "pywal16.nvim";
@@ -70,6 +61,7 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
+      nvim-tree.enable = true;
       neocord.enable = true;
       neocord.settings = {
         global_timer = true;
