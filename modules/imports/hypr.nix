@@ -55,9 +55,9 @@
           "global, 1, 5, default"
           "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
           "windowsOut, 1, 1.49, easeOutQuint, popin 87%"
-          "workspaces, 1, 3, quick, slide"
-          "workspacesIn, 1, 3, quick, slide"
-          "workspacesOut, 1, 3, quick, slide"
+          "workspaces, 1, 3, easeOutQuint, slide"
+          "workspacesIn, 1, 3, easeOutQuint, slide"
+          "workspacesOut, 1, 3, easeOutQuint, slide"
         ];
 
         bezier = [

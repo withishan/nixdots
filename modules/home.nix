@@ -14,5 +14,12 @@
     stateVersion = "24.11";
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.apple-cursor;
+    name = "apple-cursor";
+    size = 24;
+  };
+
   programs.home-manager.enable = true;
 }
