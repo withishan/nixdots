@@ -34,15 +34,16 @@
 
         shadow = {
           enabled = true;
-          range = 18;
+          range = 19;
+          offset = "0 1";
           render_power = 5;
-          color = "rgba(0, 0, 0, 0.34)";
+          color = "rgba(0, 0, 0, 0.3)";
         };
 
         blur = {
           enabled = true;
-          size = 15;
-          passes = 1;
+          size = 10;
+          passes = 3;
           vibrancy = 0.1696;
         };
       };
@@ -52,8 +53,8 @@
 
         animation = [
           "global, 1, 5, default"
-          "windowsIn, 1, 4.1, easeOutQuint, popin 100%"
-          "windowsOut, 1, 1.49, linear, popin 87%"
+          "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
+          "windowsOut, 1, 1.49, easeOutQuint, popin 87%"
           "workspaces, 1, 3, quick, slide"
           "workspacesIn, 1, 3, quick, slide"
           "workspacesOut, 1, 3, quick, slide"
@@ -122,6 +123,8 @@
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+        ", Print, exec, grim -g '$(slurp -d)' - | wl-copy"
       ];
 
       bindm = [
@@ -142,6 +145,7 @@
       windowrule = [
         "float, ^(org.gnome.Nautilus)$"
         "float, ^(com.mitchellh.ghostty)$"
+        "opacity 0.8 override, ^(com.mitchellh.ghostty)$"
       ];
 
       windowrulev2 = [
