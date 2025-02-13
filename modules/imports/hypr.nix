@@ -11,12 +11,13 @@
       exec-once = [
         "waybar" 
         "swww-daemon" 
-        "hyprctl setcursor Banana 32"
+        "sleep 1 && hyprctl keyword animations:enabled true"
+        "hyprctl setcursor macOS 24"
       ];
 
       env = [
-        "XCURSOR_THEME,Banana" 
-        "XCURSOR_SIZE,32"
+        "XCURSOR_THEME,macOS" 
+        "XCURSOR_SIZE,24"
       ];
 
       general = {
@@ -49,15 +50,15 @@
       };
 
       animations = {
-        enabled = "yes, please :)";
+        enabled = "false";
 
         animation = [
           "global, 1, 5, default"
           "windowsIn, 1, 3, quick, popin 90%"
           "windowsOut, 1, 1.49, quick, popin 87%"
           "workspaces, 1, 3, easeOutQuint, slide"
-          "workspacesIn, 1, 3, easeOutQuint, slide"
-          "workspacesOut, 1, 3, easeOutQuint, slide"
+          "workspacesIn, 1, 5, easeOutQuint, slide"
+          "workspacesOut, 1, 5, easeOutQuint, slide"
         ];
 
         bezier = [

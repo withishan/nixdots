@@ -16,8 +16,8 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.banana-cursor;
-    name = "banana-cursor";
+    package = pkgs.apple-cursor;
+    name = "apple-cursor";
     size = 24;
   };
 
