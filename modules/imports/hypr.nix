@@ -11,12 +11,12 @@
       exec-once = [
         "waybar" 
         "swww-daemon" 
-        "hyprctl setcursor macOS 24"
+        "hyprctl setcursor Banana 32"
       ];
 
       env = [
-        "XCURSOR_THEME,macOS" 
-        "XCURSOR_SIZE,24"
+        "XCURSOR_THEME,Banana" 
+        "XCURSOR_SIZE,32"
       ];
 
       general = {
@@ -53,8 +53,8 @@
 
         animation = [
           "global, 1, 5, default"
-          "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
-          "windowsOut, 1, 1.49, easeOutQuint, popin 87%"
+          "windowsIn, 1, 3, quick, popin 90%"
+          "windowsOut, 1, 1.49, quick, popin 87%"
           "workspaces, 1, 3, easeOutQuint, slide"
           "workspacesIn, 1, 3, easeOutQuint, slide"
           "workspacesOut, 1, 3, easeOutQuint, slide"
