@@ -31,6 +31,7 @@
   }@inputs: 
     let
       system = "86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
     in {
     nixpkgs.overlays = [ niri.overlays.niri ];
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem 
