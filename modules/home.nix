@@ -4,6 +4,8 @@
     ./imports/waybar.nix
     ./imports/fuzzel.nix
     ./imports/bash.nix
+    ./imports/nixvim.nix
+    ./imports/hypr.nix
   ]; 
 
   home = {
@@ -14,4 +16,3 @@
 
   programs.home-manager.enable = true;
 }
-

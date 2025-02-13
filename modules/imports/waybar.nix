@@ -5,9 +5,9 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
-      font-family: 'Host Grotesk';
-      font-size: 19px;
-      font-weight: 800;
+      font-family: 'JetBrainsMono Nerd Font';
+      font-size: 18px;
+      font-weight: 700;
     }
     
     window {
@@ -82,19 +82,19 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["keyboard-state" "niri/window" "clock"];
-	      modules-center = ["niri/workspaces"];
+	      modules-left = ["keyboard-state" "hyprland/window" "clock"];
+	      modules-center = ["hyprland/workspaces"];
 	      modules-right = ["pulseaudio" "network" "battery" "backlight"];
 
-	      "niri/workspaces" = {
+	      "hyprland/workspaces" = {
 	        "disable-scroll" = false;
 	        "format" = "{icon}";
 	      };
 
-        "niri/window" = {
+        "hyprland/window" = {
           format = "{app_id}";
           rewrite = {
-            "com.mitchellh.ghostty" = "󰊠  a ghost";
+            "com.mitchellh.ghostty" = "󰊠 ghost";
           };
         };
 
@@ -102,7 +102,7 @@
 	        numlock = false;
 	        capslock = true;
 	        format = {
-	          capslock = "caps   {icon}";
+	          capslock = "caps {icon}";
 	        };
 	        "format-icons" = {
 	          locked = " ";
@@ -111,12 +111,12 @@
 	      };		
 	      
 	      "clock" = {
-          format = "   {:%a, %d %b, %I:%M %p}";
+          format = "{:%a, %d %b, %I:%M %p}";
 	        tooltip = false;
 	      };
 
 	      backlight = {
-          format = "{icon}  {percent}%";
+          format = "{icon} {percent}%";
 	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
@@ -126,15 +126,15 @@
         };
 
 	      battery = {
-          format = "{icon}  {capacity}%"; 
-	        "format-charging" = "󰂅  {capacity}%";
-          "format-plugged" = "󰂅  {capacity}%";
+          format = "{icon} {capacity}%"; 
+	        "format-charging" = "󰂅 {capacity}%";
+          "format-plugged" = "󰂅 {capacity}%";
 	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰁹" ];
 	        tooltip = false;
 	      };
 
 	      pulseaudio = {
-          format = "{icon}   {volume}%";
+          format = "{icon} {volume}%";
 	        "format-muted" = " ";
 	        "format-icons" = {
 	        default = [ " " ];
