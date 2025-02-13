@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # niri = {
-    #   url = "github:sodiboo/niri-flake";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11";
@@ -24,7 +24,7 @@
   { 
   self,
   nixpkgs, 
-  # niri, 
+  niri, 
   home-manager, 
   nixvim, 
   ... 
@@ -32,7 +32,7 @@
     let
       system = "86_64-linux";
     in {
-    # nixpkgs.overlays = [ niri.overlays.niri ];
+    nixpkgs.overlays = [ niri.overlays.niri ];
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem 
     {
       inherit system; 
@@ -46,7 +46,7 @@
           home-manager.users.ishan = { 
 	          imports = [ 
 	            ./modules/home.nix 
-	            # niri.homeModules.niri
+	            niri.homeModules.niri
 	            nixvim.homeManagerModules.nixvim
 	          ]; 
 	        }; 

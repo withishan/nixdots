@@ -20,9 +20,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # programs.xwayland.enable = true;
-  # programs.niri.enable = true;
-  # programs.niri.package = pkgs.niri;
+  programs.xwayland.enable = true;
+  programs.niri.enable = true;
+  programs.niri.package = pkgs.niri;
 
   programs.hyprland.enable = true;
 
