@@ -124,7 +124,7 @@
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-        ", Print, exec, grim -g '$(slurp -d)' - | wl-copy"
+        '', Print, exec, grim -g "$(slurp -d)" - | wl-copy''
       ];
 
       bindm = [
