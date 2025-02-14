@@ -6,5 +6,6 @@
   programs.bash.shellAliases = {
     rebuild = "sudo nixos-rebuild switch --flake ./";
     vim = "nvim";
+    ls = "lsd";
   };
 }

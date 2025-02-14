@@ -11,7 +11,6 @@
       exec-once = [
         "waybar" 
         "swww-daemon" 
-        "sleep 1 && hyprctl keyword animations:enabled true"
         "hyprctl setcursor macOS 24"
       ];
 
@@ -24,7 +23,7 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgba(C0C0C0ee)";
+        "col.active_border" = "rgba(808080ee)";
         "col.inactive_border" = "rgba(595959aa)";
       };
 
@@ -50,7 +49,7 @@
       };
 
       animations = {
-        enabled = "false";
+        enabled = "true";
 
         animation = [
           "global, 1, 5, default"
