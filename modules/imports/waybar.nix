@@ -21,7 +21,6 @@
     #network, 
     #pulseaudio,
     #backlight,
-    #workspaces,
     #keyboard-state,
     #language,
     #tray,
@@ -30,6 +29,13 @@
       padding: 4px 27px;
       border-radius: 18px;
       transition: none;
+      color: @foreground;
+      background-color: @background;
+    }
+
+    #workspaces {
+      padding: 4px 6px;
+      border-radius: 18px;
       color: @foreground;
       background-color: @background;
     }
@@ -61,7 +67,7 @@
 
     #workspaces button {
       color: @foreground;
-      padding: 4px;
+      padding: 4px 10px;
       border: none;
       box-shadow: none;
       text-shadow: none;
@@ -69,8 +75,8 @@
     }
     
     #workspaces button.active {
-      padding: 4px 16px;
-      border-radius: 40px;
+      padding: 4px 10px;
+      border-radius: 100%;
       color: @background;
       background-color: @color15;
     }
