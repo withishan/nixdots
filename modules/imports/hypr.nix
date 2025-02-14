@@ -52,7 +52,7 @@
         enabled = "true";
 
         animation = [
-          "global, 1, 5, default"
+          "global, 1, 4, default"
           "windowsIn, 1, 3, quick, popin 90%"
           "windowsOut, 1, 1.49, quick, popin 87%"
           "workspaces, 1, 3, easeOutQuint, slide"
