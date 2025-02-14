@@ -5,9 +5,9 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
-      font-family: 'JetBrainsMono Nerd Font';
+      font-family: 'Host Grotesk';
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
     }
     
     window {
@@ -21,21 +21,15 @@
     #network, 
     #pulseaudio,
     #backlight,
+    #workspaces,
     #keyboard-state,
     #language,
     #tray,
     #window
     {
-      padding: 4px 27px;
-      border-radius: 18px;
+      padding: 6px 26px;
+      border-radius: 20px;
       transition: none;
-      color: @foreground;
-      background-color: @background;
-    }
-
-    #workspaces {
-      padding: 4px 6px;
-      border-radius: 18px;
       color: @foreground;
       background-color: @background;
     }
@@ -66,8 +60,7 @@
     }
 
     #workspaces button {
-      color: @foreground;
-      padding: 4px 10px;
+      color: @color10;
       border: none;
       box-shadow: none;
       text-shadow: none;
@@ -75,10 +68,7 @@
     }
     
     #workspaces button.active {
-      padding: 4px 10px;
-      border-radius: 100%;
-      color: @background;
-      background-color: @color15;
+      color: @color15;
     }
     ";
     settings = {
@@ -88,27 +78,30 @@
 	      margin = "10 10 0 10";
 	      spacing = 5;
 
-	      modules-left = ["keyboard-state" "hyprland/window" "clock"];
-	      modules-center = ["hyprland/workspaces"];
+	      modules-left = ["keyboard-state" "hyprland/workspaces" "clock"];
+	      modules-center = ["hyprland/window"];
 	      modules-right = ["pulseaudio" "network" "battery" "backlight"];
 
 	      "hyprland/workspaces" = {
-	        "disable-scroll" = false;
-	        "format" = "{icon}";
+          "format" = "{icon}";
+          "format-icons" = {
+            "active" = "";
+            "default"= "";
+            "empty" = "";
+          };
 	      };
 
         "hyprland/window" = {
-          format = "{app_id}";
-          rewrite = {
-            "com.mitchellh.ghostty" = "󰊠 ghost";
-          };
+          "format" = "{}";
+          "max-length" = 30;
+          "separate-outputs" = true;
         };
 
 	      "keyboard-state" = {
 	        numlock = false;
 	        capslock = true;
 	        format = {
-	          capslock = "caps {icon}";
+	          capslock = "caps   {icon}";
 	        };
 	        "format-icons" = {
 	          locked = " ";
@@ -122,7 +115,7 @@
 	      };
 
 	      backlight = {
-          format = "{icon} {percent}%";
+          format = "{icon}  {percent}%";
 	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
@@ -132,15 +125,15 @@
         };
 
 	      battery = {
-          format = "{icon} {capacity}%"; 
-	        "format-charging" = "󰂅 {capacity}%";
-          "format-plugged" = "󰂅 {capacity}%";
+          format = "{icon}  {capacity}%"; 
+	        "format-charging" = "󰂅  {capacity}%";
+          "format-plugged" = "󰂅  {capacity}%";
 	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰁹" ];
 	        tooltip = false;
 	      };
 
 	      pulseaudio = {
-          format = "{icon} {volume}%";
+          format = "{icon}   {volume}%";
 	        "format-muted" = " ";
 	        "format-icons" = {
 	        default = [ " " ];
