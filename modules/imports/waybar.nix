@@ -21,13 +21,20 @@
     #network, 
     #pulseaudio,
     #backlight,
-    #workspaces,
     #keyboard-state,
     #language,
     #tray,
     #window
     {
       padding: 6px 26px;
+      border-radius: 20px;
+      transition: none;
+      color: @foreground;
+      background-color: @background;
+    }
+
+    #workspaces {
+      padding: 6px 20px 6px 18px;
       border-radius: 20px;
       transition: none;
       color: @foreground;
