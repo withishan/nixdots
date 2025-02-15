@@ -34,7 +34,7 @@
     }
 
     #workspaces {
-      padding: 6px 20px 6px 16px;
+      padding: 6px 20px 6px 14px;
       border-radius: 20px;
       transition: none;
       color: @foreground;
