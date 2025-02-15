@@ -146,7 +146,7 @@
         "float, ^(org.gnome.Nautilus)$"
         "float, ^(com.mitchellh.ghostty)$"
         "opacity 0.7 override, ^(com.mitchellh.ghostty)$"
-        "opacity 0.9 override, ^(vesktop)$"
+        "opacity 0.8 override, ^(vesktop)$"
       ];
 
       windowrulev2 = [
