@@ -9,18 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    spicetify-nix = {
-      url = "github:the-argus/spicetify-nix";
     };
   };
 
@@ -28,17 +19,14 @@
   { 
   self,
   nixpkgs, 
-  niri, 
   home-manager, 
   nixvim, 
-  spicetify-nix,
   ... 
   }@inputs: 
     let
       system = "86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-    nixpkgs.overlays = [ niri.overlays.niri ];
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem 
     {
       inherit system; 
@@ -52,9 +40,7 @@
           home-manager.users.ishan = { 
 	          imports = [ 
 	            ./modules/home.nix 
-	            niri.homeModules.niri
 	            nixvim.homeManagerModules.nixvim
-              spicetify-nix.homeManagerModule
 	          ]; 
 	        }; 
         }
