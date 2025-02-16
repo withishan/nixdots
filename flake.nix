@@ -18,6 +18,10 @@
       url = "github:nix-community/nixvim/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:the-argus/spicetify-nix";
+    };
   };
 
   outputs = 
@@ -27,6 +31,7 @@
   niri, 
   home-manager, 
   nixvim, 
+  spicetify-nix,
   ... 
   }@inputs: 
     let
@@ -49,6 +54,7 @@
 	            ./modules/home.nix 
 	            niri.homeModules.niri
 	            nixvim.homeManagerModules.nixvim
+              spicetify-nix.homeManagerModule
 	          ]; 
 	        }; 
         }

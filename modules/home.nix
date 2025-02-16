@@ -6,6 +6,7 @@
     ./imports/bash.nix
     ./imports/nixvim.nix
     ./imports/hypr.nix
+    ./imports/spicetify.nix
   ]; 
 
   home = {
