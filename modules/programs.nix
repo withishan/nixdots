@@ -7,7 +7,6 @@
     firefox
     lsd
     spotify
-    spicetify-cli
     gh 
     pywal16
     nitch
