@@ -8,6 +8,7 @@
       font-family: 'Host Grotesk';
       font-size: 18px;
       font-weight: 800;
+      border: none;
     }
     
     window {
@@ -30,15 +31,15 @@
       border-radius: 20px;
       transition: none;
       color: @foreground;
-      background-color: @background;
+      background: alpha(@background, 0.8);
     }
 
     #workspaces {
-      padding: 6px 20px 6px 14px;
+      padding: 6px 20px;
       border-radius: 20px;
       transition: none;
       color: @foreground;
-      background-color: @background;
+      background: alpha(@background, 0.8);
     }
 
     window#waybar.empty #window {
@@ -48,7 +49,7 @@
     
     #battery.charging {
       color: @background;
-      background-color: @foreground;
+      background: alpha(@foreground, 0.8);
     }
     
     #battery.warning:not(.charging) {
@@ -67,11 +68,14 @@
     }
 
     #workspaces button {
+      margin-left: 2px; 
+      margin-right: 2px;
+      padding: 4px 6px 4px 2px;
       color: @color10;
       border: none;
       box-shadow: none;
       text-shadow: none;
-      background: @background;
+      background: none;
     }
     
     #workspaces button.active {
