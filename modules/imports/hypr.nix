@@ -53,8 +53,9 @@
 
         animation = [
           "global, 1, 4, default"
-          "windowsIn, 1, 3, quick, popin 90%"
-          "windowsOut, 1, 1.49, quick, popin 87%"
+          "windows, 1, 3.5, overshot, popin 80%"
+          # "windowsIn, 1, 3, quick, popin 90%"
+          # "windowsOut, 1, 1.49, quick, popin 87%"
           "workspaces, 1, 3, easeOutQuint, slide"
           "workspacesIn, 1, 5, easeOutQuint, slide"
           "workspacesOut, 1, 5, easeOutQuint, slide"
@@ -64,6 +65,7 @@
           "easeOutQuint,0.23,1,0.32,1"
           "easeInOutCubic,0.65,0.05,0.36,1"
           "linear,0,0,1,1"
+          "overshot,0.05,0.9,0.1,1.1"
           "almostLinear,0.5,0.5,0.75,1.0"
           "quick,0.15,0,0.1,1"
         ];
