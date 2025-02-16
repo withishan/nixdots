@@ -53,9 +53,9 @@
 
         animation = [
           "global, 1, 4, default"
-          "windows, 1, 3.5, overshot, popin 80%"
-          # "windowsIn, 1, 3, quick, popin 90%"
-          # "windowsOut, 1, 1.49, quick, popin 87%"
+          # "windows, 1, 3.5, overshot, popin 80%"
+          "windowsIn, 1, 3, overshot, popin 90%"
+          "windowsOut, 1, 1.49, overshot, popin 87%"
           "workspaces, 1, 3, easeOutQuint, slide"
           "workspacesIn, 1, 5, easeOutQuint, slide"
           "workspacesOut, 1, 5, easeOutQuint, slide"
