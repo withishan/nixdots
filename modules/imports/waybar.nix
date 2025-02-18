@@ -46,7 +46,7 @@
       margin-left: 2px; 
       margin-right: 2px;
       padding: 4px 6px 4px 2px;
-      color: @color10;
+      color: @color15;
       border: none;
       box-shadow: none;
       text-shadow: none;
@@ -54,7 +54,7 @@
     }
     
     #workspaces button.active {
-      color: @color15;
+      color: @color4;
     }
 
     #workspaces button.persistent {
@@ -100,20 +100,8 @@
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
           "format-icons" = {
-            "active" = "";
-            "default"= "";
-            "empty" = "";
-          };
-          "persistent_workspaces" = {
-            "1" = ["DP-2"];
-            "2" = ["DP-2"];
-            "3" = ["DP-2"];
-            "4" = ["DP-2"];
-            "5" = ["DP-2"];
-            "6" = ["DP-2"];
-            "7" = ["DP-2"];
-            "8" = ["DP-2"];
-            "9" = ["DP-2"];
+            "active" = "";
+            "default"= "";
           };
 	      };
 
