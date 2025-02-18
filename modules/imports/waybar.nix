@@ -42,6 +42,25 @@
       background: alpha(@background, 0.8);
     }
 
+    #workspaces button {
+      margin-left: 2px; 
+      margin-right: 2px;
+      padding: 4px 6px 4px 2px;
+      color: @color10;
+      border: none;
+      box-shadow: none;
+      text-shadow: none;
+      background: none;
+    }
+    
+    #workspaces button.active {
+      color: @color15;
+    }
+
+    #workspaces button.persistent {
+      color: @color4;
+    }
+
     window#waybar.empty #window {
       background-color: transparent;
       padding: 0px;
@@ -66,21 +85,6 @@
       animation-iteration-count: infinite;
       animation-direction: alternate;
     }
-
-    #workspaces button {
-      margin-left: 2px; 
-      margin-right: 2px;
-      padding: 4px 6px 4px 2px;
-      color: @color10;
-      border: none;
-      box-shadow: none;
-      text-shadow: none;
-      background: none;
-    }
-    
-    #workspaces button.active {
-      color: @color15;
-    }
     ";
     settings = {
       mainbar = {
@@ -99,6 +103,17 @@
             "active" = "";
             "default"= "";
             "empty" = "";
+          };
+          "persistent_workspaces" = {
+            "1" = ["DP-2"];
+            "2" = ["DP-2"];
+            "3" = ["DP-2"];
+            "4" = ["DP-2"];
+            "5" = ["DP-2"];
+            "6" = ["DP-2"];
+            "7" = ["DP-2"];
+            "8" = ["DP-2"];
+            "9" = ["DP-2"];
           };
 	      };
 
