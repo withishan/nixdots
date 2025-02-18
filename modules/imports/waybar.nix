@@ -98,7 +98,7 @@
           "format-icons" = {
             "active" = "";
             "default"= "";
-            "empty" = "";
+            "empty" = "";
           };
 	      };
 
