@@ -39,9 +39,9 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        serif = [ "JetBrainsMono Nerd Font" ];
-        sansSerif = [ "JetBrainsMono Nerd Font" ];
-        monospace = [ "JetBrainsMono Nerd Font" ];
+        serif = [ "ZedMono Nerd Font" ];
+        sansSerif = [ "ZedMono Nerd Font" ];
+        monospace = [ "ZedMono Nerd Font" ];
       };
     };
   };
