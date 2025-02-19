@@ -46,7 +46,7 @@
       margin-left: 2px; 
       margin-right: 2px;
       padding: 4px 6px 4px 2px;
-      color: @color15;
+      color: @color12;
       border: none;
       box-shadow: none;
       text-shadow: none;
@@ -58,7 +58,7 @@
     }
 
     #workspaces button.persistent {
-      color: @color4;
+      color: @color15;
     }
 
     window#waybar.empty #window {
@@ -100,8 +100,11 @@
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
           "format-icons" = {
-            "active" = "";
-            "default"= "";
+            "active" = "";
+            "default"= "";
+          };
+          "persistent-workspaces" = {
+            "*" = 2;
           };
 	      };
 
