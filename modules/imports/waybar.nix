@@ -104,7 +104,7 @@
             "default"= "";
           };
           "persistent-workspaces" = {
-            "*" = 2;
+            "*" = 3;
           };
 	      };
 
