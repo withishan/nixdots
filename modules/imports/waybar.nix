@@ -147,6 +147,7 @@
           "format-plugged" = "󰂅  {capacity}%";
 	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰂀" "󰂂" "󰁹" ];
 	        tooltip = false;
+          interval = 2;
 	      };
 
 	      pulseaudio = {
