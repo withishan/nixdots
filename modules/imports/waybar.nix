@@ -70,7 +70,7 @@
 
     #battery {
       margin: 0px 8px 8px 8px;
-      padding: 10px 8px;
+      padding: 10px 4px;
       border-radius: 8px;
       transition: none;
       background: alpha(darker(@color5), 0.4);
@@ -85,7 +85,7 @@
     }
 
     #backlight {
-      font-size: 17px;
+      font-size: 16px;
     }
 
     #workspaces button {
