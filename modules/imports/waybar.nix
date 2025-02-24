@@ -5,56 +5,100 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
+      color: @color4;
       font-family: 'Host Grotesk';
-      font-size: 18px;
-      font-weight: 800;
+      font-weight: 700;
+      font-size: 20px;
+      min-width: 18px;
       border: none;
+      border-radius: 0;
+      box-shadow: none;
+      text-shadow: none;
+      padding: 0px;
     }
     
     window {
       background: none;
       border-bottom: none;
+      border: 2px solid @color4;
+      border-radius: 10px;
+      background: alpha(@background, 0.7);
     }
 
-    #clock, 
-    #audiolight, 
-    #battery, 
-    #network, 
-    #pulseaudio,
-    #backlight,
-    #keyboard-state,
-    #language,
-    #tray,
-    #window
-    {
-      padding: 6px 26px;
-      border-radius: 20px;
-      transition: none;
-      color: @foreground;
-      background: alpha(@background, 0.8);
+    #ws {
+      margin: 0px 8px;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 8px;
+      background: alpha(darker(@color1), 0.4);
+    }
+
+    #backlight {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    #battery {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    #pulseaudio {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    #network {
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding: 2px 0px;
+      border-radius: 8px;
+      background-color: alpha(darker(@foreground), 0.4);
     }
 
     #workspaces {
-      padding: 6px 20px;
-      border-radius: 20px;
+      margin: 8px 8px 0px 8px;
+      padding: 5px 0px;
+      border-radius: 8px;
       transition: none;
-      color: @foreground;
-      background: alpha(@background, 0.8);
+      background: alpha(darker(@color1), 0.4);
+    }
+
+    #clock {
+      margin: 0px 8px;
+      padding: 5px 8px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color1), 0.4);
+    }
+
+    #battery {
+      margin: 0px 8px 8px 8px;
+      padding: 10px 8px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color1), 0.4);
+    }
+
+    #backlight {
+      margin: 0px 6px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color1), 0.4);
     }
 
     #workspaces button {
-      margin-left: 2px; 
-      margin-right: 2px;
-      padding: 4px 6px 4px 2px;
+      margin-left: 4px; 
+      margin-right: 4px;
       color: @color12;
-      border: none;
-      box-shadow: none;
-      text-shadow: none;
+      border-radius: 8px;
       background: none;
     }
     
     #workspaces button.active {
-      color: @color4;
+      color: @color12;
+      background-color: alpha(darker(@foreground), 0.4);
     }
 
     #workspaces button.persistent {
@@ -65,44 +109,24 @@
       background-color: transparent;
       padding: 0px;
     }
-    
-    #battery.charging {
-      color: @background;
-      background: alpha(@foreground, 0.8);
-    }
-    
-    #battery.warning:not(.charging) {
-      background-color: #ffbe61;
-      color: black;
-    }
-    
-    #battery.critical:not(.charging) {
-      background-color: #f53c3c;
-      color: #f7f7f7;
-      animation-name: blink;
-      animation-duration: 0.5s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
     ";
     settings = {
       mainbar = {
         layer = "top";
-	      position = "top";
-	      margin = "10 10 0 10";
-	      spacing = 5;
+	      position = "left";
+	      margin = "20 0 20 5";
+        spacing = 5;
 
-	      modules-left = ["keyboard-state" "hyprland/workspaces" "clock"];
-	      modules-center = ["hyprland/window"];
-	      modules-right = ["pulseaudio" "network" "battery" "backlight"];
+	      modules-left = ["hyprland/workspaces"];
+	      modules-center = [""];
+	      modules-right = ["clock" "group/ws" "backlight" "battery"];
+
+        "custom/smallspacer" = {
+          "format" = " ";
+        };
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
-          "format-icons" = {
-            "active" = "";
-            "default"= "";
-          };
           "persistent-workspaces" = {
             "*" = 3;
           };
@@ -114,25 +138,13 @@
           "separate-outputs" = true;
         };
 
-	      "keyboard-state" = {
-	        numlock = false;
-	        capslock = true;
-	        format = {
-	          capslock = "caps   {icon}";
-	        };
-	        "format-icons" = {
-	          locked = " ";
-	          unlocked = " ";
-	        };
-	      };		
-	      
 	      "clock" = {
-          format = "{:%a, %d %b, %I:%M %p}";
+          format = "{:%H\n%M}";
 	        tooltip = false;
 	      };
 
 	      backlight = {
-          format = "{icon}  {percent}%";
+          format = "{icon}";
 	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
@@ -141,17 +153,23 @@
           "icon-size" = 20;
         };
 
+        "group/ws" = {
+          "orientation" = "inherit";
+          "modules" = ["network" "pulseaudio"];
+        };
+
 	      battery = {
-          format = "{icon}  {capacity}%"; 
-	        "format-charging" = "󰂅  {capacity}%";
-          "format-plugged" = "󰂅  {capacity}%";
+          format = "{icon}"; 
+          "rotate" = 270;
+          "format-charging" = "<b>{icon} </b>";
 	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰂀" "󰂂" "󰁹" ];
+          "format-full" = "<span color='#82A55F'><b>{icon}</b></span>";
 	        tooltip = false;
           interval = 2;
 	      };
 
 	      pulseaudio = {
-          format = "{icon}   {volume}%";
+          format = "{icon}";
 	        "format-muted" = " ";
 	        "format-icons" = {
 	        default = [ " " ];
