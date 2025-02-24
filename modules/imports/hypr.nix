@@ -53,9 +53,10 @@
 
         animation = [
           "global, 1, 4, default"
-          # "windows, 1, 3.5, overshot, popin 80%"
-          "windowsIn, 1, 3, overshot, popin 90%"
-          "windowsOut, 1, 1.49, overshot, popin 87%"
+          "windows, 1, 4, overshot, popin 80%"
+          "windowsIn, 1, 4, overshot, popin 90%"
+          "windowsOut, 1, 2, overshot, popin 87%"
+          "windowsMove, 1, 3, overshot, slide"
           "workspaces, 1, 3, easeOutQuint, slidevert"
           "workspacesIn, 1, 5, easeOutQuint, slidevert"
           "workspacesOut, 1, 5, easeOutQuint, slidevert"
@@ -64,6 +65,7 @@
         bezier = [
           "easeOutQuint,0.23,1,0.32,1"
           "easeInOutCubic,0.65,0.05,0.36,1"
+          "circ, 0.85, 0, 0.15, 1"
           "linear,0,0,1,1"
           "overshot,0.05,0.9,0.1,1.1"
           "almostLinear,0.5,0.5,0.75,1.0"
