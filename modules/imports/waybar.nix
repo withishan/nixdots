@@ -139,7 +139,7 @@
 	      };
 
 	      backlight = {
-          format = "{icon}";
+          format = "{percent}";
 	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
@@ -164,7 +164,7 @@
 	      };
 
 	      pulseaudio = {
-          format = "{icon}";
+          format = "{volume}";
 	        "format-muted" = " ";
 	        "format-icons" = {
 	        default = [ " " ];
