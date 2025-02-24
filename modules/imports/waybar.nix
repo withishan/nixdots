@@ -53,7 +53,24 @@
     }
 
     #workspaces {
+      font-size: 16px;
+      margin: 0px 8px 0px 8px;
+      padding: 2px 0px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color5), 0.4);
+    }
+
+    #keyboard-state {
       margin: 8px 8px 0px 8px;
+      padding: 2px 0px 2px 4px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color5), 0.4);
+    }
+
+    #language {
+      margin: 0px 8px 0px 8px;
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
@@ -79,6 +96,14 @@
     #brightness {
       margin: 0px 8px;
       padding: 6px 5px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color5), 0.4);
+    }
+
+    #memory {
+      margin: 0px 8px;
+      padding: 6px 0px 6px 4px;
       border-radius: 8px;
       transition: none;
       background: alpha(darker(@color5), 0.4);
@@ -112,9 +137,9 @@
 	      margin = "20 0 20 5";
         spacing = 5;
 
-	      modules-left = ["hyprland/workspaces"];
+	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
 	      modules-center = [""];
-	      modules-right = ["clock" "group/ws" "group/brightness" "battery"];
+	      modules-right = ["clock" "group/ws" "memory" "group/brightness" "battery"];
 
         "custom/smallspacer" = {
           "format" = " ";
@@ -127,10 +152,19 @@
           };
 	      };
 
-        "hyprland/window" = {
+        "hyprland/language" = {
           "format" = "{}";
-          "max-length" = 30;
-          "separate-outputs" = true;
+          "format-en" = "en";
+        };
+
+        "keyboard-state" = {
+          "numlock" = false;
+          "capslock" = true;
+          "format" = "{icon}";
+          "format-icons" = {
+            "locked" = " ";
+            "unlocked" = " ";
+          };
         };
 
 	      "clock" = {
@@ -140,11 +174,17 @@
 
         "group/brightness" = {
           orientation = "inherit";
-          modules = ["custom/icon" "backlight"];
+          modules = ["custom/rtns" "backlight"];
         };
 
-        "custom/icon" = {
+        "custom/rtns" = {
           "format" = "󰃞 ";
+        };
+
+        "memory" = {
+          "interval" = 30;
+          "format" = "{icon}";
+          "format-icons" = ["󰝦 " "󰪞 " "󰪟 " "󰪠 " "󰪡 " "󰪢 " "󰪣 " "󰪤 " "󰪥 "];
         };
 
 	      backlight = {
