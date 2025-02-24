@@ -33,11 +33,6 @@
       background: alpha(darker(@color5), 0.4);
     }
 
-    #backlight {
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
     #battery {
       margin-top: 5px;
       margin-bottom: 10px;
@@ -80,9 +75,9 @@
       background: alpha(darker(@color5), 0.4);
     }
 
-    #backlight {
+    #brightness {
       margin: 0px 8px;
-      padding: 6px 8px;
+      padding: 6px 6px;
       border-radius: 8px;
       transition: none;
       background: alpha(darker(@color5), 0.4);
@@ -114,7 +109,7 @@
 
 	      modules-left = ["hyprland/workspaces"];
 	      modules-center = [""];
-	      modules-right = ["clock" "group/ws" "backlight" "battery"];
+	      modules-right = ["clock" "group/ws" "group/brightness" "battery"];
 
         "custom/smallspacer" = {
           "format" = " ";
@@ -138,9 +133,17 @@
 	        tooltip = false;
 	      };
 
+        "group/brightness" = {
+          orientation = "inherit";
+          modules = ["custom/icon" "backlight"];
+        };
+
+        "custom/icon" = {
+          "format" = "󰃞 ";
+        };
+
 	      backlight = {
           format = "{percent}";
-	        "format-icons" = [ "󰃞 " ];
 	        tooltip = false;
 	      };
 
