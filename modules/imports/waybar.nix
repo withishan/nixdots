@@ -39,6 +39,7 @@
     }
 
     #pulseaudio {
+      font-size: 17px;
       margin-top: 5px;
       margin-bottom: 5px;
     }
@@ -77,10 +78,14 @@
 
     #brightness {
       margin: 0px 8px;
-      padding: 6px 6px;
+      padding: 6px 5px;
       border-radius: 8px;
       transition: none;
       background: alpha(darker(@color5), 0.4);
+    }
+
+    #backlight {
+      font-size: 17px;
     }
 
     #workspaces button {
