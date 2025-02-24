@@ -5,6 +5,7 @@
     wl-clipboard
     gnome-tweaks
     firefox
+    pywalfox-native
     lsd
     spotify
     gh 
