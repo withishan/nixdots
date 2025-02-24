@@ -5,7 +5,7 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
-      color: @color4;
+      color: @color5;
       font-family: 'Host Grotesk';
       font-weight: 700;
       font-size: 20px;
@@ -20,7 +20,7 @@
     window {
       background: none;
       border-bottom: none;
-      border: 2px solid @color4;
+      border: 2px solid darker(@color5);
       border-radius: 10px;
       background: alpha(@background, 0.7);
     }
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(darker(@color1), 0.4);
+      background: alpha(darker(@color5), 0.4);
     }
 
     #backlight {
@@ -53,15 +53,15 @@
       margin-bottom: 2px;
       padding: 2px 0px;
       border-radius: 8px;
-      background-color: alpha(darker(@foreground), 0.4);
+      background-color: alpha(lighter(@color5), 0.2);
     }
 
     #workspaces {
       margin: 8px 8px 0px 8px;
-      padding: 5px 0px;
+      padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color1), 0.4);
+      background: alpha(darker(@color5), 0.4);
     }
 
     #clock {
@@ -69,7 +69,7 @@
       padding: 5px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color1), 0.4);
+      background: alpha(darker(@color5), 0.4);
     }
 
     #battery {
@@ -77,32 +77,27 @@
       padding: 10px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color1), 0.4);
+      background: alpha(darker(@color5), 0.4);
     }
 
     #backlight {
-      margin: 0px 6px;
+      margin: 0px 8px;
       padding: 6px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color1), 0.4);
+      background: alpha(darker(@color5), 0.4);
     }
 
     #workspaces button {
-      margin-left: 4px; 
-      margin-right: 4px;
-      color: @color12;
+      margin-left: 2px; 
+      margin-right: 2px;
       border-radius: 8px;
       background: none;
     }
     
     #workspaces button.active {
-      color: @color12;
-      background-color: alpha(darker(@foreground), 0.4);
-    }
-
-    #workspaces button.persistent {
-      color: @color11;
+      color: lighter(@color5);
+      background-color: alpha(lighter(@color5), 0.2);
     }
 
     window#waybar.empty #window {
