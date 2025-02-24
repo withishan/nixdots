@@ -13,6 +13,8 @@
       url = "github:nix-community/nixvim/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    textfox.url = "github:adriankarlen/textfox";
   };
 
   outputs = 
@@ -35,6 +37,9 @@
         ./configuration.nix 
         home-manager.nixosModules.home-manager 
 	      {
+          home-manager.extraSpecialArgs = {
+            inherit inputs;
+          };
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.ishan = { 

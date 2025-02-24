@@ -1,5 +1,6 @@
 { config, pkgs, inputs, ... }: {
   imports = [
+    inputs.textfox.homeManagerModules.default
     ./imports/waybar.nix
     ./imports/fuzzel.nix
     ./imports/bash.nix
@@ -18,6 +19,13 @@
     package = pkgs.apple-cursor;
     name = "apple-cursor";
     size = 24;
+  };
+
+  textfox = {
+    enable = true;
+    profile = "default";
+    config = {
+    };
   };
 
   programs.home-manager.enable = true;
