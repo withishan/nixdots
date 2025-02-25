@@ -44,7 +44,9 @@
       margin-bottom: 5px;
     }
 
-    #network {
+    #network,
+    #custom-rtns
+    {
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 2px 0px;
@@ -95,7 +97,8 @@
 
     #brightness {
       margin: 0px 8px;
-      padding: 6px 5px;
+      padding-left: 2px;
+      padding-right: 2px;
       border-radius: 8px;
       transition: none;
       background: alpha(darker(@color5), 0.4);
@@ -111,6 +114,8 @@
 
     #backlight {
       font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
 
     #workspaces button {
