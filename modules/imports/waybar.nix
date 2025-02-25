@@ -25,7 +25,7 @@
       background: alpha(@background, 0.7);
     }
 
-    #ws {
+    #audio {
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
@@ -44,7 +44,7 @@
       margin-bottom: 5px;
     }
 
-    #network,
+    #custom-sdio,
     #custom-rtns
     {
       margin-top: 2px;
@@ -112,6 +112,14 @@
       background: alpha(darker(@color5), 0.4);
     }
 
+    #network {
+      margin: 0px 8px;
+      padding: 6px 4px 6px 4px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color5), 0.4);
+    }
+
     #backlight {
       font-size: 16px;
       margin-top: 5px;
@@ -144,7 +152,7 @@
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
 	      modules-center = [""];
-	      modules-right = ["clock" "group/ws" "memory" "group/brightness" "battery"];
+	      modules-right = ["clock" "network" "group/audio" "memory" "group/brightness" "battery"];
 
         "custom/smallspacer" = {
           "format" = " ";
@@ -186,6 +194,10 @@
           "format" = "󰃞 ";
         };
 
+        "custom/sdio" = {
+          "format" = " ";
+        };
+
         "memory" = {
           "interval" = 30;
           "format" = "{icon}";
@@ -201,9 +213,9 @@
           "icon-size" = 20;
         };
 
-        "group/ws" = {
+        "group/audio" = {
           "orientation" = "inherit";
-          "modules" = ["network" "pulseaudio"];
+          "modules" = ["custom/sdio" "pulseaudio"];
         };
 
 	      battery = {
@@ -218,10 +230,7 @@
 
 	      pulseaudio = {
           format = "{volume}";
-	        "format-muted" = " ";
-	        "format-icons" = {
-	        default = [ " " ];
-	        }; 
+	        "format-muted" = "⨯";
 	        tooltip = false;
 	      };
 
