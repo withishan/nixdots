@@ -151,12 +151,7 @@
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
-	      modules-center = [""];
 	      modules-right = ["clock" "network" "group/audio" "memory" "group/brightness" "battery"];
-
-        "custom/smallspacer" = {
-          "format" = " ";
-        };
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
@@ -181,7 +176,7 @@
         };
 
 	      "clock" = {
-          format = "{:%H\n%M}";
+          format = "{:%I\n%M}";
 	        tooltip = false;
 	      };
 
