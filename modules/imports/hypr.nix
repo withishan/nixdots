@@ -2,6 +2,8 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland = {
     settings = {
+      source = "~/.cache/wal/colors-hyprland.conf";
+
       monitor = ",preferred,auto,1.0";
 
       "$terminal" = "ghostty";
@@ -23,8 +25,8 @@
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
-        "col.active_border" = "rgba(808080ee)";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "$color1";
+        "col.inactive_border" = "$background";
       };
 
       decoration = {
