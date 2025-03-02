@@ -44,13 +44,11 @@
       })
     ];
 
-    # colorscheme = "pywal16";
-    extraConfigLua = ''
-      require("vague").setup({
-        transparent = true
-      })
-      vim.cmd "colorscheme vague"
-    '';
+    colorscheme = "pywal16";
+    # extraConfigLua = ''
+    #   require("e-ink").setup()
+    #   vim.cmd "colorscheme e-ink"
+    # '';
 
     plugins = {
       cursorline = {
