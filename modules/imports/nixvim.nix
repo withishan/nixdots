@@ -42,13 +42,26 @@
           sha256 = "0vpyyak3fn3clnlnbmpj7a2bwdrbd14cz76xicvmrvfz1p1yfh7q";
         };
       })
+
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "evergarden";
+        src = pkgs.fetchFromGitHub {
+          owner = "comfysage";
+          repo = "evergarden";
+          rev = "1f491009c634277a971d1c682a24cb7ceaef7eb0";
+          sha256 = "1z24qxgfn5xysr29qhy9cqm28jc1hx8w7815anc15b2z06374m7d";
+        };
+      })
     ];
 
     colorscheme = "pywal16";
-    # extraConfigLua = ''
-    #   require("e-ink").setup()
-    #   vim.cmd "colorscheme e-ink"
-    # '';
+    extraConfigLua = ''
+      require("evergarden").setup({
+          transparent_background = true,
+          variant = "soft",
+      })
+      vim.cmd "colorscheme evergarden"
+    '';
 
     plugins = {
       cursorline = {
