@@ -146,7 +146,7 @@
     settings = {
       mainbar = {
         layer = "top";
-	      position = "left";
+	      position = "right";
 	      margin = "20 0 20 5";
         spacing = 5;
 
