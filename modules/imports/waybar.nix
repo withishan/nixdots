@@ -20,7 +20,7 @@
     window {
       background: none;
       border-bottom: none;
-      border: 2px solid darker(@color5);
+      border: 2px solid alpha(darker(@color5), 0.8);
       border-radius: 10px;
       background: alpha(@background, 0.7);
     }
