@@ -36,10 +36,10 @@
 
         shadow = {
           enabled = true;
-          range = 60;
+          range = 52;
           offset = "3 3";
           render_power = 5;
-          color = "rgba(0, 0, 0, 0.5)";
+          color = "rgba(0, 0, 0, 0.3)";
         };
 
         blur = {
