@@ -135,6 +135,7 @@
 
       bindm = [
         "$mainMod, mouse:272, movewindow"
+        "SUPER_CTRL, mouse:272, resizewindow"
       ];
 
       bindel = [
