@@ -54,14 +54,22 @@
       })
     ];
 
-    colorscheme = "pywal16";
-    extraConfigLua = ''
-      require("evergarden").setup({
-          transparent_background = true,
-          variant = "soft",
-      })
-      vim.cmd "colorscheme evergarden"
-    '';
+    # colorscheme = "rose-pine";
+    # extraConfigLua = ''
+    #   require("evergarden").setup({
+    #       transparent_background = true,
+    #       variant = "soft",
+    #   })
+    #   vim.cmd "colorscheme evergarden"
+    # '';
+
+    colorschemes.rose-pine.enable = true;
+      colorschemes.rose-pine.settings = {
+        styles = {
+          italic = false;
+          transparency = true;
+        };
+      };
 
     plugins = {
       cursorline = {
