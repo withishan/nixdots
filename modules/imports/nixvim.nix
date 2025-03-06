@@ -63,12 +63,18 @@
     #   vim.cmd "colorscheme evergarden"
     # '';
 
-    colorschemes.rose-pine.enable = true;
-      colorschemes.rose-pine.settings = {
+    colorschemes.tokyonight.enable = true;
+      colorschemes.tokyonight.settings = {
         styles = {
-          italic = false;
-          transparency = true;
+          comments = {
+            italic = false;
+          };
+          keywords = {
+            italic = false;
+          };
+          sidebars = "dark";
         };
+        transparent = true;
       };
 
     plugins = {
