@@ -57,8 +57,8 @@
     # colorscheme = "rose-pine";
     # extraConfigLua = ''
     #   require("evergarden").setup({
-    #       transparent_background = true,
-    #       variant = "soft",
+    #     transparent_background = true,
+    #     variant = "soft",
     #   })
     #   vim.cmd "colorscheme evergarden"
     # '';
