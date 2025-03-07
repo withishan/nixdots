@@ -5,7 +5,7 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
-      color: @color5;
+      color: @color4;
       font-family: 'Host Grotesk';
       font-weight: 700;
       font-size: 20px;
@@ -20,7 +20,7 @@
     window {
       background: none;
       border-bottom: none;
-      border: 2px solid alpha(darker(@color5), 0.8);
+      border: 2px solid alpha(darker(@color4), 0.8);
       border-radius: 10px;
       background: alpha(@background, 0.7);
     }
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #battery {
@@ -51,7 +51,7 @@
       margin-bottom: 2px;
       padding: 2px 0px;
       border-radius: 8px;
-      background-color: alpha(lighter(@color5), 0.2);
+      background-color: alpha(lighter(@color4), 0.2);
     }
 
     #workspaces {
@@ -60,7 +60,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #keyboard-state {
@@ -68,7 +68,7 @@
       padding: 2px 0px 2px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #language {
@@ -76,7 +76,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #clock {
@@ -84,7 +84,7 @@
       padding: 5px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #battery {
@@ -92,7 +92,7 @@
       padding: 10px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #brightness {
@@ -101,7 +101,7 @@
       padding-right: 2px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #memory {
@@ -109,7 +109,7 @@
       padding: 6px 0px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #network {
@@ -117,7 +117,7 @@
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color5), 0.4);
+      background: alpha(darker(@color4), 0.4);
     }
 
     #backlight {
@@ -134,8 +134,8 @@
     }
     
     #workspaces button.active {
-      color: lighter(@color5);
-      background-color: alpha(lighter(@color5), 0.2);
+      color: lighter(@color4);
+      background-color: alpha(lighter(@color4), 0.2);
     }
 
     window#waybar.empty #window {
