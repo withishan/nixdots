@@ -95,7 +95,7 @@
         keywords = {
           italic = false;
         };
-        sidebars = "dark";
+        # sidebars = "dark";
       };
       transparent = true;
     };
