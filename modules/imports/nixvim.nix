@@ -54,8 +54,8 @@
       })
     ];
 
-    colorscheme = "rosebones";
     extraConfigLua = ''
+      vim.cmd.colorscheme("zenbones")
     '';
 
     # colorschemes.poimandres.enable = true;
