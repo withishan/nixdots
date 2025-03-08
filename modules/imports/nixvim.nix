@@ -55,50 +55,42 @@
     ];
 
     # colorscheme = "pywal16";
-    # extraConfigLua = ''
-    # require("vague").setup({
-    #   transparent = true,
-    #   style = {
-    #     boolean = "bold",
-    #     number = "none",
-    #     float = "none",
-    #     error = "bold",
-    #     comments = "none",
-    #     conditionals = "none",
-    #     functions = "none",
-    #     headings = "bold",
-    #     operators = "none",
-    #     strings = "none",
-    #     variables = "none",
+    extraConfigLua = ''
+     require("vague").setup({
+       transparent = true,
+       style = {
+         boolean = "bold",
+         number = "none",
+         float = "none",
+         error = "bold",
+         comments = "none",
+         conditionals = "none",
+         functions = "none",
+         headings = "bold",
+         operators = "none",
+         strings = "none",
+         variables = "none",
+         },
+       })
+      vim.cmd "colorscheme vague"
+    '';
 
-    #     keywords = "none",
-    #     keyword_return = "none",
-    #     keywords_loop = "none",
-    #     keywords_label = "none",
-    #     keywords_exception = "none",
-
-    #     builtin_constants = "bold",
-    #     builtin_functions = "none",
-    #     builtin_types = "bold",
-    #     builtin_variables = "none",
-    #     },
-    #   })
-    #    vim.cmd "colorscheme vague"
-    # '';
-
-    colorschemes.tokyonight.enable = true;
-    colorschemes.tokyonight.settings = {
-      styles = {
-        comments = {
-          italic = false;
-        };
-        keywords = {
-          italic = false;
-        };
-        # sidebars = "dark";
-      };
-      transparent = true;
-    };
+    # colorschemes.poimandres.enable = true;
+    # colorschemes.poimandres.settings = {
+    #   disable_background = true;
+    # };
+    # colorschemes.tokyonight.settings = {
+    #   styles = {
+    #     comments = {
+    #       italic = false;
+    #     };
+    #     keywords = {
+    #       italic = false;
+    #     };
+    #     # sidebars = "dark";
+    #   };
+    #   transparent = true;
+    # };
 
     plugins = {
       cursorline = {
@@ -109,7 +101,6 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
-      nvim-tree.enable = true;
       neocord.enable = true;
       neocord.settings = {
         global_timer = true;
