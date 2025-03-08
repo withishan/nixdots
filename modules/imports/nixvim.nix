@@ -44,35 +44,18 @@
       })
 
       (pkgs.vimUtils.buildVimPlugin {
-        name = "evergarden";
+        name = "zenbones.nvim";
         src = pkgs.fetchFromGitHub {
-          owner = "comfysage";
-          repo = "evergarden";
-          rev = "1f491009c634277a971d1c682a24cb7ceaef7eb0";
-          sha256 = "1z24qxgfn5xysr29qhy9cqm28jc1hx8w7815anc15b2z06374m7d";
+          owner = "zenbones-theme";
+          repo = "zenbones.nvim";
+          rev = "dbd485fa5d5230d175e024374d41dab5ad71b119";
+          sha256 = "102375anp0b4iygnxcrx173r5cll3x1gwhfm4qnl3xq26691xy9p";
         };
       })
     ];
 
-    # colorscheme = "pywal16";
+    colorscheme = "rosebones";
     extraConfigLua = ''
-     require("vague").setup({
-       transparent = true,
-       style = {
-         boolean = "bold",
-         number = "none",
-         float = "none",
-         error = "bold",
-         comments = "none",
-         conditionals = "none",
-         functions = "none",
-         headings = "bold",
-         operators = "none",
-         strings = "none",
-         variables = "none",
-         },
-       })
-      vim.cmd "colorscheme vague"
     '';
 
     # colorschemes.poimandres.enable = true;
