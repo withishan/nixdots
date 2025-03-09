@@ -42,38 +42,47 @@
           sha256 = "0vpyyak3fn3clnlnbmpj7a2bwdrbd14cz76xicvmrvfz1p1yfh7q";
         };
       })
-
-      (pkgs.vimUtils.buildVimPlugin {
-        name = "zenbones.nvim";
-        src = pkgs.fetchFromGitHub {
-          owner = "zenbones-theme";
-          repo = "zenbones.nvim";
-          rev = "dbd485fa5d5230d175e024374d41dab5ad71b119";
-          sha256 = "102375anp0b4iygnxcrx173r5cll3x1gwhfm4qnl3xq26691xy9p";
-        };
-      })
     ];
 
-    extraConfigLua = ''
-      vim.cmd.colorscheme("zenbones")
-    '';
+    # colorscheme = "pywal16";
+    # extraConfigLua = ''
+    # require("vague").setup({
+    #   transparent = true,
+    #   style = {
+    #     boolean = "bold",
+    #     number = "none",
+    #     float = "none",
+    #     error = "bold",
+    #     comments = "none",
+    #     conditionals = "none",
+    #     functions = "none",
+    #     headings = "bold",
+    #     operators = "none",
+    #     strings = "none",
+    #     variables = "none",
 
-    # colorschemes.poimandres.enable = true;
-    # colorschemes.poimandres.settings = {
-    #   disable_background = true;
-    # };
-    # colorschemes.tokyonight.settings = {
-    #   styles = {
-    #     comments = {
-    #       italic = false;
-    #     };
-    #     keywords = {
-    #       italic = false;
-    #     };
-    #     # sidebars = "dark";
-    #   };
-    #   transparent = true;
-    # };
+    #     keywords = "none",
+    #     keyword_return = "none",
+    #     keywords_loop = "none",
+    #     keywords_label = "none",
+    #     keywords_exception = "none",
+
+    #     builtin_constants = "bold",
+    #     builtin_functions = "none",
+    #     builtin_types = "bold",
+    #     builtin_variables = "none",
+    #     },
+    #   })
+    #    vim.cmd "colorscheme vague"
+    # '';
+
+    colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings = {
+      styles = {
+        italic = false;
+        transparency = true;
+      };
+    };
 
     plugins = {
       cursorline = {
@@ -84,6 +93,7 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
+      nvim-tree.enable = true;
       neocord.enable = true;
       neocord.settings = {
         global_timer = true;

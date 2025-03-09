@@ -24,9 +24,9 @@
       general = {
         gaps_in = 5;
         gaps_out = 20;
-        border_size = 2;
-        "col.active_border" = "$color1";
-        "col.inactive_border" = "$background";
+        border_size = 0;
+        # "col.active_border" = "$color1";
+        # "col.inactive_border" = "$background";
       };
 
       decoration = {
@@ -39,7 +39,7 @@
           range = 52;
           offset = "3 3";
           render_power = 5;
-          color = "rgba(0, 0, 0, 0.3)";
+          color = "rgba(0, 0, 0, 0.6)";
         };
 
         blur = {
