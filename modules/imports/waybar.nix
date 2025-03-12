@@ -7,7 +7,7 @@
     * {
       color: @color5;
       font-family: 'Host Grotesk';
-      font-weight: 500;
+      font-weight: 600;
       font-size: 20px;
       min-width: 18px;
       border: none;
@@ -135,7 +135,7 @@
     }
 
     #workspaces button {
-      padding: 2px 12px 2px 2px;
+      padding: 2px 4px 2px 4px;
       margin-left: 2px; 
       margin-right: 2px;
       border-radius: 8px;
@@ -164,10 +164,6 @@
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
-          "format-icons" = {
-            "active" = "";
-            "default"= "";
-          };
           "persistent-workspaces" = {
             "*" = 3;
           };
