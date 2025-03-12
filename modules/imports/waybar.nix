@@ -5,9 +5,9 @@
     @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
 
     * {
-      color: @color4;
+      color: @color5;
       font-family: 'Host Grotesk';
-      font-weight: 700;
+      font-weight: 500;
       font-size: 20px;
       min-width: 18px;
       border: none;
@@ -20,7 +20,7 @@
     window {
       background: none;
       border-bottom: none;
-      border: 2px solid alpha(darker(@color4), 0.8);
+      border: 2px solid alpha(darker(@color5), 0.4);
       border-radius: 10px;
       background: alpha(@background, 0.7);
     }
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #battery {
@@ -51,7 +51,7 @@
       margin-bottom: 2px;
       padding: 2px 0px;
       border-radius: 8px;
-      background-color: alpha(lighter(@color4), 0.2);
+      background-color: alpha(lighter(@color5), 0.2);
     }
 
     #workspaces {
@@ -60,7 +60,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #keyboard-state {
@@ -68,7 +68,7 @@
       padding: 2px 0px 2px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #language {
@@ -76,15 +76,15 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #clock {
       margin: 0px 8px;
-      padding: 5px 8px;
+      padding: 4px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #battery {
@@ -92,7 +92,7 @@
       padding: 10px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #brightness {
@@ -101,7 +101,7 @@
       padding-right: 2px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #memory {
@@ -109,7 +109,7 @@
       padding: 6px 0px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
     }
 
     #network {
@@ -117,7 +117,15 @@
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@color4), 0.4);
+      background: alpha(darker(@color5), 0.2);
+    }
+    
+    #custom-screen {
+      margin: 0px 8px;
+      padding: 6px 5px 6px 8px;
+      border-radius: 8px;
+      transition: none;
+      background: alpha(darker(@color5), 0.2);
     }
 
     #backlight {
@@ -127,6 +135,7 @@
     }
 
     #workspaces button {
+      padding: 2px 12px 2px 2px;
       margin-left: 2px; 
       margin-right: 2px;
       border-radius: 8px;
@@ -134,8 +143,8 @@
     }
     
     #workspaces button.active {
-      color: lighter(@color4);
-      background-color: alpha(lighter(@color4), 0.2);
+      color: lighter(@color5);
+      background: alpha(lighter(@color5), 0.2);
     }
 
     window#waybar.empty #window {
@@ -151,10 +160,14 @@
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
-	      modules-right = ["clock" "network" "group/audio" "memory" "group/brightness" "battery"];
+	      modules-right = ["clock" "network" "group/audio" "memory" "custom/screen" "group/brightness" "battery"];
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
+          "format-icons" = {
+            "active" = "";
+            "default"= "";
+          };
           "persistent-workspaces" = {
             "*" = 3;
           };
@@ -185,12 +198,20 @@
           modules = ["custom/rtns" "backlight"];
         };
 
+        "custom/screen" = {
+          format = " ";
+          tooltip = false;
+          on-click = ''grim -g "$(slurp -d)" - | wl-copy'';
+        };
+
         "custom/rtns" = {
           "format" = "󰃞 ";
+          tooltip = false;
         };
 
         "custom/sdio" = {
           "format" = " ";
+          tooltip = false;
         };
 
         "memory" = {
