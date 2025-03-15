@@ -232,10 +232,6 @@
 	        tooltip = false;
 	      };
 
-        tray = {
-          "icon-size" = 20;
-        };
-
         "group/audio" = {
           "orientation" = "inherit";
           "modules" = ["custom/sdio" "pulseaudio"];
