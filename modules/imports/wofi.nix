@@ -2,7 +2,7 @@
   programs.wofi.enable = true;
   programs.wofi.settings = {
     mode = "drun";
-    allow_images = true;
+    allow_images = false;
     image_size = 30;
     prompt = "Search";
     columns = 1;
