@@ -40,20 +40,20 @@
       font-size: 18px;
       font-family: "Host Grotesk";
       font-weight: 500;
-      background-color: @background;
+      background-color: lighter(@background);
       border-radius: 8px;
       opacity: 0.98;
     }
     
     #outer-box {
       margin: 10px 10px 20px 10px;
-      background-color: @background;
+      background-color: lighter(@background);
       opacity: 0.90;
     }
     
     #inner-box {
       margin: 10px;
-      background-color: @background;
+      background-color: lighter(@background);
       opacity: 0.90;
     }
     
