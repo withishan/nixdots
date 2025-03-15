@@ -37,12 +37,12 @@
     }
     
     window {
-      font-size: 18px;
+      font-size: 20px;
       font-family: "Host Grotesk";
       font-weight: 600;
       background-color: @background;
       border-radius: 8px;
-      opacity: 0.90;
+      opacity: 0.98;
     }
     
     #outer-box {
@@ -75,7 +75,7 @@
     #entry:selected #text {
       padding: 0px 0px 0px 10px;
       font-weight: normal;
-      color: @color0;
+      color: lighter(@color0);
     }
     
     #input {
