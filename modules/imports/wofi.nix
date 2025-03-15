@@ -6,7 +6,7 @@
     image_size = 30;
     prompt = "Search";
     columns = 1;
-    width = 480;
+    width = 460;
     height = 330;
     no_actions = true;
     location = "center";
@@ -37,9 +37,9 @@
     }
     
     window {
-      font-size: 20px;
+      font-size: 18px;
       font-family: "Host Grotesk";
-      font-weight: 600;
+      font-weight: 500;
       background-color: @background;
       border-radius: 8px;
       opacity: 0.98;
@@ -75,14 +75,14 @@
     #entry:selected #text {
       padding: 0px 0px 0px 10px;
       font-weight: normal;
-      color: lighter(@color0);
+      color: white;
     }
     
     #input {
       background: transparent;
       margin: 0px 5px 0px 20px;
-      color: lighter(@color3);
-      padding: 10px;
+      color: white;
+      padding: 5px;
     }
     
     #image {
