@@ -6,6 +6,7 @@
     firefox
     pywalfox-native
     lsd
+    stow
     cava
     spotify
     gh 

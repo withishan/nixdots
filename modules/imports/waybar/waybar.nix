@@ -2,7 +2,7 @@
   programs.waybar = {
     enable = true;
     style = "
-    @import url('file:///home/ishan/.cache/wal/colors-waybar.css');
+    @import url('./colors.css');
 
     * {
       color: @color3;
