@@ -1,16 +1,14 @@
 { config, lib, pkgs, inputs, ... }: {
   environment.systemPackages = with pkgs; [
+    inputs.matugen.packages.${system}.default
     ghostty
-    imagemagick
     wl-clipboard
-    gnome-tweaks
     firefox
     pywalfox-native
     lsd
     cava
     spotify
     gh 
-    pywal16
     nitch
     brightnessctl
     font-manager
@@ -25,7 +23,6 @@
     neovim
     vesktop 
     wofi
-    rofi
     nwg-look
   ];
 }
