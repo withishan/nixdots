@@ -14,6 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    matugen = {
+      url = "github:/InioX/Matugen";
+    };
+
     textfox.url = "github:adriankarlen/textfox";
   };
 
@@ -26,7 +30,7 @@
   ... 
   }@inputs: 
     let
-      system = "86_64-linux";
+      system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem 
