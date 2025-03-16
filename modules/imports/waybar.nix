@@ -22,7 +22,7 @@
       border-bottom: none;
       border: 2px solid alpha(@secondary_container, 0.7);
       border-radius: 10px;
-      background: alpha(@surface, 0.8);
+      background: alpha(@surface, 0.7);
     }
 
     #audio {
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #battery {
@@ -59,7 +59,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(lighter(@surface_bright), 0.5);
     }
 
     #keyboard-state {
@@ -67,7 +67,7 @@
       padding: 2px 0px 2px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(lighter(@surface_bright), 0.5);
     }
 
     #language {
@@ -75,7 +75,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(lighter(@surface_bright), 0.5);
     }
 
     #clock {
@@ -83,7 +83,7 @@
       padding: 4px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #battery {
@@ -91,7 +91,7 @@
       padding: 10px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #brightness {
@@ -100,7 +100,7 @@
       padding-right: 2px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #memory {
@@ -108,7 +108,7 @@
       padding: 6px 0px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #network {
@@ -116,7 +116,7 @@
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
     
     #custom-screen {
@@ -124,7 +124,7 @@
       padding: 6px 5px 6px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.8);
+      background: alpha(@surface_bright, 0.7);
     }
 
     #backlight {

@@ -2,8 +2,6 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland = {
     settings = {
-      source = "~/.cache/wal/colors-hyprland.conf";
-
       monitor = ",preferred,auto,1.0";
 
       "$terminal" = "ghostty";
