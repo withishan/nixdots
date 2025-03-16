@@ -25,6 +25,7 @@
     neovim
     vesktop 
     wofi
+    rofi
     nwg-look
   ];
 }
