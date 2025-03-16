@@ -8,6 +8,7 @@
     lsd
     stow
     cava
+    geeqie
     spotify
     gh 
     nitch

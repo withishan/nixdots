@@ -5,7 +5,7 @@
     @import url('./colors.css');
 
     * {
-      color: @primary;
+      color: @secondary;
       font-family: 'Host Grotesk';
       font-weight: 600;
       font-size: 20px;
@@ -20,9 +20,9 @@
     window {
       background: none;
       border-bottom: none;
-      border: 2px solid alpha(darker(@primary), 0.5);
+      border: 2px solid alpha(@secondary_container, 0.7);
       border-radius: 10px;
-      background: alpha(@surface_container_low, 0.7);
+      background: alpha(@surface, 0.8);
     }
 
     #audio {
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #battery {
@@ -51,7 +51,7 @@
       margin-bottom: 2px;
       padding: 2px 0px;
       border-radius: 8px;
-      background-color: alpha(lighter(@primary), 0.1);
+      background-color: alpha(@secondary_fixed_dim, 0.2);
     }
 
     #workspaces {
@@ -59,7 +59,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #keyboard-state {
@@ -67,7 +67,7 @@
       padding: 2px 0px 2px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #language {
@@ -75,7 +75,7 @@
       padding: 2px 0px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #clock {
@@ -83,7 +83,7 @@
       padding: 4px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #battery {
@@ -91,7 +91,7 @@
       padding: 10px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #brightness {
@@ -100,7 +100,7 @@
       padding-right: 2px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #memory {
@@ -108,7 +108,7 @@
       padding: 6px 0px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #network {
@@ -116,7 +116,7 @@
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
     
     #custom-screen {
@@ -124,7 +124,7 @@
       padding: 6px 5px 6px 8px;
       border-radius: 8px;
       transition: none;
-      background: alpha(darker(@primary), 0.2);
+      background: alpha(@surface_bright, 0.8);
     }
 
     #backlight {
@@ -142,8 +142,8 @@
     }
     
     #workspaces button.active {
-      color: lighter(@primary);
-      background: alpha(lighter(@primary), 0.1);
+      color: @surface;
+      background: alpha(@secondary_fixed_dim, 0.2);
     }
 
     window#waybar.empty #window {
