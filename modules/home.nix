@@ -2,7 +2,7 @@
   imports = [
     inputs.textfox.homeManagerModules.default
     ./imports/waybar.nix
-    ./imports/wofi.nix
+    ./imports/fuzzel.nix
     ./imports/bash.nix
     ./imports/nixvim.nix
     ./imports/hypr.nix
