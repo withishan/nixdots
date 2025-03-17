@@ -24,8 +24,7 @@
     swww
     neovim
     vesktop 
-    wofi
-    fuzzel
+    tofi
     nwg-look
   ];
 }
