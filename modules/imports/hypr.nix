@@ -45,6 +45,8 @@
           size = 2;
           passes = 4;
           vibrancy = 0.1696;
+          new_optimizations = true;
+          ignore_opacity = true;
         };
       };
 
