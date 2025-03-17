@@ -6,7 +6,7 @@
       font = "Archivo:size=13";
       prompt = ''"   "'';
       icons-enabled = "no";
-      width = "12";
+      width = "13";
       vertical-pad = "25";
       horizontal-pad = "38";
       inner-pad = "10";
