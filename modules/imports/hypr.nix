@@ -6,7 +6,7 @@
 
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";
-      "$menu" = "wofi";
+      "$menu" = "fuzzel";
 
       exec-once = [
         "waybar" 
