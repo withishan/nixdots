@@ -2,29 +2,20 @@
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     main = {
+      include = "/home/ishan/.config/fuzzel/colors.ini";
       font = "Archivo:size=13";
       prompt = ''"   "'';
       icons-enabled = "no";
-      width = "13";
+      width = "12";
       vertical-pad = "25";
-      horizontal-pad = "35";
+      horizontal-pad = "38";
       inner-pad = "10";
-    };
-
-    colors = {
-      prompt = "ffffffff";
-      background = "343a40ff";
-      text = "6c757dff";
-      input = "ffffffff";
-      match = "ffffffff";
-      selection = "343a40ff";
-      selection-text = "ffffffff";
-      selection-match = "ffffffff";
+      line-height = "10";
     };
 
     border = {
      width = "0";
-     radius = "6";
+     radius = "10";
     };
   };
 }
