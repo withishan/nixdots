@@ -10,7 +10,7 @@
       vertical-pad = "25";
       horizontal-pad = "38";
       inner-pad = "10";
-      line-height = "10";
+      line-height = "15";
     };
 
     border = {
