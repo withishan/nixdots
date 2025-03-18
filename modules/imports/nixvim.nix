@@ -11,6 +11,10 @@
         action = "<cmd>LazyGit<cr>";
         key = "<C-l>";
       }
+      {
+        action = "<cmd>NvimTreeToggle<cr>";
+        key = "<C-n>";
+      }
     ];
 
     opts = {
@@ -32,59 +36,23 @@
           sha256 = "1y3r04n8ks1qq5rfv2lkxdsd39hajfiqg7z997m5j8xxq7cjzrlh";
         };
       })
-
-      (pkgs.vimUtils.buildVimPlugin {
-        name = "vague.nvim";
-        src = pkgs.fetchFromGitHub {
-          owner = "vague2k";
-          repo = "vague.nvim";
-          rev = "aa744dbf7bfc768da3dd232ccde3b337182903dc";
-          sha256 = "0vpyyak3fn3clnlnbmpj7a2bwdrbd14cz76xicvmrvfz1p1yfh7q";
-        };
-      })
     ];
 
     # colorscheme = "pywal16";
     # extraConfigLua = ''
-    # require("vague").setup({
-    #   transparent = true,
-    #   style = {
-    #     boolean = "bold",
-    #     number = "none",
-    #     float = "none",
-    #     error = "bold",
-    #     comments = "none",
-    #     conditionals = "none",
-    #     functions = "none",
-    #     headings = "bold",
-    #     operators = "none",
-    #     strings = "none",
-    #     variables = "none",
-
-    #     keywords = "none",
-    #     keyword_return = "none",
-    #     keywords_loop = "none",
-    #     keywords_label = "none",
-    #     keywords_exception = "none",
-
-    #     builtin_constants = "bold",
-    #     builtin_functions = "none",
-    #     builtin_types = "bold",
-    #     builtin_variables = "none",
-    #     },
-    #   })
-    #    vim.cmd "colorscheme vague"
+    #   vim.cmd "colorscheme twilight-moon"
     # '';
 
-    colorschemes.rose-pine.enable = true;
-    colorschemes.rose-pine.settings = {
-      styles = {
-        italic = false;
-        transparency = true;
-      };
+    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin.settings = {
+      transparent_background = true;
     };
 
     plugins = {
+      lualine = {
+        enable = true;
+        globalstatus = true;
+      };
       cursorline = {
         enable = true;
         cursorline.timeout = 600;
@@ -93,7 +61,15 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
-      nvim-tree.enable = true;
+      nvim-tree = {
+        enable = true;
+        hijackNetrw = true;
+        openOnSetup = true;
+        openOnSetupFile = true;
+        view = {
+          width = 24;
+        };
+      };
       neocord.enable = true;
       neocord.settings = {
         global_timer = true;
