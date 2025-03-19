@@ -72,7 +72,6 @@
                   left = "";
                   right = "";
                 };
-                icon = "";
               }
             ];
             lualine_b = [
