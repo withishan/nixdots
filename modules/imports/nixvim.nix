@@ -43,15 +43,86 @@
     #   vim.cmd "colorscheme twilight-moon"
     # '';
 
-    colorschemes.catppuccin.enable = true;
-    colorschemes.catppuccin.settings = {
-      transparent_background = true;
+    colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings = {
+      styles = {
+        bold = false;
+        italic = true;
+        transparency = true;
+      };
     };
 
     plugins = {
       lualine = {
         enable = true;
-        globalstatus = true;
+        settings = {
+          options = {
+            component_separators = "";
+            section_separators = {
+              left = "";
+              right = "";
+            };
+            globalstatus = true;
+          };
+          sections = {
+            lualine_a = [
+              {
+                __unkeyed-1 = "mode";
+                separator = {
+                  left = "";
+                  right = "";
+                };
+                icon = "";
+              }
+            ];
+            lualine_b = [
+              {
+                __unkeyed-1 = "filetype";
+                icon_only = true;
+                padding = {
+                  right = 0;
+                  left = 1;
+                };
+              }
+              "filename"
+            ];
+            lualine_c = [
+              {
+                __unkeyed-1 = "branch";
+                icon = " ";
+              }
+            ];
+            lualine_x = [
+              {
+                __unkeyed-1 = "diagnostics";
+                symbols = {
+                  error = " ";
+                  warn = " ";
+                  info = " ";
+                  hint = " ";
+                };
+                update_in_insert = true;
+              }
+            ];
+            lualine_z = [
+              {
+                __unkeyed-1 = "location";
+                separator = {
+                  left = "";
+                  right = "";
+                };
+              }
+            ];
+          };  
+          inactive_sections = {
+				    lualine_a = [ "filename" ];
+				    lualine_b = [];
+				    lualine_c = [];
+				    lualine_x = [];
+				    lualine_y = [];
+				    lualine_z = [ "location" ];
+			    };
+        };
       };
       cursorline = {
         enable = true;
