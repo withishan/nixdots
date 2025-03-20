@@ -56,7 +56,7 @@
 
     #workspaces {
       margin: 0px 8px 0px 8px;
-      padding: 2px 0px 0px 0px;
+      padding: 3px 0px 0px 0px;
       border-radius: 8px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
