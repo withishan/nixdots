@@ -12,7 +12,7 @@
         key = "<C-l>";
       }
       {
-        action = "<cmd>NvimTreeToggle<cr>";
+        action = "<cmd>Neotree<cr>";
         key = "<C-n>";
       }
     ];
@@ -39,9 +39,6 @@
     ];
 
     # colorscheme = "pywal16";
-    # extraConfigLua = ''
-    #   vim.cmd "colorscheme twilight-moon"
-    # '';
 
     colorschemes.rose-pine.enable = true;
     colorschemes.rose-pine.settings = {
@@ -123,12 +120,12 @@
       lazygit.enable = true;
       bufferline.enable = true;
       nvim-colorizer.enable = true;
-      nvim-tree = {
+      neo-tree = {
         enable = true;
-        hijackNetrw = true;
-        openOnSetup = true;
-        openOnSetupFile = true;
-        view = {
+        filesystem = {
+          hijackNetrwBehavior = "open_current";
+        };      
+        window = {
           width = 24;
         };
       };

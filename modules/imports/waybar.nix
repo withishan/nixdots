@@ -158,7 +158,7 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "20 0 20 5";
+	      margin = "50 0 50 5";
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
