@@ -83,13 +83,7 @@
                   left = 1;
                 };
               }
-              {
-                __unkeyed-1 = "filename";
-                padding = {
-                  left = 0;
-                  right = 1;
-                };
-              }
+              "filename"
             ];
             lualine_c = [
               {
