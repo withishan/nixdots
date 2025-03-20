@@ -75,14 +75,6 @@
               }
             ];
             lualine_b = [
-              {
-                __unkeyed-1 = "filetype";
-                icon_only = true;
-                padding = {
-                  right = 0;
-                  left = 1;
-                };
-              }
               "filename"
             ];
             lualine_c = [
