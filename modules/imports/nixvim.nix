@@ -75,9 +75,8 @@
               "filename"
             ];
             lualine_c = [
-              {
-                __unkeyed-1 = "branch";
-                icon = " ";
+              { __unkeyed-1 = "branch";
+                icon = "";
               }
             ];
             lualine_x = [
