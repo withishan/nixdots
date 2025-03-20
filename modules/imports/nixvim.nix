@@ -69,7 +69,7 @@
               {
                 __unkeyed-1 = "mode";
                 separator = {
-                  left = "";
+                  left = " ";
                   right = "";
                 };
               }
@@ -83,7 +83,13 @@
                   left = 1;
                 };
               }
-              "filename"
+              {
+                __unkeyed-1 = "filename";
+                padding = {
+                  left = 0;
+                  right = 1;
+                };
+              }
             ];
             lualine_c = [
               {
@@ -108,7 +114,7 @@
                 __unkeyed-1 = "location";
                 separator = {
                   left = "";
-                  right = "";
+                  right = " ";
                 };
               }
             ];
