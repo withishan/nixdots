@@ -56,7 +56,7 @@
 
     #workspaces {
       margin: 0px 8px 0px 8px;
-      padding: 2px 0px;
+      padding: 2px 0px 0px 0px;
       border-radius: 8px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
@@ -80,7 +80,7 @@
 
     #clock {
       margin: 0px 8px;
-      padding: 4px 9px;
+      padding: 5px 9px;
       border-radius: 8px;
       transition: none;
       background: alpha(@surface_bright, 0.7);
@@ -134,16 +134,19 @@
     }
 
     #workspaces button {
-      padding: 2px 4px 2px 4px;
+      padding: 0px 4px 0px 4px;
+      margin-bottom: 3px;
       margin-left: 2px; 
       margin-right: 2px;
       border-radius: 8px;
-      background: none;
+      border: 2px solid alpha(@secondary_fixed_dim, 0);
+      background: alpha(@secondary_fixed_dim, 0.1);
+
     }
     
     #workspaces button.active {
       color: @surface;
-      background: alpha(@secondary_fixed_dim, 0.2);
+      border: 2px solid alpha(@secondary_fixed_dim, 0.2);
     }
 
     window#waybar.empty #window {
@@ -176,7 +179,7 @@
              "10" = "十";
           };
           "persistent-workspaces" = {
-            "*" = 4;
+            "*" = 3;
           };
 	      };
 
