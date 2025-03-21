@@ -125,7 +125,7 @@
                 },
                 {
                   "fileformat",
-                  symbols = { dos = "DOS", mac = "MAC", unix = "UNIX" },
+                  symbols = { dos = "dos", mac = "mac", unix = "unix" },
                 },
             },
             lualine_z = {
