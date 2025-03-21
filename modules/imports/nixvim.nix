@@ -49,83 +49,95 @@
       };
     };
 
+    extraConfigLua = ''
+      local mode_map = {
+        ['NORMAL'] = 'NOR',
+        ['O-PENDING'] = 'NOR?',
+        ['INSERT'] = 'INS',
+        ['VISUAL'] = 'VIS',
+        ['V-BLOCK'] = 'VB',
+        ['V-LINE'] = 'VL',
+        ['V-REPLACE'] = 'VR',
+        ['REPLACE'] = 'REP',
+        ['COMMAND'] = 'CMD',
+        ['SHELL'] = 'SH',
+        ['TERMINAL'] = 'TER',
+        ['EX'] = 'EX',
+        ['S-BLOCK'] = 'SB',
+        ['S-LINE'] = 'SL',
+        ['SELECT'] = 'S',
+        ['CONFIRM'] = 'Y?',
+        ['MORE'] = 'M',
+      }
+      require("lualine").setup({
+          inactive_sections = { 
+            lualine_a = { "filename" }, 
+            lualine_z = { "location" } 
+          },
+          options = { 
+            component_separators = "", 
+            globalstatus = true, 
+            section_separators = { 
+              left = "", 
+              right = "" 
+            } 
+          },
+          sections = {
+              lualine_a = { 
+                { 
+                  "mode", 
+                  fmt = function(s) return mode_map[s] or s end, 
+                  separator = { 
+                    left = " ", 
+                    right = "" 
+                  } 
+                } 
+              },
+              lualine_b = { 
+                { 
+                  "filename", 
+                  path = 5, 
+                  separator = { 
+                    left = "", 
+                    right = " " 
+                  } 
+                } 
+              },
+              lualine_c = { 
+                { 
+                  "branch", 
+                  icon = "" 
+                },
+                
+              },
+              lualine_x = {
+              {
+						      "diff",
+						      symbols = { added = " ", modified = " ", removed = " " },
+						      colored = false,
+					      },
+              },
+              lualine_y = {
+                  {
+                    "diagnostics",
+                    symbols = { error = " ", hint = " ", info = " ", warn = " " },
+                    update_in_insert = true,
+                  },
+              },
+              lualine_z = {
+                  {
+                    "fileformat",
+                    separator = { left = "", right = " " },
+                    symbols = { dos = "DOS", mac = "MAC", unix = "UNIX" },
+                  },
+              },
+          },
+      })
+    '';
+
     plugins = {
       lualine = {
         enable = true;
-        settings = {
-          options = {
-            component_separators = "";
-            section_separators = {
-              left = "";
-              right = "";
-            };
-            globalstatus = true;
-          };
-          sections = {
-            lualine_a = [
-              {
-                __unkeyed-1 = "mode";
-                separator = {
-                  left = " ";
-                  right = "";
-                };
-              }
-            ];
-            lualine_b = [
-              {
-                __unkeyed-1 = "filename";
-                separator = {
-                  left = "";
-                  right = " ";
-                };
-                path = 5;
-              }
-            ];
-            lualine_c = [
-              { __unkeyed-1 = "branch";
-                icon = "";
-              }
-            ];
-            lualine_x = [
-              "diff"
-            ];
-            lualine_y = [
-              {
-                __unkeyed-1 = "diagnostics";
-                symbols = {
-                  error = " ";
-                  warn = " ";
-                  info = " ";
-                  hint = " ";
-                };
-                update_in_insert = true;
-              }
-
-            ];
-            lualine_z = [
-              {
-                __unkeyed-1 = "fileformat";
-                separator = {
-                  left = "";
-                  right = " ";
-                };
-                symbols = {
-                  unix = "UNIX";
-                  dos = "DOS";
-                  mac = "MAC";
-                };
-              }
-            ];
-          };  
-          inactive_sections = {
-				    lualine_a = [ "filename" ];
-				    lualine_b = [];
-				    lualine_c = [];
-				    lualine_x = [];
-				    lualine_y = [];
-				    lualine_z = [ "location" ];
-			    };
-        };
       };
       cursorline = {
         enable = true;
