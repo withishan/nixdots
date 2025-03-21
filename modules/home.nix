@@ -2,7 +2,6 @@
   imports = [
     inputs.textfox.homeManagerModules.default
     ./imports/waybar.nix
-    ./imports/anyrun.nix
     ./imports/tofi.nix
     ./imports/bash.nix
     ./imports/nixvim.nix

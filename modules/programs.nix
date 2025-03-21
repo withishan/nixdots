@@ -2,7 +2,7 @@
   environment.systemPackages = with pkgs; [
     inputs.matugen.packages.${system}.default
     inputs.zen-browser.packages."${system}".generic
-    inputs.anyrun.packages.${system}.default
+    inputs.anyrun.packages.${system}.anyrun
     ghostty
     wl-clipboard
     firefox
