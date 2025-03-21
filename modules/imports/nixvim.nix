@@ -28,12 +28,12 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
-        name = "pywal16.nvim";
+        name = "sakura.nvim";
         src = pkgs.fetchFromGitHub {
-          owner = "uZer";
-          repo = "pywal16.nvim";
-          rev = "446ae689c8e4569b9537cddadb28d6e939658ea5";
-          sha256 = "1y3r04n8ks1qq5rfv2lkxdsd39hajfiqg7z997m5j8xxq7cjzrlh";
+          owner = "anAcc22";
+          repo = "sakura.nvim";
+          rev = "1a7381e99b0253e34bf9cf4f283204b4948f5269";
+          sha256 = "19kzdnxkyskgvxf4yvrxwmz861vvsd6ai8xwmlf1pm8ssk88j2qx";
         };
       })
     ];
