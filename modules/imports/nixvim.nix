@@ -127,9 +127,7 @@
     '';
 
     plugins = {
-      lualine = {
-        enable = true;
-      };
+      lualine.enable = true;
       cursorline = {
         enable = true;
         cursorline.timeout = 600;
