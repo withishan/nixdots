@@ -83,54 +83,59 @@
             } 
           },
           sections = {
-              lualine_a = { 
-                { 
-                  "mode", 
-                  fmt = function(s) return mode_map[s] or s end, 
-                  separator = { 
-                    left = " ", 
-                    right = "" 
-                  } 
+            lualine_a = { 
+              { 
+                "mode", 
+                fmt = function(s) return mode_map[s] or s end, 
+                separator = { 
+                  left = " ", 
+                  right = "" 
                 } 
-              },
-              lualine_b = { 
-                { 
-                  "filename", 
-                  path = 5, 
-                  separator = { 
-                    left = "", 
-                    right = " " 
-                  } 
+              } 
+            },
+            lualine_b = { 
+              { 
+                "filename", 
+                path = 5, 
+                separator = { 
+                  left = "", 
+                  right = " " 
                 } 
+              } 
+            },
+            lualine_c = { 
+              { 
+                "branch", 
+                icon = "" 
               },
-              lualine_c = { 
-                { 
-                  "branch", 
-                  icon = "" 
+              
+            },
+            lualine_x = {
+            {
+					      "diff",
+					      symbols = { added = " ", modified = " ", removed = " " },
+					      colored = false,
+					    },
+            },
+            lualine_y = {
+                {
+                  "diagnostics",
+                  symbols = { error = " ", hint = " ", info = " ", warn = " " },
+                  update_in_insert = true,
                 },
-                
-              },
-              lualine_x = {
+                {
+                  "fileformat",
+                  symbols = { dos = "DOS", mac = "MAC", unix = "UNIX" },
+                },
+            },
+            lualine_z = {
               {
-						      "diff",
-						      symbols = { added = " ", modified = " ", removed = " " },
-						      colored = false,
-					      },
-              },
-              lualine_y = {
-                  {
-                    "diagnostics",
-                    symbols = { error = " ", hint = " ", info = " ", warn = " " },
-                    update_in_insert = true,
-                  },
-              },
-              lualine_z = {
-                  {
-                    "fileformat",
-                    separator = { left = "", right = " " },
-                    symbols = { dos = "DOS", mac = "MAC", unix = "UNIX" },
-                  },
-              },
+                function()
+                  return os.date("%-I:%-M %p")
+                end,
+                separator = { left = "", right = " " },
+              }
+            },
           },
       })
     '';
