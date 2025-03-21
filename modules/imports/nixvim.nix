@@ -72,14 +72,24 @@
               }
             ];
             lualine_b = [
-              "filename"
+              {
+                __unkeyed-1 = "filename";
+                separator = {
+                  left = "";
+                  right = " ";
+                };
+                path = 5;
+              }
             ];
             lualine_c = [
               { __unkeyed-1 = "branch";
-                icon = "";
+                icon = "";
               }
             ];
             lualine_x = [
+              "diff"
+            ];
+            lualine_y = [
               {
                 __unkeyed-1 = "diagnostics";
                 symbols = {
@@ -90,13 +100,19 @@
                 };
                 update_in_insert = true;
               }
+
             ];
             lualine_z = [
               {
-                __unkeyed-1 = "location";
+                __unkeyed-1 = "fileformat";
                 separator = {
                   left = "";
                   right = " ";
+                };
+                symbols = {
+                  unix = "UNIX";
+                  dos = "DOS";
+                  mac = "MAC";
                 };
               }
             ];
