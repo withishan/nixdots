@@ -80,7 +80,7 @@
             section_separators = { 
               left = "", 
               right = "" 
-            } 
+            }, 
           },
           sections = {
             lualine_a = { 
@@ -95,21 +95,11 @@
             },
             lualine_b = { 
               { 
-                "filename", 
-                path = 5, 
-                separator = { 
-                  left = "", 
-                  right = " " 
-                } 
-              } 
-            },
-            lualine_c = { 
-              { 
                 "branch", 
                 icon = "" 
               },
-              
             },
+            lualine_c = {},
             lualine_x = {
             {
 					      "diff",
@@ -122,10 +112,6 @@
                   "diagnostics",
                   symbols = { error = " ", hint = " ", info = " ", warn = " " },
                   update_in_insert = true,
-                },
-                {
-                  "fileformat",
-                  symbols = { dos = "dos", mac = "mac", unix = "unix" },
                 },
             },
             lualine_z = {
