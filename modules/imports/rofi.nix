@@ -2,6 +2,6 @@
   programs.rofi = {
     enable = true;
     font = "Archivo 18";
-    configPath = "./config.rasi";
+    theme = "~/nixdots/modules/imports/theme.rasi";
   };
 }

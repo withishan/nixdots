@@ -6,7 +6,7 @@
 
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";
-      "$menu" = "tofi-drun";
+      "$menu" = "rofi -show drun";
 
       exec-once = [
         "waybar" 
