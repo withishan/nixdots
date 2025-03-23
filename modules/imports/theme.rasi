@@ -38,7 +38,7 @@ mainbox {
 
 listbox {
     spacing:                     20px;
-    padding:                     20px;
+    padding:                     5px 20px 20px 20px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview", "mode-switcher" ];
@@ -70,7 +70,7 @@ entry {
     background-color:            @background-alt;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "search";
     placeholder-color:           inherit;
 }
 
