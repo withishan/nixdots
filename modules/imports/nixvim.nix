@@ -99,7 +99,9 @@
                 icon = "" 
               },
             },
-            lualine_c = {},
+            lualine_c = {
+              "filename"
+            },
             lualine_x = {
             {
 					      "diff",
@@ -113,6 +115,7 @@
                   symbols = { error = " ", hint = " ", info = " ", warn = " " },
                   update_in_insert = true,
                 },
+                { "location", icon = "" },
             },
             lualine_z = {
               {
