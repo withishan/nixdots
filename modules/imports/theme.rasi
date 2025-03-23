@@ -7,14 +7,10 @@ configuration {
 	window-format:              "{w} · {c} · {t}";
 }
 
+@import "~/nixdots/modules/imports/colors.rasi"
+
 * {
     font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #101010;
-    background-alt:              #252525;
-    foreground:                  #FFFFFF;
-    selected:                    #505050;
-    active:                      #909090;
-    urgent:                      #707070;
 }
 
 window {
@@ -78,7 +74,6 @@ entry {
     placeholder-color:           inherit;
 }
 
-/*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
     spacing:                     10px;
@@ -97,7 +92,6 @@ button selected {
     text-color:                  @foreground;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
@@ -116,7 +110,6 @@ listview {
     cursor:                      "default";
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     10px;
@@ -164,7 +157,6 @@ element-text {
     horizontal-align:            0.0;
 }
 
-/*****----- Message -----*****/
 message {
     background-color:            transparent;
 }
