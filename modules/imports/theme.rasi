@@ -1,8 +1,8 @@
 configuration {
 	modi:                       "drun,window";
     show-icons:                 false;
-    display-drun:               "";
-    display-window:             "";
+    display-drun:               "apps";
+    display-window:             "windows";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -10,7 +10,7 @@ configuration {
 @import "./colors.rasi"
 
 * {
-    font:                        "Iosevka Nerd Font 11";
+    font:                        "Archivo 10";
 }
 
 window {
