@@ -19,12 +19,6 @@
     };
 
     textfox.url = "github:adriankarlen/textfox";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
-
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = 
@@ -33,8 +27,6 @@
   nixpkgs, 
   home-manager, 
   nixvim, 
-  zen-browser,
-  anyrun,
   ... 
   }@inputs: 
     let
