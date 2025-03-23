@@ -121,7 +121,7 @@
     
     #custom-screen {
       margin: 0px 8px;
-      padding: 6px 5px 6px 8px;
+      padding: 8px 5px 8px 8px;
       border-radius: 8px;
       transition: none;
       background: alpha(@surface_bright, 0.7);
