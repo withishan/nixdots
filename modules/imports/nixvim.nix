@@ -85,9 +85,8 @@
           sections = {
             lualine_a = { { "mode", fmt = function(s) return mode_map[s] or s end, separator = { left = " ", right = "" } } },
             lualine_b = { { "branch", icon = "" }, },
-            lualine_c = { "filename" },
-            lualine_x = { { "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false, },
-            },
+            lualine_c = { { "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false, },},
+            lualine_x = { "filename" },
             lualine_y = { { "diagnostics", symbols = { error = " ", hint = " ", info = " ", warn = " " }, update_in_insert = true, }, },
             lualine_z = { {
                 function()
