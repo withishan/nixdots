@@ -153,7 +153,7 @@
         "float, ^(org.gnome.Nautilus)$"
         "opacity 0.8 override, ^(org.gnome.Nautilus)$"
         "float, ^(com.mitchellh.ghostty)$"
-        "opacity 0.9 override, ^(com.mitchellh.ghostty)$"
+        "opacity 0.8 override, ^(com.mitchellh.ghostty)$"
         "opacity 0.8 override, ^(vesktop)$"
         "opacity 0.8 override, ^(Spotify)$"
         "opacity 0.8 override, ^(firefox)$"
