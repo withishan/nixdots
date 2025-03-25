@@ -33,23 +33,43 @@
       background: alpha(@surface_bright, 0.7);
     }
 
+    #memo {
+      margin: 0px 8px;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 8px;
+      background: alpha(@surface_bright, 0.7);
+    }
+
     #battery {
       margin-top: 5px;
       margin-bottom: 10px;
     }
 
-    #pulseaudio {
+    #pulseaudio,
+    #memory,
+    #backlight
+    {
       font-size: 17px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 1px;
+      margin-bottom: 2px;
     }
-
+    
     #custom-sdio,
-    #custom-rtns
+    #custom-mem
     {
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 2px 0px;
+      border-radius: 8px;
+      background-color: alpha(@secondary_fixed_dim, 0.2);
+    }
+
+    #backlight {
+      font-size: 18px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding: 5px 2px 5px 4px;
       border-radius: 8px;
       background-color: alpha(@secondary_fixed_dim, 0.2);
     }
@@ -79,8 +99,9 @@
     }
 
     #clock {
+      font-size: 21px;
       margin: 0px 8px;
-      padding: 4px 9px;
+      padding: 2px 9px;
       border-radius: 8px;
       transition: none;
       background: alpha(@surface_bright, 0.7);
@@ -103,15 +124,9 @@
       background: alpha(@surface_bright, 0.7);
     }
 
-    #memory {
-      margin: 0px 8px;
-      padding: 6px 0px 6px 4px;
-      border-radius: 8px;
-      transition: none;
-      background: alpha(@surface_bright, 0.7);
-    }
-
-    #network {
+    #network,
+    #bluetooth
+    {
       margin: 0px 8px;
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
@@ -119,20 +134,6 @@
       background: alpha(@surface_bright, 0.7);
     }
     
-    #custom-screen {
-      margin: 0px 8px;
-      padding: 8px 5px 8px 8px;
-      border-radius: 8px;
-      transition: none;
-      background: alpha(@surface_bright, 0.7);
-    }
-
-    #backlight {
-      font-size: 16px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
     #workspaces button {
       padding: 0px 4px 0px 4px;
       margin-bottom: 3px;
@@ -158,11 +159,11 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "50 0 50 5";
+	      margin = "60 0 60 5";
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
-	      modules-right = ["clock" "network" "group/audio" "memory" "custom/screen" "group/brightness" "battery"];
+	      modules-right = ["clock" "network" "bluetooth" "group/audio" "group/brightness" "group/memo" "battery"];
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";
@@ -205,17 +206,11 @@
 
         "group/brightness" = {
           orientation = "inherit";
-          modules = ["custom/rtns" "backlight"];
+          modules = ["backlight"];
         };
 
-        "custom/screen" = {
-          format = " ";
-          tooltip = false;
-          on-click = ''grim -g "$(slurp -d)" - | wl-copy'';
-        };
-
-        "custom/rtns" = {
-          "format" = "󰃞 ";
+        "custom/mem" = {
+          "format" = " ";
           tooltip = false;
         };
 
@@ -224,20 +219,33 @@
           tooltip = false;
         };
 
+        "bluetooth" = {
+          "format" = "";
+          "format-connected" = "󰂱 ";
+          "format-disabled" = "󰂲 ";
+          tooltip = false;
+        };
+
         "memory" = {
           "interval" = 30;
-          "format" = "{icon}";
-          "format-icons" = ["󰝦 " "󰪞 " "󰪟 " "󰪠 " "󰪡 " "󰪢 " "󰪣 " "󰪤 " "󰪥 "];
+          "format" = "{}";
+          "tooltip" = false;
         };
 
 	      backlight = {
-          format = "{percent}";
+          format = "{icon}";
+          "format-icons" = ["󰃝 " "󰃞 " "󰃟 " "󰃠 "];
 	        tooltip = false;
 	      };
 
         "group/audio" = {
           "orientation" = "inherit";
           "modules" = ["custom/sdio" "pulseaudio"];
+        };
+
+        "group/memo" = {
+          "orientation" = "inherit";
+          "modules" = ["custom/mem" "memory"];
         };
 
 	      battery = {
