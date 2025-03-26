@@ -49,56 +49,8 @@
       };
     };
 
-    extraConfigLua = ''
-      local mode_map = {
-        ['NORMAL'] = 'NOR',
-        ['O-PENDING'] = 'NOR?',
-        ['INSERT'] = 'INS',
-        ['VISUAL'] = 'VIS',
-        ['V-BLOCK'] = 'VB',
-        ['V-LINE'] = 'VL',
-        ['V-REPLACE'] = 'VR',
-        ['REPLACE'] = 'REP',
-        ['COMMAND'] = 'CMD',
-        ['SHELL'] = 'SH',
-        ['TERMINAL'] = 'TER',
-        ['EX'] = 'EX',
-        ['S-BLOCK'] = 'SB',
-        ['S-LINE'] = 'SL',
-        ['SELECT'] = 'S',
-        ['CONFIRM'] = 'Y?',
-        ['MORE'] = 'M',
-      }
-      require("lualine").setup({
-          inactive_sections = { 
-            lualine_a = { "filename" }, 
-            lualine_z = { "location" } 
-          },
-          options = { 
-            component_separators = "", 
-            globalstatus = true, 
-            section_separators = { 
-              left = "", 
-              right = "" 
-            }, 
-          },
-          sections = {
-            lualine_a = { { "mode", fmt = function(s) return mode_map[s] or s end, separator = { left = " ", right = "" } } },
-            lualine_b = { { "branch", icon = "" }, },
-            lualine_c = { { "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false, },},
-            lualine_x = { "filename" },
-            lualine_y = { { "diagnostics", symbols = { error = " ", hint = " ", info = " ", warn = " " }, update_in_insert = true, }, },
-            lualine_z = { {
-                function()
-                  return os.date("%-I:%-M %p")
-                end,
-                separator = { left = "", right = " " }, } },
-          },
-      })
-    '';
-
     plugins = {
-      lualine.enable = true;
+      lualine.enable = false;
       cursorline = {
         enable = true;
         cursorline.timeout = 600;
