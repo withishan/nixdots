@@ -28,37 +28,27 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
-        name = "lush.nvim";
+        name = "lackluster.nvim";
         src = pkgs.fetchFromGitHub {
-          owner = "rktjmp";
-          repo = "lush.nvim";
-          rev = "45a79ec4acb5af783a6a29673a999ce37f00497e";
-          sha256 = "0ac93sdhsi41hpwpshffpkvj5c3kklflsy0pln77743x69g05rcr";
+          owner = "slugbyte";
+          repo = "lackluster.nvim";
+          rev = "662fba7e6719b7afc155076385c00d79290bc347";
+          sha256 = "1jp02km6hmryb9g36z239qkv34hmjx0hbwmg2ns1aq7cqzy1m5x1";
         };
-      })
-      
-      (pkgs.vimUtils.buildVimPlugin {
-        name = "zenbones.nvim";
-        src = pkgs.fetchFromGitHub {
-          owner = "zenbones-theme";
-          repo = "zenbones.nvim";
-          rev = "dbd485fa5d5230d175e024374d41dab5ad71b119";
-          sha256 = "102375anp0b4iygnxcrx173r5cll3x1gwhfm4qnl3xq26691xy9p";
-        };
-        dependencies = [ lush-nvim ];
+        # dependencies = [ lush-nvim ];
       })
     ];
 
     extraConfigLua = ''
-      vim.o.termguicolors = true
-      vim.o.background = "dark"
-      vim.cmd("colorscheme rosebones")
-      vim.cmd([[
-        hi Normal guibg=NONE ctermbg=NONE
-        hi NormalNC guibg=NONE ctermbg=NONE
-        hi EndOfBuffer guibg=NONE ctermbg=NONE
-        hi SignColumn guibg=NONE ctermbg=NONE
-      ]])
+      require("lackluster").setup({
+        tweak_background = {
+          normal = 'none',    
+          telescope = 'default', 
+          menu = 'default',     
+          popup = 'default',     
+        },
+      })
+      vim.cmd.colorscheme("lackluster")
     '';
 
     # colorschemes.rose-pine.enable = true;
@@ -78,7 +68,14 @@
       };
       treesitter.enable = true;
       lazygit.enable = true;
-      bufferline.enable = true;
+      bufferline = {
+        enable = true;
+        settings = {
+          options = {
+            show_buffer_icons = false;
+          };
+        };
+      };
       nvim-colorizer.enable = true;
       neo-tree = {
         enable = true;
