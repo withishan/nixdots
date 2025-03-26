@@ -28,26 +28,47 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
-        name = "sakura.nvim";
+        name = "lush.nvim";
         src = pkgs.fetchFromGitHub {
-          owner = "anAcc22";
-          repo = "sakura.nvim";
-          rev = "1a7381e99b0253e34bf9cf4f283204b4948f5269";
-          sha256 = "19kzdnxkyskgvxf4yvrxwmz861vvsd6ai8xwmlf1pm8ssk88j2qx";
+          owner = "rktjmp";
+          repo = "lush.nvim";
+          rev = "45a79ec4acb5af783a6a29673a999ce37f00497e";
+          sha256 = "0ac93sdhsi41hpwpshffpkvj5c3kklflsy0pln77743x69g05rcr";
         };
+      })
+      
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "zenbones.nvim";
+        src = pkgs.fetchFromGitHub {
+          owner = "zenbones-theme";
+          repo = "zenbones.nvim";
+          rev = "dbd485fa5d5230d175e024374d41dab5ad71b119";
+          sha256 = "102375anp0b4iygnxcrx173r5cll3x1gwhfm4qnl3xq26691xy9p";
+        };
+        dependencies = [ lush-nvim ];
       })
     ];
 
-    # colorscheme = "pywal16";
+    extraConfigLua = ''
+      vim.o.termguicolors = true
+      vim.o.background = "dark"
+      vim.cmd("colorscheme rosebones")
+      vim.cmd([[
+        hi Normal guibg=NONE ctermbg=NONE
+        hi NormalNC guibg=NONE ctermbg=NONE
+        hi EndOfBuffer guibg=NONE ctermbg=NONE
+        hi SignColumn guibg=NONE ctermbg=NONE
+      ]])
+    '';
 
-    colorschemes.rose-pine.enable = true;
-    colorschemes.rose-pine.settings = {
-      styles = {
-        bold = false;
-        italic = true;
-        transparency = true;
-      };
-    };
+    # colorschemes.rose-pine.enable = true;
+    # colorschemes.rose-pine.settings = {
+    #   styles = {
+    #     bold = false;
+    #     italic = true;
+    #     transparency = true;
+    #   };
+    # };
 
     plugins = {
       lualine.enable = false;
