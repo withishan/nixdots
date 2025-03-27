@@ -155,6 +155,7 @@
         "float, ^(com.mitchellh.ghostty)$"
         "opacity 0.8 override, ^(com.mitchellh.ghostty)$"
         "opacity 0.8 override, ^(vesktop)$"
+        "float, ^(vesktop)$"
         "opacity 0.8 override, ^(Spotify)$"
         "opacity 0.8 override, ^(firefox)$"
       ];
