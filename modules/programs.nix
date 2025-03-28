@@ -19,6 +19,7 @@
     slurp
     waybar
     starship
+    oh-my-posh
     nautilus
     swww
     neovim
