@@ -22,7 +22,7 @@
       border-bottom: none;
       border: 2px solid alpha(@secondary_container, 0.7);
       border-radius: 10px;
-      background: alpha(@surface, 0.7);
+      background: alpha(@surface, 0.8);
     }
 
     #audio {
@@ -163,7 +163,7 @@
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
-	      modules-right = ["clock" "network" "bluetooth" "group/audio" "group/brightness" "group/memo" "battery"];
+	      modules-right = ["clock" "network" "bluetooth" "group/audio" "group/brightness" "battery"];
 
 	      "hyprland/workspaces" = {
           "format" = "{icon}";

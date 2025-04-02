@@ -20,9 +20,6 @@
     "t-background": "p:main-bg"
   },
   "blocks": [
-    {
-      "alignment": "left",
-      "segments": [
         {
           "type": "path",
           "style": "plain",
