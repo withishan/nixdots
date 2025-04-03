@@ -8,7 +8,7 @@
     lsd
     stow
     cava
-    spotify
+    youtube-music
     gh 
     nitch
     brightnessctl

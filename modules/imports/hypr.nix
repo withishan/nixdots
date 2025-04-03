@@ -37,7 +37,7 @@
           range = 52;
           offset = "3 3";
           render_power = 5;
-          color = "rgba(0, 0, 0, 0.5)";
+          color = "rgba(0, 0, 0, 0.3)";
         };
 
         blur = {
@@ -153,11 +153,11 @@
         "float, ^(org.gnome.Nautilus)$"
         "opacity 0.8 override, ^(org.gnome.Nautilus)$"
         "float, ^(com.mitchellh.ghostty)$"
-        "opacity 0.8 override, ^(com.mitchellh.ghostty)$"
-        "opacity 0.8 override, ^(vesktop)$"
+        "opacity 0.9 override, ^(com.mitchellh.ghostty)$"
+        "opacity 0.9 override, ^(vesktop)$"
         "float, ^(vesktop)$"
-        "opacity 0.8 override, ^(Spotify)$"
-        "opacity 0.8 override, ^(firefox)$"
+        "opacity 0.9 override, ^(Spotify)$"
+        "opacity 0.9 override, ^(firefox)$"
       ];
 
       windowrulev2 = [

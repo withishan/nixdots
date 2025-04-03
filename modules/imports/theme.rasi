@@ -23,7 +23,7 @@ window {
     y-offset:                    0px;
 
     enabled:                     true;
-    border-radius:               20px;
+    border-radius:               12px;
     cursor:                      "default";
     background-color:            @background;
 }
