@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }: {
   imports = [
     inputs.textfox.homeManagerModules.default
+    ./imports/textfox.nix
     ./imports/waybar.nix
     ./imports/tofi.nix
     ./imports/rofi.nix
