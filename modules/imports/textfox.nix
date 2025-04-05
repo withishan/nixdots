@@ -4,7 +4,7 @@
     config = {
       font = {
         family = "Iosevka Nerd Font";
-        size = "16px";
+        size = "15px";
       };
     };
   };
