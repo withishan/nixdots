@@ -6,6 +6,7 @@
         family = "Iosevka Nerd Font";
         size = "15px";
       };
+      displayHorizontalTabs = true;
     };
   };
 }
