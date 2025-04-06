@@ -28,27 +28,28 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       (pkgs.vimUtils.buildVimPlugin {
-        name = "lackluster.nvim";
+        name = "vague.nvim";
         src = pkgs.fetchFromGitHub {
-          owner = "slugbyte";
-          repo = "lackluster.nvim";
-          rev = "662fba7e6719b7afc155076385c00d79290bc347";
-          sha256 = "1jp02km6hmryb9g36z239qkv34hmjx0hbwmg2ns1aq7cqzy1m5x1";
+          owner = "vague2k";
+          repo = "vague.nvim";
+          rev = "982453f671332ce0240a15be5eb223d32f877e06";
+          sha256 = "1b83xhppl2mgk9ycvg8aywksf13z2l7l3hijdw9v46p7ycqcvla0";
         };
         # dependencies = [ lush-nvim ];
       })
     ];
 
     extraConfigLua = ''
-      require("lackluster").setup({
-        tweak_background = {
-          normal = 'none',    
-          telescope = 'default', 
-          menu = 'default',     
-          popup = 'default',     
+      require("vague").setup({
+        transparent = true,
+        style = {
+          boolean = "none",
+          comments = "italic",
+          strings = "none",
+          keyword_return = "none",
         },
       })
-      vim.cmd.colorscheme("lackluster")
+      vim.cmd.colorscheme("vague")
     '';
 
     # colorschemes.rose-pine.enable = true;
@@ -69,7 +70,7 @@
       treesitter.enable = true;
       lazygit.enable = true;
       bufferline = {
-        enable = true;
+        enable = false;
         settings = {
           options = {
             show_buffer_icons = false;
