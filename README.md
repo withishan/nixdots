@@ -1,3 +1,3 @@
 # nixdots
-![image](https://github.com/user-attachments/assets/2d3861e5-9ea3-4477-a85d-d16eb8d502c4)
+![image](https://github.com/user-attachments/assets/1d2b5d0a-f483-43d4-8feb-df455e93e269)
 
