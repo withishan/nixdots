@@ -48,12 +48,16 @@
       margin-bottom: 10px;
     }
 
-    #pulseaudio,
-    #memory,
-    #backlight
-    {
+    #pulseaudio {
       color: @secondary;
       font-size: 17px;
+      margin-top: 1px;
+      margin-bottom: 2px;
+    }
+
+    #backlight {
+      color: @secondary;
+      font-size: 16px;
       margin-top: 1px;
       margin-bottom: 2px;
     }
