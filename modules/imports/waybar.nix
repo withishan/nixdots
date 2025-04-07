@@ -5,7 +5,6 @@
     @import url('./colors.css');
 
     * {
-      color: @secondary;
       font-family: 'Host Grotesk';
       font-weight: 600;
       font-size: 20px;
@@ -26,6 +25,7 @@
     }
 
     #audio {
+      color: @secondary;
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
@@ -34,6 +34,7 @@
     }
 
     #memo {
+      color: @secondary;
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
@@ -42,6 +43,7 @@
     }
 
     #battery {
+      color: @secondary;
       margin-top: 5px;
       margin-bottom: 10px;
     }
@@ -50,6 +52,7 @@
     #memory,
     #backlight
     {
+      color: @secondary;
       font-size: 17px;
       margin-top: 1px;
       margin-bottom: 2px;
@@ -58,6 +61,7 @@
     #custom-sdio,
     #custom-mem
     {
+      color: @secondary;
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 2px 0px;
@@ -66,6 +70,7 @@
     }
 
     #backlight {
+      color: @secondary;
       font-size: 18px;
       margin-top: 2px;
       margin-bottom: 2px;
@@ -83,6 +88,7 @@
     }
 
     #keyboard-state {
+      color: @secondary;
       margin: 8px 8px 0px 8px;
       padding: 2px 0px 2px 4px;
       border-radius: 8px;
@@ -91,6 +97,7 @@
     }
 
     #language {
+      color: @secondary;
       margin: 0px 8px 0px 8px;
       padding: 2px 0px;
       border-radius: 8px;
@@ -99,6 +106,7 @@
     }
 
     #clock {
+      color: @secondary;
       font-size: 21px;
       margin: 0px 8px;
       padding: 2px 9px;
@@ -108,6 +116,7 @@
     }
 
     #battery {
+      color: @secondary;
       margin: 0px 8px 8px 8px;
       padding: 10px 4px;
       border-radius: 8px;
@@ -116,6 +125,7 @@
     }
 
     #brightness {
+      color: @secondary;
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
@@ -127,6 +137,7 @@
     #network,
     #bluetooth
     {
+      color: @secondary;
       margin: 0px 8px;
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
@@ -135,6 +146,7 @@
     }
     
     #workspaces button {
+      color: darker(@secondary);
       padding: 0px 4px 0px 4px;
       margin-bottom: 2px;
       margin-left: 2px; 
@@ -146,7 +158,7 @@
     }
     
     #workspaces button.active {
-      color: @surface;
+      color: @secondary;
       border: 2px solid alpha(@secondary_fixed_dim, 0.2);
     }
 
