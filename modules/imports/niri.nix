@@ -13,14 +13,13 @@
      prefer-no-csd = true;
 
      animations = {
-       slowdown = 1.0;
-     };
-
-     animations.window-open = {
-       easing = {
-         duration-ms = 300;
-	        curve = "ease-out-quad";
-       };
+      slowdown = 0.8;
+      window-open = {
+        easing = {
+          duration-ms = 160;
+	         curve = "ease-out-expo";
+        };
+      };
      };
 
      layout = {
@@ -43,8 +42,56 @@
               top-right = 5.0;
            };
           clip-to-geometry = true;
+          open-maximized = true;
+          shadow = {
+            enable = true;
+            color = "#00000062";
+            draw-behind-window = true;
+            softness = 40;
+            spread = 8;
+            offset.x = 3;
+            offset.y = 3;
+          };
         }
-      ];
+        {
+          matches = [
+            { app-id = "com.mitchellh.ghostty"; }
+          ];
+
+          open-floating = true;
+          default-column-width = { 
+            fixed = 800; 
+          };
+          default-window-height = { 
+            fixed = 560; 
+          };
+        }
+    ];
+
+    layer-rules = [
+      {
+        matches = [
+          { namespace = "waybar"; }
+        ];
+
+        shadow = {
+          enable = true;
+          color = "#00000064";
+          draw-behind-window = true;
+          softness = 40;
+          spread = 3;
+          offset.x = 1;
+          offset.y = 1;
+        };
+
+        geometry-corner-radius = {
+          bottom-left = 12.0;
+          bottom-right = 12.0;
+          top-left = 12.0;
+          top-right = 12.0;
+        };
+      }
+    ];
 
       binds = with config.lib.niri.actions;
       let
@@ -59,6 +106,7 @@
 
 	      "Super+Q".action = close-window;
 	      "Super+F".action = maximize-column;
+	      "Super+V".action = toggle-window-floating;
 	      "Super+Equal".action = set-column-width "+5%";
 	      "Super+Minus".action = set-column-width "-5%";
 
