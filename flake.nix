@@ -19,6 +19,11 @@
     };
 
     textfox.url = "github:adriankarlen/textfox";
+
+    niri = {
+     url = "github:sodiboo/niri-flake";
+     inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = 
@@ -27,12 +32,14 @@
   nixpkgs, 
   home-manager, 
   nixvim, 
+  niri,
   ... 
   }@inputs: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+    nixpkgs.overlays = [ niri.overlays.niri ];
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem 
     {
       inherit system; 
@@ -50,6 +57,7 @@
 	          imports = [ 
 	            ./modules/home.nix 
 	            nixvim.homeManagerModules.nixvim
+              niri.homeModules.niri
 	          ]; 
 	        }; 
         }
