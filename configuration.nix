@@ -23,11 +23,10 @@
   programs.niri.enable = true;
   programs.niri.package = pkgs.niri;
 
-  programs.hyprland.enable = true;
+  programs.hyprland.enable = false;
 
   environment.variables = {
     NIXOS_OZONE_WL = "1";
-    DISPLAY = ":0";
   };
 
   networking.hostName = "nixos"; # Define your hostname.

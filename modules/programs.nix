@@ -25,7 +25,7 @@
     swww
     neovim
     vesktop 
-    rofi
+    rofi-wayland
     nwg-look
   ];
 }

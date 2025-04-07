@@ -16,12 +16,11 @@
       padding: 0px;
     }
     
-    window {
-      background: none;
+    window#waybar {
       border-bottom: none;
       border: 2px solid alpha(@secondary_container, 0.7);
       border-radius: 10px;
-      background: alpha(@surface, 0.9);
+      background: @surface;
     }
 
     #audio {
@@ -178,10 +177,10 @@
 	      margin = "60 0 60 5";
         spacing = 5;
 
-	      modules-left = ["keyboard-state" "hyprland/language" "hyprland/workspaces"];
+	      modules-left = ["keyboard-state" "niri/language" "niri/workspaces"];
 	      modules-right = ["clock" "network" "bluetooth" "group/audio" "group/brightness" "battery"];
 
-	      "hyprland/workspaces" = {
+	      "niri/workspaces" = {
           "format" = "{icon}";
           "format-icons" = {
              "1" = "一";
@@ -200,7 +199,7 @@
           };
 	      };
 
-        "hyprland/language" = {
+        "niri/language" = {
           "format" = "{}";
           "format-en" = "en";
         };
