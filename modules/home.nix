@@ -4,7 +4,6 @@
     ./imports/textfox.nix
     ./imports/waybar.nix
     ./imports/tofi.nix
-    ./imports/rofi.nix
     ./imports/bash.nix
     ./imports/nixvim.nix
     ./imports/hypr.nix
