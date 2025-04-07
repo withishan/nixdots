@@ -48,7 +48,7 @@
 
       binds = with config.lib.niri.actions;
       let
-            shoot = spawn "sh" "-c";
+            cm = spawn "sh" "-c";
       in
       {
 	      "XF86AudioRaiseVolume".action.spawn = [ "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" ];
@@ -67,7 +67,7 @@
 	      "Super+3".action = focus-workspace 3;
 	      "Super+4".action = focus-workspace 4;
 
-	      "Super+R".action.spawn = "rofi -show drun";
+	      "Super+D".action = cm "rofi -show drun";
         "Super+T".action.spawn = "ghostty";
 
 	      "Super+H".action = focus-column-left;
@@ -75,7 +75,7 @@
         "Super+J".action = focus-window-down-or-column-left;
         "Super+K".action = focus-window-up-or-column-right;
 
-	      "Print".action = shoot ''grim -g "$(slurp)" - | wl-copy'';
+	      "Print".action = cm ''grim -g "$(slurp)" - | wl-copy'';
       };
     };
   };
