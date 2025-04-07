@@ -46,7 +46,7 @@
           passes = 4;
           vibrancy = 0.1696;
           new_optimizations = true;
-          ignore_opacity = true;
+          ignore_opacity = false;
         };
       };
 
@@ -151,6 +151,7 @@
 
       windowrule = [
         "float, ^(org.gnome.Nautilus)$"
+        "float, ^(com.obsproject.Studio)$"
         "opacity 0.8 override, ^(org.gnome.Nautilus)$"
         "float, ^(com.mitchellh.ghostty)$"
         "opacity 0.9 override, ^(com.mitchellh.ghostty)$"

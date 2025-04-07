@@ -5,6 +5,7 @@
     wl-clipboard
     firefox
     pywalfox-native
+    obs-studio
     lsd
     stow
     cava
