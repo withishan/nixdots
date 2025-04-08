@@ -57,10 +57,10 @@
             enable = true;
             color = "#00000062";
             draw-behind-window = true;
-            softness = 40;
+            softness = 50;
             spread = 8;
-            offset.x = 3;
-            offset.y = 3;
+            offset.x = 8;
+            offset.y = 8;
           };
         }
         {
@@ -86,7 +86,7 @@
 
         shadow = {
           enable = true;
-          color = "#00000064";
+          color = "#00000050";
           draw-behind-window = true;
           softness = 40;
           spread = 3;
