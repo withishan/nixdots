@@ -20,7 +20,7 @@
       border-bottom: none;
       border: 2px solid alpha(@secondary_container, 0.7);
       border-radius: 10px;
-      background: @surface;
+      background: alpha(@surface, 0.9);
       box-shadow: none;
     }
 

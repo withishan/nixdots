@@ -12,6 +12,11 @@
 
      prefer-no-csd = true;
 
+     cursor = {
+      theme = "macOS";
+      size = 24;
+     };
+
      animations = {
       slowdown = 0.8;
       window-open = {
@@ -63,7 +68,7 @@
             fixed = 800; 
           };
           default-window-height = { 
-            fixed = 560; 
+            fixed = 540; 
           };
         }
     ];
@@ -114,8 +119,17 @@
 	      "Super+2".action = focus-workspace 2;
 	      "Super+3".action = focus-workspace 3;
 	      "Super+4".action = focus-workspace 4;
+	      "Super+5".action = focus-workspace 5;
+	      "Super+6".action = focus-workspace 6;
+	      "Super+7".action = focus-workspace 7;
+	      "Super+8".action = focus-workspace 8;
+	      "Super+9".action = focus-workspace 9;
+	      "Super+0".action = focus-workspace 10;
 
-	      "Super+D".action = cm "rofi -show drun";
+	      "Super+Shift+H".action = move-column-left;
+	      "Super+Shift+L".action = move-column-right;
+
+	      "Super+R".action = cm "rofi -show drun";
         "Super+T".action.spawn = "ghostty";
 
 	      "Super+H".action = focus-column-left;
