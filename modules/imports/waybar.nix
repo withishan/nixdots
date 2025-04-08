@@ -18,7 +18,7 @@
     
     window#waybar {
       border-bottom: none;
-      border: 2px solid alpha(@secondary_container, 0.7);
+      border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 10px;
       background: alpha(@surface, 0.999);
       box-shadow: none;
@@ -30,7 +30,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
 
     #memo {
@@ -39,7 +39,7 @@
       padding-left: 2px;
       padding-right: 2px;
       border-radius: 8px;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
 
     #battery {
@@ -116,7 +116,7 @@
       padding: 2px 9px;
       border-radius: 7px;
       transition: none;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
 
     #battery {
@@ -125,7 +125,7 @@
       padding: 10px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
 
     #brightness {
@@ -135,7 +135,7 @@
       padding-right: 2px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
 
     #network,
@@ -146,7 +146,7 @@
       padding: 6px 4px 6px 4px;
       border-radius: 8px;
       transition: none;
-      background: alpha(@surface_bright, 0.7);
+      background: alpha(@surface_bright, 0.5);
     }
     
     #workspaces button {

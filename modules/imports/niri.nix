@@ -55,7 +55,7 @@
           open-maximized = true;
           shadow = {
             enable = true;
-            color = "#00000062";
+            color = "#00000065";
             draw-behind-window = true;
             softness = 50;
             spread = 8;
@@ -98,11 +98,11 @@
         ];
 
         shadow = {
-          enable = true;
-          color = "#00000050";
+          enable = false;
+          color = "#00000002";
           draw-behind-window = true;
           softness = 40;
-          spread = 3;
+          spread = 10;
           offset.x = 1;
           offset.y = 1;
         };
@@ -130,7 +130,6 @@
 	      "Super+Q".action = close-window;
 	      "Super+F".action = maximize-column;
 	      "Super+V".action = toggle-window-floating;
-	      "Super+Right-Click".action = set-column-width "-10%";
 
 	      "Super+Equal".action = set-column-width "+5%";
 	      "Super+Minus".action = set-column-width "-5%";
