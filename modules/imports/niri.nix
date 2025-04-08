@@ -5,6 +5,11 @@
         sh = cmd: [ "sh" "-c" (lib.escape [ "\"" ] cmd) ];
       in
     {
+
+    input = {
+      focus-follows-mouse.enable = true;
+    };
+
      spawn-at-startup = [
        { command = sh "waybar"; }
        { command = sh "swww-daemon"; }
