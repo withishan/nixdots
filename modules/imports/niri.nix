@@ -76,6 +76,19 @@
             fixed = 540; 
           };
         }
+        {
+          matches = [
+            { app-id = "org.gnome.Nautilus"; }
+          ];
+
+          open-floating = true;
+          default-column-width = { 
+            fixed = 800; 
+          };
+          default-window-height = { 
+            fixed = 540; 
+          };
+        }
     ];
 
     layer-rules = [
@@ -117,6 +130,8 @@
 	      "Super+Q".action = close-window;
 	      "Super+F".action = maximize-column;
 	      "Super+V".action = toggle-window-floating;
+	      "Super+Right-Click".action = set-column-width "-10%";
+
 	      "Super+Equal".action = set-column-width "+5%";
 	      "Super+Minus".action = set-column-width "-5%";
 
