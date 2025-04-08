@@ -55,13 +55,6 @@
       margin-bottom: 2px;
     }
 
-    #backlight {
-      color: @secondary;
-      font-size: 16px;
-      margin-top: 1px;
-      margin-bottom: 2px;
-    }
-    
     #custom-sdio,
     #custom-mem
     {
@@ -70,17 +63,17 @@
       margin-bottom: 2px;
       padding: 2px 0px;
       border-radius: 8px;
-      background-color: alpha(@secondary_fixed_dim, 0.2);
+      background-color: alpha(@secondary_fixed_dim, 0.1);
     }
 
     #backlight {
       color: @secondary;
-      font-size: 18px;
+      font-size: 17px;
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 5px 2px 5px 4px;
       border-radius: 8px;
-      background-color: alpha(@secondary_fixed_dim, 0.2);
+      background-color: alpha(@secondary_fixed_dim, 0.1);
     }
 
     #workspaces {
