@@ -153,8 +153,8 @@
 
 	      "Super+H".action = focus-column-left;
         "Super+L".action = focus-column-right;
-        "Super+J".action = focus-window-down-or-column-left;
-        "Super+K".action = focus-window-up-or-column-right;
+        "Super+J".action = focus-window-up-or-column-left;
+        "Super+K".action = focus-window-down-or-column-right;
 
 	      "Print".action = cm ''grim -g "$(slurp)" - | wl-copy'';
       };
