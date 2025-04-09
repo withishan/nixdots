@@ -25,7 +25,7 @@
     nautilus
     swww
     neovim
-    vesktop 
+    vesktop
     rofi-wayland
     nwg-look
   ];
