@@ -35,7 +35,12 @@
      layout = {
        gaps = 16;
        border.enable = false;
-       focus-ring.enable = false;
+       focus-ring = {
+        enable = true;
+        active = {
+          color = "#3a3740"; 
+        };
+       };
        always-center-single-column = false;
      };
 
@@ -46,13 +51,13 @@
           ];
           draw-border-with-background = false;
 	        geometry-corner-radius = {
-              bottom-left = 5.0;
-              bottom-right = 5.0;
-              top-left = 5.0;
-              top-right = 5.0;
+              bottom-left = 0.0;
+              bottom-right = 0.0;
+              top-left = 0.0;
+              top-right = 0.0;
            };
           clip-to-geometry = true;
-          open-maximized = true;
+          open-maximized = false;
           shadow = {
             enable = true;
             color = "#00000065";
@@ -70,10 +75,10 @@
 
           open-floating = true;
           default-column-width = { 
-            fixed = 800; 
+            fixed = 700; 
           };
           default-window-height = { 
-            fixed = 540; 
+            fixed = 500; 
           };
         }
         {
