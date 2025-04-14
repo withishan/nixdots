@@ -7,7 +7,7 @@
     {
 
     input = {
-      focus-follows-mouse.enable = true;
+      focus-follows-mouse.enable = false;
     };
 
      spawn-at-startup = [
@@ -75,7 +75,7 @@
 
           open-floating = true;
           default-column-width = { 
-            fixed = 700; 
+            fixed = 730; 
           };
           default-window-height = { 
             fixed = 500; 
