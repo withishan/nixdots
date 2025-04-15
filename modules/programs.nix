@@ -12,6 +12,7 @@
     youtube-music
     gh 
     nitch
+    pipes
     niri
     brightnessctl
     font-manager
