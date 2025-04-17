@@ -10,6 +10,7 @@
     stow
     cava
     youtube-music
+    departure-mono
     gh 
     nitch
     pipes
