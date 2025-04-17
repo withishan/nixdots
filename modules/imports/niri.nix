@@ -38,7 +38,7 @@
        focus-ring = {
         enable = true;
         active = {
-          color = "#3a3740"; 
+          color = "#4e4754"; 
         };
        };
        always-center-single-column = false;
