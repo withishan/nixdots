@@ -3,5 +3,6 @@
     nerdfonts 
     font-awesome
     jetbrains-mono
+    departure-mono
   ]; 
 }
