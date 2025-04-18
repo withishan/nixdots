@@ -38,7 +38,7 @@
        focus-ring = {
         enable = true;
         active = {
-          color = "#4e4754"; 
+          color = "#4f4b5e"; 
         };
        };
        always-center-single-column = false;
@@ -78,7 +78,7 @@
             fixed = 730; 
           };
           default-window-height = { 
-            fixed = 500; 
+            fixed = 480; 
           };
         }
         {
