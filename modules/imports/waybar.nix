@@ -107,7 +107,7 @@
       font-size: 21px;
       margin: 0px 8px;
       padding: 2px 9px;
-      border-radius: 5px;
+      border-radius: 6px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
     }
