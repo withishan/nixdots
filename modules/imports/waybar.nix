@@ -19,7 +19,7 @@
     window#waybar {
       border-bottom: none;
       border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 6px;
+      border-radius: 7px;
       background: alpha(@surface, 0.999);
       box-shadow: none;
     }
@@ -29,7 +29,7 @@
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
-      border-radius: 6px;
+      border-radius: 7px;
       background: alpha(@surface_bright, 0.5);
     }
 
@@ -38,7 +38,7 @@
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
-      border-radius: 6px;
+      border-radius: 7px;
       background: alpha(@surface_bright, 0.5);
     }
 
@@ -62,7 +62,7 @@
       margin-top: 2px;
       margin-bottom: 0px;
       padding: 2px 0px;
-      border-radius: 6px;
+      border-radius: 7px;
       background-color: alpha(@secondary_fixed_dim, 0.1);
     }
 
@@ -72,14 +72,14 @@
       margin-top: 2px;
       margin-bottom: 2px;
       padding: 5px 2px 5px 4px;
-      border-radius: 6px;
+      border-radius: 7px;
       background-color: alpha(@secondary_fixed_dim, 0.1);
     }
 
     #workspaces {
       margin: 0px 8px 0px 8px;
       padding: 2px 0px 0px 0px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
     }
@@ -88,7 +88,7 @@
       color: @secondary;
       margin: 8px 8px 0px 8px;
       padding: 2px 0px 2px 4px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
     }
@@ -97,7 +97,7 @@
       color: @secondary;
       margin: 0px 8px 0px 8px;
       padding: 2px 0px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
     }
@@ -107,7 +107,7 @@
       font-size: 21px;
       margin: 0px 8px;
       padding: 2px 9px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
     }
@@ -116,7 +116,7 @@
       color: @secondary;
       margin: 0px 8px 8px 8px;
       padding: 10px 4px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
     }
@@ -126,18 +126,26 @@
       margin: 0px 8px;
       padding-left: 2px;
       padding-right: 2px;
-      border-radius: 6px;
+      border-radius: 7px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
     }
 
-    #network,
-    #bluetooth
+    #network
     {
       color: @secondary;
       margin: 0px 8px;
       padding: 6px 4px 6px 4px;
       border-radius: 6px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+
+    #bluetooth {
+      color: @secondary;
+      margin: 0px 8px;
+      padding: 6px 4px 6px 4px;
+      border-radius: 7px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
     }
@@ -148,7 +156,7 @@
       margin-bottom: 2px;
       margin-left: 2px; 
       margin-right: 2px;
-      border-radius: 6px;
+      border-radius: 7px;
       border: 2px solid alpha(@secondary_fixed_dim, 0);
       background: alpha(@secondary_fixed_dim, 0.1);
 
