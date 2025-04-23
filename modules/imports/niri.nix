@@ -75,7 +75,7 @@
 
           open-floating = true;
           default-column-width = { 
-            fixed = 730; 
+            fixed = 710; 
           };
           default-window-height = { 
             fixed = 480; 

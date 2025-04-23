@@ -51,7 +51,7 @@
     #pulseaudio {
       color: @secondary;
       font-size: 17px;
-      margin-top: 1px;
+      margin-top: 2px;
       margin-bottom: 2px;
     }
 
@@ -60,7 +60,7 @@
     {
       color: @secondary;
       margin-top: 2px;
-      margin-bottom: 2px;
+      margin-bottom: 0px;
       padding: 2px 0px;
       border-radius: 6px;
       background-color: alpha(@secondary_fixed_dim, 0.1);
@@ -168,7 +168,7 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "70 0 70 5";
+	      margin = "80 0 80 5";
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "niri/language" "niri/workspaces"];
