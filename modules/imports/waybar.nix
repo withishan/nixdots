@@ -70,6 +70,7 @@
 
     #workspaces button.active {
       color: @secondary;
+      background: alpha(darker(@secondary), 0.4);
     }
 
     window#waybar.empty #window {

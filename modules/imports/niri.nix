@@ -103,8 +103,8 @@
         ];
 
         shadow = {
-          enable = false;
-          color = "#00000002";
+          enable = true;
+          color = "#00000020";
           draw-behind-window = true;
           softness = 40;
           spread = 10;
