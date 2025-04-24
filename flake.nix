@@ -19,6 +19,7 @@
     };
 
     textfox.url = "github:adriankarlen/textfox";
+    pond.url = "gitlab:Morgenkaff/flake-for-pond";
 
     niri = {
      url = "github:sodiboo/niri-flake";
@@ -32,6 +33,7 @@
   nixpkgs, 
   home-manager, 
   nixvim, 
+  pond,
   niri,
   ... 
   }@inputs: 
