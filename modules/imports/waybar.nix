@@ -81,7 +81,7 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "70 0 70 15";
+	      margin = "70 5 70 15";
         spacing = 5;
 
         modules-left = ["niri/workspaces" "group/datetime" "group/connections" "group/others"];
