@@ -5,8 +5,8 @@
     @import url('./colors.css');
 
     * {
-      font-family: 'Host Grotesk';
-      font-weight: 600;
+      font-family: 'MartianMono Nerd Font';
+      font-weight: 400;
       font-size: 20px;
       min-width: 18px;
       border: none;
@@ -17,154 +17,52 @@
     }
     
     window#waybar {
+      background: none;
       border-bottom: none;
-      border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 7px;
-      background: alpha(@surface, 0.999);
       box-shadow: none;
-    }
-
-    #audio {
-      color: @secondary;
-      margin: 0px 8px;
-      padding-left: 2px;
-      padding-right: 2px;
-      border-radius: 7px;
-      background: alpha(@surface_bright, 0.5);
-    }
-
-    #memo {
-      color: @secondary;
-      margin: 0px 8px;
-      padding-left: 2px;
-      padding-right: 2px;
-      border-radius: 7px;
-      background: alpha(@surface_bright, 0.5);
-    }
-
-    #battery {
-      color: @secondary;
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
-
-    #pulseaudio {
-      color: @secondary;
-      font-size: 17px;
-      margin-top: 2px;
-      margin-bottom: 2px;
-    }
-
-    #custom-sdio,
-    #custom-mem
-    {
-      color: @secondary;
-      margin-top: 2px;
-      margin-bottom: 0px;
-      padding: 2px 0px;
-      border-radius: 7px;
-      background-color: alpha(@secondary_fixed_dim, 0.1);
-    }
-
-    #backlight {
-      color: @secondary;
-      font-size: 17px;
-      margin-top: 2px;
-      margin-bottom: 2px;
-      padding: 5px 2px 5px 4px;
-      border-radius: 7px;
-      background-color: alpha(@secondary_fixed_dim, 0.1);
-    }
-
-    #workspaces {
-      margin: 0px 8px 0px 8px;
-      padding: 2px 0px 0px 0px;
-      border-radius: 7px;
-      transition: none;
-      background: alpha(lighter(@surface_bright), 0.5);
-    }
-
-    #keyboard-state {
-      color: @secondary;
-      margin: 8px 8px 0px 8px;
-      padding: 2px 0px 2px 4px;
-      border-radius: 7px;
-      transition: none;
-      background: alpha(lighter(@surface_bright), 0.5);
-    }
-
-    #language {
-      color: @secondary;
-      margin: 0px 8px 0px 8px;
-      padding: 2px 0px;
-      border-radius: 7px;
-      transition: none;
-      background: alpha(lighter(@surface_bright), 0.5);
     }
 
     #clock {
       color: @secondary;
-      font-size: 21px;
-      margin: 0px 8px;
-      padding: 2px 9px;
-      border-radius: 6px;
+      padding: 8px 14px;
+      border: 2px solid alpha(@secondary_container, 0.5);
+      border-radius: 0px;
       transition: none;
-      background: alpha(@surface_bright, 0.5);
+      background: @surface_container_low;
     }
 
-    #battery {
+    #connections {
       color: @secondary;
-      margin: 0px 8px 8px 8px;
-      padding: 10px 4px;
-      border-radius: 7px;
+      padding: 8px 14px;
+      border: 2px solid alpha(@secondary_container, 0.5);
+      border-radius: 0px;
       transition: none;
-      background: alpha(@surface_bright, 0.5);
+      background: @surface_container_low;
     }
 
-    #brightness {
+    #others {
       color: @secondary;
-      margin: 0px 8px;
-      padding-left: 2px;
-      padding-right: 2px;
-      border-radius: 7px;
+      padding: 8px 14px;
+      border: 2px solid alpha(@secondary_container, 0.5);
+      border-radius: 0px;
       transition: none;
-      background: alpha(@surface_bright, 0.5);
+      background: @surface_container_low;
     }
 
-    #network
-    {
-      color: @secondary;
-      margin: 0px 8px;
-      padding: 6px 4px 6px 4px;
-      border-radius: 6px;
+    #workspaces {
+      padding: 8px 14px;
+      border: 2px solid alpha(@secondary_container, 0.5);
+      border-radius: 0px;
       transition: none;
-      background: alpha(@surface_bright, 0.5);
+      background: @surface_container_low;
     }
 
-    #bluetooth {
-      color: @secondary;
-      margin: 0px 8px;
-      padding: 6px 4px 6px 4px;
-      border-radius: 7px;
-      transition: none;
-      background: alpha(@surface_bright, 0.5);
-    }
-    
     #workspaces button {
       color: darker(@secondary);
-      padding: 0px 4px 0px 4px;
-      margin-bottom: 2px;
-      margin-left: 2px; 
-      margin-right: 2px;
-      border-radius: 7px;
-      border: 2px solid alpha(@secondary_fixed_dim, 0);
-      background: alpha(@secondary_fixed_dim, 0.1);
-
     }
-    
+
     #workspaces button.active {
       color: @secondary;
-      border: 2px solid alpha(@secondary_fixed_dim, 0.2);
     }
 
     window#waybar.empty #window {
@@ -176,26 +74,13 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "80 0 80 5";
+	      margin = "90 0 90 15";
         spacing = 5;
 
-	      modules-left = ["keyboard-state" "niri/language" "niri/workspaces"];
-	      modules-right = ["clock" "network" "bluetooth" "group/audio" "group/brightness" "battery"];
+        modules-center = ["niri/workspaces" "clock#time" "clock#date" "group/others"];
 
 	      "niri/workspaces" = {
-          "format" = "{icon}";
-          "format-icons" = {
-             "1" = "一";
-             "2" = "二";
-             "3" = "三";
-             "4" = "四";
-             "5" = "五";
-             "6" = "六";
-             "7" = "七";
-             "8" = "八";
-             "9" = "九";
-             "10" = "十";
-          };
+          "format" = "0{}";
           "persistent-workspaces" = {
             "*" = 3;
           };
@@ -221,20 +106,23 @@
 	        tooltip = false;
 	      };
 
-        "group/brightness" = {
-          orientation = "inherit";
-          modules = ["backlight"];
+        "clock#date" = {
+          interval = 60;
+          format = "{:%m\n%d}";
         };
 
-        "custom/mem" = {
-          "format" = " ";
-          tooltip = false;
+        "clock#time" = {
+          interval = 60;
+          format = "{:%H\n%M}";
         };
 
-        "custom/sdio" = {
-          "format" = " ";
-          tooltip = false;
-        };
+
+        network = {
+	        format = "{icon}";
+	        "format-disconnected" = "󰤯 ";
+	        "format-icons" = [ "󰤨 " ];
+	        tooltip = false;
+	      };
 
         "bluetooth" = {
           "format" = "";
@@ -243,50 +131,31 @@
           tooltip = false;
         };
 
-        "memory" = {
-          "interval" = 30;
-          "format" = "{}";
-          "tooltip" = false;
-        };
-
 	      backlight = {
-          format = "{icon}";
-          "format-icons" = ["󰃝 " "󰃞 " "󰃟 " "󰃠 "];
+          format = "{percent}";
 	        tooltip = false;
-	      };
-
-        "group/audio" = {
-          "orientation" = "inherit";
-          "modules" = ["custom/sdio" "pulseaudio"];
-        };
-
-        "group/memo" = {
-          "orientation" = "inherit";
-          "modules" = ["custom/mem" "memory"];
-        };
-
-	      battery = {
-          format = "{icon}"; 
-          "rotate" = 270;
-          "format-charging" = "<b>{icon} </b>";
-	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰂀" "󰂂" "󰁹" ];
-          "format-full" = "<span color='#82A55F'><b>{icon}</b></span>";
-	        tooltip = false;
-          interval = 2;
 	      };
 
 	      pulseaudio = {
           format = "{volume}";
-	        "format-muted" = "⨯";
 	        tooltip = false;
 	      };
 
-	      network = {
-	        format = "{icon}";
-	        "format-disconnected" = "󰤯 ";
-	        "format-icons" = [ "󰤨 " ];
+        battery = {
+          format = "{}"; 
 	        tooltip = false;
+          interval = 2;
 	      };
+
+        "group/connections" = {
+          orientation = "inherit";
+          modules = ["network" "bluetooth"];
+        };
+
+        "group/others" = {
+          orientation = "inherit";
+          modules = ["backlight" "pulseaudio" "battery"];
+        };
       };
     };
   };
