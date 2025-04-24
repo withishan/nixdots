@@ -20,7 +20,7 @@
       box-shadow: none;
     }
 
-    #datetime {
+    #bunch {
       font-size: 18px;
       min-width: 24px;
       color: @secondary;
@@ -85,7 +85,7 @@
 	      margin = "70 5 70 15";
         spacing = 5;
 
-        modules-left = ["niri/workspaces" "group/datetime" "group/connections" "group/others"];
+        modules-left = ["niri/workspaces" "group/bunch" "group/connections" "group/others"];
 
 	      "niri/workspaces" = {
           "format" = "{}";
@@ -105,17 +105,22 @@
 
         "niri/language" = {
           "format" = "{}";
-          "format-en" = "en";
+          "format-en" = "EN";
         };
 
-        "group/datetime" = {
+        "group/bunch" = {
           orientation = "inherit";
-          modules = ["clock#date" "clock#time"];
+          modules = ["clock#date" "custom/separator" "clock#time"];
         };
 
         "clock#date" = {
           interval = 60;
           format = "{:%m\n%d}";
+        };
+
+        "custom/separator" = {
+          rotate = 270;
+          "format" = "|";
         };
 
         "clock#time" = {
@@ -154,9 +159,14 @@
           interval = 2;
 	      };
 
+        tray = {
+          "icon-size" = 20;
+          spacing = 5;
+        };
+
         "group/connections" = {
           orientation = "inherit";
-          modules = ["network" "bluetooth"];
+          modules = ["network" "bluetooth" "tray"];
         };
 
         "group/others" = {
