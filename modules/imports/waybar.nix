@@ -31,6 +31,10 @@
       background: @surface_container_low;
     }
 
+    #network {
+      padding: 0px 4px 0px 0px;
+    }
+
     #connections {
       font-size: 18px;
       color: @secondary;
@@ -80,7 +84,7 @@
 	      margin = "70 0 70 15";
         spacing = 5;
 
-        modules-left = ["niri/workspaces" "group/datetime" "" "group/others"];
+        modules-left = ["niri/workspaces" "group/datetime" "group/connections" "group/others"];
 
 	      "niri/workspaces" = {
           "format" = "{}";
@@ -110,7 +114,7 @@
 
         "clock#date" = {
           interval = 60;
-          format = "{:%m\n%d}\n";
+          format = "{:%m\n%d}";
         };
 
         "clock#time" = {
@@ -121,8 +125,8 @@
 
         network = {
 	        format = "{icon}";
-	        "format-disconnected" = "󰤯 ";
-	        "format-icons" = [ "󰤨 " ];
+	        "format-disconnected" = "󰤯";
+	        "format-icons" = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
 	        tooltip = false;
 	      };
 
