@@ -7,8 +7,6 @@
     * {
       font-family: 'MartianMono Nerd Font';
       font-weight: 400;
-      font-size: 20px;
-      min-width: 18px;
       border: none;
       border-radius: 0;
       box-shadow: none;
@@ -22,9 +20,11 @@
       box-shadow: none;
     }
 
-    #clock {
+    #datetime {
+      font-size: 18px;
+      min-width: 24px;
       color: @secondary;
-      padding: 8px 14px;
+      padding: 10px 16px;
       border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 0px;
       transition: none;
@@ -32,8 +32,9 @@
     }
 
     #connections {
+      font-size: 18px;
       color: @secondary;
-      padding: 8px 14px;
+      padding: 10px 16px;
       border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 0px;
       transition: none;
@@ -41,8 +42,9 @@
     }
 
     #others {
+      font-size: 18px;
       color: @secondary;
-      padding: 8px 14px;
+      padding: 10px 6px;
       border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 0px;
       transition: none;
@@ -50,7 +52,8 @@
     }
 
     #workspaces {
-      padding: 8px 14px;
+      font-size: 18px;
+      padding: 10px 16px;
       border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 0px;
       transition: none;
@@ -74,13 +77,25 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "90 0 90 15";
+	      margin = "70 0 70 15";
         spacing = 5;
 
-        modules-center = ["niri/workspaces" "clock#time" "clock#date" "group/others"];
+        modules-left = ["niri/workspaces" "group/datetime" "" "group/others"];
 
 	      "niri/workspaces" = {
-          "format" = "0{}";
+          "format" = "{}";
+          "format-icons" = {
+            "1" = "01";
+            "2" = "02";
+            "3" = "03";
+            "4" = "04";
+            "5" = "05";
+            "6" = "06";
+            "7" = "07";
+            "8" = "08";
+            "9" = "09";
+            "10" = "10";
+          };
           "persistent-workspaces" = {
             "*" = 3;
           };
@@ -101,10 +116,10 @@
           };
         };
 
-	      "clock" = {
-          format = "{:%I\n%M}";
-	        tooltip = false;
-	      };
+        "group/datetime" = {
+          orientation = "inherit";
+          modules = ["clock#date" "clock#time"];
+        };
 
         "clock#date" = {
           interval = 60;
