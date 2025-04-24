@@ -34,7 +34,13 @@
 
      layout = {
        gaps = 16;
-       border.enable = false;
+       border = {
+        enable = true;
+        width = 2;
+        active = {
+          color = "#2a2a2a";
+        };
+       };
        focus-ring = {
         enable = true;
         active = {
