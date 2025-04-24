@@ -96,24 +96,11 @@
             "9" = "09";
             "10" = "10";
           };
-          "persistent-workspaces" = {
-            "*" = 3;
-          };
 	      };
 
         "niri/language" = {
           "format" = "{}";
           "format-en" = "en";
-        };
-
-        "keyboard-state" = {
-          "numlock" = false;
-          "capslock" = true;
-          "format" = "{icon}";
-          "format-icons" = {
-            "locked" = " ";
-            "unlocked" = " ";
-          };
         };
 
         "group/datetime" = {
@@ -123,7 +110,7 @@
 
         "clock#date" = {
           interval = 60;
-          format = "{:%m\n%d}";
+          format = "{:%m\n%d}\n";
         };
 
         "clock#time" = {
