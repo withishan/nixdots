@@ -37,8 +37,8 @@
   fonts = {
     fontconfig = {
       defaultFonts = {
-        serif = [ "ZedMono Nerd Font" ];
-        sansSerif = [ "ZedMono Nerd Font" ];
+        serif = [ "SF Pro Display" ];
+        sansSerif = [ "SF Pro Display" ];
         monospace = [ "ZedMono Nerd Font" ];
       };
     };
