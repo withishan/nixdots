@@ -18,8 +18,14 @@
       url = "github:/InioX/Matugen";
     };
 
-    textfox.url = "github:adriankarlen/textfox";
-    pond.url = "gitlab:Morgenkaff/flake-for-pond";
+    pond = {
+      url = "gitlab:Morgenkaff/flake-for-pond";
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     niri = {
      url = "github:sodiboo/niri-flake";
@@ -34,6 +40,7 @@
   home-manager, 
   nixvim, 
   pond,
+  zen-browser,
   niri,
   ... 
   }@inputs: 
