@@ -5,7 +5,6 @@
     inputs.zen-browser.packages.${system}.default
     ghostty
     wl-clipboard
-    firefox
     pywalfox-native
     obs-studio
     lsd
