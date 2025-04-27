@@ -166,7 +166,7 @@
 
         "group/connections" = {
           orientation = "inherit";
-          modules = ["network" "bluetooth" "tray"];
+          modules = ["network" "bluetooth"];
         };
 
         "group/others" = {
