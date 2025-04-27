@@ -1,2 +1,2 @@
 # nixdots
-![colorado](https://github.com/user-attachments/assets/68ee681d-4d2c-4a26-a641-f130b3efd3a7)
+![lake](https://github.com/user-attachments/assets/8032714a-b108-4d85-80c0-f10d96443e13)
