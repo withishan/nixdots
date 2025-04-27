@@ -1,2 +1,2 @@
 # nixdots
-![lake](https://github.com/user-attachments/assets/8032714a-b108-4d85-80c0-f10d96443e13)
+![lake](https://github.com/user-attachments/assets/0145c1cd-a6a9-4ec3-9bc8-62af96e1e528)
