@@ -9,6 +9,7 @@
     obs-studio
     lsd
     stow
+    firefox
     cava
     youtube-music
     gh 

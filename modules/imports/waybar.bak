@@ -176,7 +176,7 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "80 0 80 5";
+	      margin = "130 0 130 5";
         spacing = 5;
 
 	      modules-left = ["keyboard-state" "niri/language" "niri/workspaces"];

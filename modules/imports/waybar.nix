@@ -110,7 +110,7 @@
 
         "group/bunch" = {
           orientation = "inherit";
-          modules = ["clock#date" "custom/separator" "clock#time"];
+          modules = ["clock#date" "clock#time"];
         };
 
         "clock#date" = {
