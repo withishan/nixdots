@@ -73,6 +73,7 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    audio.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
@@ -91,7 +92,7 @@
   users.users.ishan = {
     isNormalUser = true;
     description = "ishan";
-    extraGroups = [ "networkmanager" "wheel" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "audio" ];
   };
 
   # Allow unfree packages
