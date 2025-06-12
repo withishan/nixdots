@@ -150,6 +150,7 @@
 
 	      pulseaudio = {
           format = "{volume}";
+          "format-muted" = "M";
 	        tooltip = false;
 	      };
 
