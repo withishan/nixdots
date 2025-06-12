@@ -29,7 +29,6 @@
     nautilus
     swww
     neovim
-    vesktop
     rofi-wayland
     nwg-look
   ];
