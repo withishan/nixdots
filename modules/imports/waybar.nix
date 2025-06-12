@@ -5,9 +5,9 @@
     @import url('./colors.css');
 
     * {
-      font-family: 'Host Grotesk';
-      font-weight: 600;
-      font-size: 20px;
+      font-family: 'Martian Mono Nerd Font';
+      font-weight: 400;
+      font-size: 18px;
       border: none;
       border-radius: 0;
       box-shadow: none;
@@ -32,15 +32,6 @@
       background: alpha(@surface_bright, 0.5);
     }
 
-    #memo {
-      color: @secondary;
-      margin: 0px 8px;
-      padding-left: 2px;
-      padding-right: 2px;
-      border-radius: 4px;
-      background: alpha(@surface_bright, 0.5);
-    }
-
     #battery {
       color: @secondary;
       margin-top: 5px;
@@ -49,18 +40,16 @@
 
     #pulseaudio {
       color: @secondary;
-      font-size: 17px;
+      font-size: 15px;
       margin-top: 2px;
       margin-bottom: 2px;
     }
 
-    #custom-sdio,
-    #custom-mem
-    {
+    #custom-sdio {
       color: @secondary;
       margin-top: 2px;
       margin-bottom: 0px;
-      padding: 2px 0px;
+      padding: 2px 5px 2px 0px;
       border-radius: 4px;
       background-color: alpha(@secondary_fixed_dim, 0.1);
     }
@@ -70,7 +59,7 @@
       font-size: 17px;
       margin-top: 2px;
       margin-bottom: 2px;
-      padding: 5px 2px 5px 4px;
+      padding: 5px 5px 5px 2px;
       border-radius: 4px;
       background-color: alpha(@secondary_fixed_dim, 0.1);
     }
@@ -86,7 +75,7 @@
     #keyboard-state {
       color: @secondary;
       margin: 8px 8px 0px 8px;
-      padding: 2px 0px 2px 4px;
+      padding: 2px 4px 2px 4px;
       border-radius: 4px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
@@ -103,9 +92,9 @@
 
     #clock {
       color: @secondary;
-      font-size: 21px;
+      font-size: 20px;
       margin: 0px 8px;
-      padding: 3px 11px;
+      padding: 4px 11px;
       border-radius: 4px;
       transition: none;
       background: alpha(lighter(@surface_bright), 0.5);
@@ -130,11 +119,10 @@
       background: alpha(@surface_bright, 0.5);
     }
 
-    #network
-    {
+    #network {
       color: @secondary;
       margin: 0px 8px;
-      padding: 6px 4px 6px 4px;
+      padding: 6px 7px 6px 2px;
       border-radius: 4px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
@@ -152,7 +140,7 @@
     #bluetooth.connected {
       color: @secondary;
       margin: 0px 8px;
-      padding: 6px 6px 6px 3px;
+      padding: 6px 3px 6px 4px;
       border-radius: 4px;
       transition: none;
       background: alpha(@surface_bright, 0.5);
@@ -219,8 +207,8 @@
           "capslock" = true;
           "format" = "{icon}";
           "format-icons" = {
-            "locked" = " ";
-            "unlocked" = " ";
+            "locked" = "";
+            "unlocked" = "";
           };
         };
 
@@ -234,13 +222,8 @@
           modules = ["backlight"];
         };
 
-        "custom/mem" = {
-          "format" = " ";
-          tooltip = false;
-        };
-
         "custom/sdio" = {
-          "format" = " ";
+          "format" = "";
           tooltip = false;
         };
 
@@ -259,7 +242,7 @@
 
 	      backlight = {
           format = "{icon}";
-          "format-icons" = ["󰃝 " "󰃞 " "󰃟 " "󰃠 "];
+          "format-icons" = ["󰃝" "󰃞" "󰃟" "󰃠"];
 	        tooltip = false;
 	      };
 
@@ -291,8 +274,8 @@
 
 	      network = {
 	        format = "{icon}";
-	        "format-disconnected" = "󰤯 ";
-	        "format-icons" = [ "󰤨 " ];
+	        "format-disconnected" = "󰤯";
+	        "format-icons" = [ "󰤨" ];
 	        tooltip = false;
 	      };
       };
