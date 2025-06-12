@@ -1,8 +1,6 @@
 { pkgs, ... }: {
   fonts.packages = with pkgs; [
-    nerdfonts 
-    font-awesome
-    jetbrains-mono
-    departure-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.departure-mono
   ]; 
 }
