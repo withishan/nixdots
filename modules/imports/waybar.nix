@@ -5,8 +5,9 @@
     @import url('./colors.css');
 
     * {
-      font-family: 'MartianMono Nerd Font';
-      font-weight: 400;
+      font-family: 'Host Grotesk';
+      font-weight: 600;
+      font-size: 20px;
       border: none;
       border-radius: 0;
       box-shadow: none;
@@ -15,62 +16,154 @@
     }
     
     window#waybar {
-      background: none;
       border-bottom: none;
+      border: 2px solid alpha(@secondary_container, 0.5);
+      border-radius: 3px;
+      background: alpha(@surface, 0.999);
       box-shadow: none;
     }
 
-    #bunch {
-      font-size: 18px;
-      min-width: 24px;
+    #audio {
       color: @secondary;
-      padding: 10px 16px;
-      border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 0px;
-      transition: none;
-      background: @surface_container_low;
+      margin: 0px 8px;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 3px;
+      background: alpha(@surface_bright, 0.5);
     }
 
-    #network {
-      padding: 0px 4px 0px 0px;
+    #memo {
+      color: @secondary;
+      margin: 0px 8px;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 3px;
+      background: alpha(@surface_bright, 0.5);
     }
 
-    #connections {
-      font-size: 18px;
+    #battery {
       color: @secondary;
-      padding: 10px 16px;
-      border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 0px;
-      transition: none;
-      background: @surface_container_low;
+      margin-top: 5px;
+      margin-bottom: 10px;
     }
 
-    #others {
-      font-size: 18px;
+    #pulseaudio {
       color: @secondary;
-      padding: 10px 6px;
-      border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 0px;
-      transition: none;
-      background: @surface_container_low;
+      font-size: 17px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+
+    #custom-sdio,
+    #custom-mem
+    {
+      color: @secondary;
+      margin-top: 2px;
+      margin-bottom: 0px;
+      padding: 2px 0px;
+      border-radius: 3px;
+      background-color: alpha(@secondary_fixed_dim, 0.1);
+    }
+
+    #backlight {
+      color: @secondary;
+      font-size: 17px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      padding: 5px 2px 5px 4px;
+      border-radius: 3px;
+      background-color: alpha(@secondary_fixed_dim, 0.1);
     }
 
     #workspaces {
-      font-size: 18px;
-      padding: 10px 16px;
-      border: 2px solid alpha(@secondary_container, 0.5);
-      border-radius: 0px;
+      margin: 0px 8px 0px 8px;
+      padding: 2px 0px 0px 0px;
+      border-radius: 3px;
       transition: none;
-      background: @surface_container_low;
+      background: alpha(lighter(@surface_bright), 0.5);
     }
 
+    #keyboard-state {
+      color: @secondary;
+      margin: 8px 8px 0px 8px;
+      padding: 2px 0px 2px 4px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(lighter(@surface_bright), 0.5);
+    }
+
+    #language {
+      color: @secondary;
+      margin: 0px 8px 0px 8px;
+      padding: 2px 0px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(lighter(@surface_bright), 0.5);
+    }
+
+    #clock {
+      color: @secondary;
+      font-size: 21px;
+      margin: 0px 8px;
+      padding: 3px 11px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+
+    #battery {
+      color: @secondary;
+      margin: 0px 8px 8px 8px;
+      padding: 10px 4px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+
+    #brightness {
+      color: @secondary;
+      margin: 0px 8px;
+      padding-left: 2px;
+      padding-right: 2px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+
+    #network
+    {
+      color: @secondary;
+      margin: 0px 8px;
+      padding: 6px 4px 6px 4px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+
+    #bluetooth {
+      color: @secondary;
+      margin: 0px 8px;
+      padding: 6px 4px 6px 4px;
+      border-radius: 3px;
+      transition: none;
+      background: alpha(@surface_bright, 0.5);
+    }
+    
     #workspaces button {
       color: darker(@secondary);
-    }
+      padding: 0px 4px 0px 4px;
+      margin-bottom: 2px;
+      margin-left: 2px; 
+      margin-right: 2px;
+      border-radius: 3px;
+      border: 2px solid alpha(@secondary_fixed_dim, 0);
+      background: alpha(@secondary_fixed_dim, 0.1);
 
+    }
+    
     #workspaces button.active {
       color: @secondary;
-      background: alpha(darker(@secondary), 0.4);
+      border: 2px solid alpha(@secondary_fixed_dim, 0.2);
     }
 
     window#waybar.empty #window {
@@ -82,59 +175,65 @@
       mainbar = {
         layer = "top";
 	      position = "left";
-	      margin = "70 5 70 15";
+	      margin = "60 0 480 5";
         spacing = 5;
 
-        modules-left = ["niri/workspaces" "group/bunch" "group/connections" "group/others"];
+	      modules-left = ["keyboard-state" "niri/language" "niri/workspaces" "clock"];
+	      modules-right = ["network" "bluetooth" "group/audio" "group/brightness" "battery"];
 
 	      "niri/workspaces" = {
-          "format" = "{}";
+          "format" = "{icon}";
           "format-icons" = {
-            "1" = "01";
-            "2" = "02";
-            "3" = "03";
-            "4" = "04";
-            "5" = "05";
-            "6" = "06";
-            "7" = "07";
-            "8" = "08";
-            "9" = "09";
-            "10" = "10";
+             "1" = "一";
+             "2" = "二";
+             "3" = "三";
+             "4" = "四";
+             "5" = "五";
+             "6" = "六";
+             "7" = "七";
+             "8" = "八";
+             "9" = "九";
+             "10" = "十";
+          };
+          "persistent-workspaces" = {
+            "*" = 3;
           };
 	      };
 
         "niri/language" = {
           "format" = "{}";
-          "format-en" = "EN";
+          "format-en" = "en";
         };
 
-        "group/bunch" = {
-          orientation = "inherit";
-          modules = ["clock#date" "clock#time"];
+        "keyboard-state" = {
+          "numlock" = false;
+          "capslock" = true;
+          "format" = "{icon}";
+          "format-icons" = {
+            "locked" = " ";
+            "unlocked" = " ";
+          };
         };
 
-        "clock#date" = {
-          interval = 60;
-          format = "{:%m\n%d}";
-        };
-
-        "custom/separator" = {
-          rotate = 270;
-          "format" = "|";
-        };
-
-        "clock#time" = {
-          interval = 60;
-          format = "{:%H\n%M}";
-        };
-
-
-        network = {
-	        format = "{icon}";
-	        "format-disconnected" = "󰤯";
-	        "format-icons" = [ "󰤟" "󰤢" "󰤥" "󰤨" ];
+	      "clock" = {
+          format = "{:%I\n%M}";
 	        tooltip = false;
 	      };
+
+        "group/brightness" = {
+          orientation = "inherit";
+          modules = ["backlight"];
+        };
+
+        "custom/mem" = {
+          "format" = " ";
+          tooltip = false;
+        };
+
+        "custom/sdio" = {
+          "format" = " ";
+          tooltip = false;
+        };
 
         "bluetooth" = {
           "format" = "";
@@ -143,37 +242,50 @@
           tooltip = false;
         };
 
+        "memory" = {
+          "interval" = 30;
+          "format" = "{}";
+          "tooltip" = false;
+        };
+
 	      backlight = {
-          format = "{percent}";
+          format = "{icon}";
+          "format-icons" = ["󰃝 " "󰃞 " "󰃟 " "󰃠 "];
 	        tooltip = false;
 	      };
 
-	      pulseaudio = {
-          format = "{volume}";
-          "format-muted" = "M";
-	        tooltip = false;
-	      };
+        "group/audio" = {
+          "orientation" = "inherit";
+          "modules" = ["custom/sdio" "pulseaudio"];
+        };
 
-        battery = {
-          format = "{}"; 
+        "group/memo" = {
+          "orientation" = "inherit";
+          "modules" = ["custom/mem" "memory"];
+        };
+
+	      battery = {
+          format = "{icon}"; 
+          "rotate" = 270;
+          "format-charging" = "<b>{icon} </b>";
+	        "format-icons" = [ "󰁺" "󰁼" "󰁾" "󰂀" "󰂂" "󰁹" ];
+          "format-full" = "<span color='#82A55F'><b>{icon}</b></span>";
 	        tooltip = false;
           interval = 2;
 	      };
 
-        tray = {
-          "icon-size" = 20;
-          spacing = 5;
-        };
+	      pulseaudio = {
+          format = "{volume}";
+	        "format-muted" = "⨯";
+	        tooltip = false;
+	      };
 
-        "group/connections" = {
-          orientation = "inherit";
-          modules = ["network" "bluetooth"];
-        };
-
-        "group/others" = {
-          orientation = "inherit";
-          modules = ["backlight" "pulseaudio" "battery"];
-        };
+	      network = {
+	        format = "{icon}";
+	        "format-disconnected" = "󰤯 ";
+	        "format-icons" = [ "󰤨 " ];
+	        tooltip = false;
+	      };
       };
     };
   };
