@@ -40,7 +40,7 @@
 
     #pulseaudio {
       color: @secondary;
-      font-size: 15px;
+      font-size: 16px;
       margin-top: 2px;
       margin-bottom: 2px;
     }
@@ -92,7 +92,7 @@
 
     #clock {
       color: @secondary;
-      font-size: 20px;
+      font-size: 19px;
       margin: 0px 8px;
       padding: 4px 11px;
       border-radius: 4px;
