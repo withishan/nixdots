@@ -8,6 +8,7 @@
     bluez
     pywalfox-native
     obs-studio
+    obsidian
     lsd
     stow
     firefox
@@ -15,6 +16,7 @@
     youtube-music
     gh 
     nitch
+    man-pages
     pipes
     niri
     brightnessctl

@@ -24,14 +24,17 @@
     }
 
     #battery {
+      font-size: 17px;
       color: @secondary;
     }
 
     #pulseaudio {
+      font-size: 17px;
       color: @secondary;
     }
 
     #backlight {
+      font-size: 17px;
       color: @secondary;
     }
 
@@ -60,7 +63,8 @@
     }
 
     #bunch {
-      padding: 7px 16px;
+      padding-top: 7px;
+      padding-bottom: 7px;
       border: 2px solid alpha(@secondary_container, 0.5);
       background: @surface_container_low;
     }
@@ -82,6 +86,7 @@
     }
     
     #workspaces button {
+      font-size: 16px;
       color: darker(@secondary);
       padding: 2px 4px 2px 4px;
       margin-bottom: 2px;
