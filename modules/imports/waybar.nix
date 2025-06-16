@@ -83,7 +83,7 @@
     
     #workspaces button {
       color: darker(@secondary);
-      padding: 0px 4px 0px 4px;
+      padding: 2px 4px 2px 4px;
       margin-bottom: 2px;
       margin-left: 2px; 
       margin-right: 2px;
