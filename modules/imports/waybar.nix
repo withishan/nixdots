@@ -45,7 +45,7 @@
 
     #datetime {
       color: @secondary;
-      padding: 8px 16px;
+      padding: 7px 16px;
       border-radius: 0px;
       transition: none;
       background: @surface_container_low;
@@ -53,13 +53,13 @@
     }
 
     #connections {
-      padding: 6px 16px;
+      padding: 7px 16px;
       background: @surface_container_low;
       border: 2px solid alpha(@secondary_container, 0.5);
     }
 
     #bunch {
-      padding: 6px 16px;
+      padding: 7px 16px;
       border: 2px solid alpha(@secondary_container, 0.5);
       background: @surface_container_low;
     }
@@ -109,7 +109,7 @@
 	      margin = "70 0 70 5";
         spacing = 5;
 
-	      modules-left = ["niri/workspaces" "group/bunch" "group/connections" "group/datetime"];
+	      modules-left = ["niri/workspaces" "group/datetime" "group/bunch" "group/connections"];
 
 	      "niri/workspaces" = {
           "format" = "{icon}";
