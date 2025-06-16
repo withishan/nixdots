@@ -36,6 +36,7 @@
     }
 
     #workspaces {
+      font-size: 16px;
       padding: 2px 0px 0px 0px;
       border: 2px solid alpha(@secondary_container, 0.5);
       border-radius: 0px;
@@ -114,16 +115,15 @@
 	      "niri/workspaces" = {
           "format" = "{icon}";
           "format-icons" = {
-             "1" = "一";
-             "2" = "二";
-             "3" = "三";
-             "4" = "四";
-             "5" = "五";
-             "6" = "六";
-             "7" = "七";
-             "8" = "八";
-             "9" = "九";
-             "10" = "十";
+             "1" = "01";
+             "2" = "02";
+             "3" = "03";
+             "4" = "04";
+             "5" = "05";
+             "6" = "06";
+             "7" = "07";
+             "8" = "08";
+             "9" = "09";
           };
           "persistent-workspaces" = {
             "*" = 3;
